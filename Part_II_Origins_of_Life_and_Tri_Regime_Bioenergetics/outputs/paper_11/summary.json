@@ -1,0 +1,91 @@
+{
+  "paper": 11,
+  "model": "photochemical capture before overload stabilization",
+  "corrected_chain": "capture -> couple -> retain -> close -> stabilize surplus",
+  "chlorophyll_status": "late high-performance endpoint of energy-input amplification",
+  "melanin_status": "mature exemplar of surplus stabilization, not an origin requirement",
+  "capture_rows": [
+    {
+      "scenario": "geochemical_redox_only",
+      "input_energy": 1.2,
+      "sigma_e": 0.55,
+      "sigma_p": 0.4,
+      "stabilization": 1.2,
+      "life_number": 0.22000000000000003,
+      "regime": "subcritical",
+      "note": "chemical input before phototrophy"
+    },
+    {
+      "scenario": "mineral_photoredox",
+      "input_energy": 2.4,
+      "sigma_e": 0.55,
+      "sigma_p": 0.38,
+      "stabilization": 1.4,
+      "life_number": 0.3582857142857143,
+      "regime": "subcritical",
+      "note": "pre-chlorophyll light capture candidate"
+    },
+    {
+      "scenario": "porphyrinoid_or_chromophore",
+      "input_energy": 4.0,
+      "sigma_e": 0.65,
+      "sigma_p": 0.5,
+      "stabilization": 1.8,
+      "life_number": 0.7222222222222222,
+      "regime": "subcritical",
+      "note": "stronger pre-chlorophyll capture"
+    },
+    {
+      "scenario": "modern_chlorophyll_endpoint",
+      "input_energy": 8.0,
+      "sigma_e": 0.85,
+      "sigma_p": 0.8,
+      "stabilization": 2.2,
+      "life_number": 2.4727272727272727,
+      "regime": "sustained",
+      "note": "late high-performance endpoint"
+    }
+  ],
+  "overload_rows": [
+    {
+      "scenario": "low_capture_no_buffer",
+      "input_energy": 1.0,
+      "usable_capacity": 1.5,
+      "dissipative_capacity": 0.5,
+      "overload_proxy": 0.5,
+      "usable_fraction": 0.75,
+      "state": "buffered",
+      "note": "low input; no overload"
+    },
+    {
+      "scenario": "high_capture_no_buffer",
+      "input_energy": 8.0,
+      "usable_capacity": 2.0,
+      "dissipative_capacity": 0.5,
+      "overload_proxy": 3.2,
+      "usable_fraction": 0.8,
+      "state": "overload",
+      "note": "capture precedes overload"
+    },
+    {
+      "scenario": "high_capture_with_buffer",
+      "input_energy": 8.0,
+      "usable_capacity": 2.0,
+      "dissipative_capacity": 6.0,
+      "overload_proxy": 1.0,
+      "usable_fraction": 0.25,
+      "state": "buffered",
+      "note": "buffer reduces overload"
+    },
+    {
+      "scenario": "high_capture_excessive_screening",
+      "input_energy": 8.0,
+      "usable_capacity": 0.8,
+      "dissipative_capacity": 9.0,
+      "overload_proxy": 0.8163265306122448,
+      "usable_fraction": 0.08163265306122448,
+      "state": "buffered",
+      "note": "too much screening can block useful capture"
+    }
+  ]
+}

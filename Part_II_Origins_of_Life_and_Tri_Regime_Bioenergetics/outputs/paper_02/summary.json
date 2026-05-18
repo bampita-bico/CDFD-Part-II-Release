@@ -1,0 +1,10 @@
+{
+  "paper": 2,
+  "model": "Fe-S interface redox flux toy model",
+  "initial_mean_redox_flux": 0.14940865627357353,
+  "final_mean_redox_flux": 50.22351015922742,
+  "final_peak_interface_flux": 100.0,
+  "final_mean_s": 22.800273500513935,
+  "final_mean_ms": 26.877988957382314,
+  "interpretation": "Interface gradients can localize and amplify flux in the toy field."
+}

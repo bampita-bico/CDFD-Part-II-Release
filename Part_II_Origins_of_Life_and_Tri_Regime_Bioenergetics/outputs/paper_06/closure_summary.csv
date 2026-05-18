@@ -1,0 +1,5 @@
+initial_phi,constraint,substrate,final_phi,closure_state
+0.1,1.0,1.0,0.07300589866953758,sub_ignition
+0.5,1.0,1.0,0.5538953082421175,sub_ignition
+0.1,5.0,1.0,0.10203591930602891,sub_ignition
+0.5,5.0,1.0,0.8487797965634019,sub_ignition

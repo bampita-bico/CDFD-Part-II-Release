@@ -1,0 +1,60 @@
+{
+  "paper": 9,
+  "model": "merged error-threshold and integrated-protocell diagnostic toy models",
+  "error_rows": [
+    {
+      "flux_energy": 0.2,
+      "final_master_sequence_fitness": 0.3669582394473313,
+      "state": "error_catastrophe"
+    },
+    {
+      "flux_energy": 0.5,
+      "final_master_sequence_fitness": 0.08293790536844343,
+      "state": "error_catastrophe"
+    },
+    {
+      "flux_energy": 1.0,
+      "final_master_sequence_fitness": 0.013899043014057023,
+      "state": "error_catastrophe"
+    },
+    {
+      "flux_energy": 5.0,
+      "final_master_sequence_fitness": 1.0,
+      "state": "survives"
+    },
+    {
+      "flux_energy": 10.0,
+      "final_master_sequence_fitness": 1.0,
+      "state": "survives"
+    }
+  ],
+  "first_nonfinite_step": 74,
+  "protocell_snapshots": [
+    {
+      "time": 10,
+      "external_psi": 6.217421240519457,
+      "internal_psi": 0.10357553894700025
+    },
+    {
+      "time": 50,
+      "external_psi": 3.0526649629538793,
+      "internal_psi": 0.03129997040876754
+    },
+    {
+      "time": 100,
+      "external_psi": null,
+      "internal_psi": null
+    },
+    {
+      "time": 150,
+      "external_psi": null,
+      "internal_psi": null
+    },
+    {
+      "time": 199,
+      "external_psi": null,
+      "internal_psi": null
+    }
+  ],
+  "interpretation": "The replication toy model supports high-flux sequence persistence, while the integrated explicit update remains numerically fragile."
+}

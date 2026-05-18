@@ -1,0 +1,188 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{booktabs}
+\onehalfspacing
+
+\title{\textbf{Paper OOL-2: Iron--Sulfur Redox and Mineral Constraint Scaffolds:\\ The First Geochemical Constraint Layer}}
+\author{Steve Bico Mujjabi, MD\\
+\small Independent Researcher\\
+\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper begins the concrete Part II chain with iron--sulfur redox and mineral constraint scaffolds. Fe--S surfaces are treated as localized energy-processing boundaries: they can host electron transfer, surface catalysis, pore-scale confinement, and continuity with later Fe--S cluster biochemistry. The claim is conditional, not triumphalist: mineral Fe--S matters for origins only when a planet supplies sustained donors, acceptors, renewal, and retention. The companion script illustrates boundary-local flux amplification in a toy CDFD field and is explicitly not a molecular simulation.
+\end{abstract}
+
+\section{Introduction}
+The origin of life is inseparable from the problem of maintaining chemical work against dilution and side reactions. Redox chemistry provides the elementary mechanism: electrons move between donors and acceptors, coupling environmental gradients to bond rearrangement. Modern biochemistry places ancient fingerprints on this problem: iron--sulfur clusters remain central to electron transfer in respiration and photosynthesis, motivating the hypothesis that mineral Fe--S phases participated in the earliest energy-processing networks~\cite{Russell1994,Martin2007,Branscomb2018}.
+
+Paper OOL-2 opens the concrete geochemical sequence by asking a precise question: \textbf{can Fe--S \emph{geometry} and connectivity be represented as organizers of redox throughput, not merely as passive catalysts?} We connect this question to hydrothermal petrology and to a phenomenological transport field in which gradients in constraint modulate flow. Paper~OOL-3 extends the same viewpoint to distributed conduction (magnetite-like networks).
+
+\subsection*{Bridging gap from prior work}
+The present series treats prebiotic stages as a ladder of transport and constraint mechanisms. No prior installment exists; the unresolved gap is empirical: which mineralogies and fluid chemistries first produced \emph{persistent} redox channeling under open-system forcing.
+
+\textbf{Status: Inferred}
+
+\paragraph{Capstone channel mapping.}
+Paper 12 treats Fe--S redox gradients as one early implementation of the energy-input function $I_E$. Later papers allow other implementations, including photochemical materials, but this first stage does not assume chlorophyll or any mature photosynthetic machinery. The purpose here is narrower: establish how mineral geometry can localize usable redox work.
+
+\section{Model and Assumptions}
+
+\subsection{Notation (CDFD alignment)}
+Throughout the OOL series, $C$ denotes a nonnegative \emph{constraint} or transport-resistance field (earlier drafts used $\Lambda$ for the same role). $\Phi$ is an intensity variable for redox driving (electrochemical potential or associated flux potential). The dimensionless ratio
+\begin{equation}
+\Psi_s \;=\; \frac{\Phi}{C}
+\end{equation}
+measures local ``overload'' of flow relative to resistance. Species concentrations in reaction kinetics are written $c_i$ when needed, to avoid clashing with $C$.
+
+\textbf{Status: Derived}
+
+\subsection{Geochemical formation of Fe--S assemblages}
+Hydrothermal fluids rich in Fe$^{2+}$ and reduced sulfur precipitate Fe--S phases; representative steps include
+\begin{align}
+\text{Fe}^{2+} + \text{H}_2\text{S} &\rightarrow \text{FeS} + 2\text{H}^+,\\
+\text{FeS} + \text{S} &\rightarrow \text{FeS}_2.
+\end{align}
+Mackinawite, pyrite, and related assemblages often grow as porous networks rather than isolated grains, yielding high surface area, tortuous transport, and internal confinement~\cite{Martin2007,Hazen2008}. These are the geological preconditions for localized chemistry.
+
+\textbf{Status: Inferred}
+
+\subsection{Redox thermodynamics}
+Iron cycles between oxidation states,
+\begin{equation}
+\text{Fe}^{2+} \leftrightarrow \text{Fe}^{3+} + e^-,
+\end{equation}
+with electrochemical work set by Nernst-type relations; a compact statement is $\Delta G = -n F \Delta E$ for $n$ electrons transferred, Faraday $F$, and potential gap $\Delta E$. Fe--S minerals scaffold this chemistry at interfaces where water, dissolved gases, and mineral terminations coexist.
+
+\textbf{Status: Derived}
+
+\subsection{Electron transport as a field process}
+Redox events embed in a continuum description of electron transport. We write the current density in the resistance form
+\begin{equation}
+\bm{J}_e = -\frac{1}{C}\nabla\Phi,
+\label{eq:Je}
+\end{equation}
+so that large $C$ (high resistance) suppresses flow at fixed potential gradient. In Fe--S environments, $\nabla\Phi$ arises from vent chemistry and fluid mixing; $C$ encodes mineral connectivity, disorder, and interfacial barriers. Eq.~\eqref{eq:Je} is \emph{phenomenological}: it does not resolve hopping microphysics or Marcus rates.
+
+Rather than viewing redox reactions as isolated events, we interpret them as part of a continuous transport process. This formulation highlights that electron flow is not only driven by gradients but also fundamentally shaped by the structure of the medium.
+
+\textbf{Status: Hypothesis}
+
+\subsection{Catalysis and confinement}
+Surfaces lower activation barriers via adsorption and transition-state stabilization; schematically $A+B \rightarrow AB$ is accelerated at the interface. These surfaces adsorb reactants, stabilize intermediate states, and increase effective collision rates, enabling reactions that would otherwise be kinetically unfavorable in bulk solution.
+
+Porous Fe--S masses retard diffusion, increasing residence time. A Fickian picture with spatially varying resistance is
+\begin{equation}
+\frac{\partial \rho}{\partial t} = \nabla\cdot\left(\frac{1}{C}\nabla\rho\right) + R,
+\end{equation}
+where $\rho$ is a scalar concentration proxy and $R$ gathers reactions. In regions where $C$ is large (such as pore throats), diffusion is reduced, reactants remain localized, and reaction probability increases. This prevents the rapid dilution of chemical species, a critical requirement for sustained chemical networks.
+
+\textbf{Status: Inferred}
+
+\section{Main Results}
+
+\subsection{Conceptual synthesis}
+Within the assumptions above, Fe--S systems couple three roles: (i)~they generate and maintain redox gradients; (ii)~they channel electron transport through structured resistance; (iii)~they confine solutes so that surface catalysis can outperform bulk washout.
+
+The key insight is that Fe--S systems do not merely catalyze reactions; they organize energy flow. Electron transport and catalytic activity are deeply coupled: transport distributes energy via $J_e = -\frac{1}{C} \nabla \Phi$, while catalysis transforms matter. Together, these features motivate treating vent-associated Fe--S as the first geological ``energy-processing substrate'' in the series narrative, prior to extended magnetite networks (Paper 3) and interfacial water (Paper 4).
+
+\textbf{Status: Inferred}
+
+\subsection{Continuity with biochemistry (interpretive)}
+Biological Fe--S clusters perform electron transfer in contemporary enzymes; mineral Fe--S offers a geochemical precedent for localized, mixed-valence chemistry~\cite{Russell1994}. This continuity argument is qualitative: homology of function does not establish homology of historical pathway.
+
+\textbf{Status: Hypothesis}
+
+\section{Numerical Verification}
+Companion script: \texttt{supplementary\_ool\_02.py}. The implementation places a high-$C$ mineral block in a 2D grid, applies a simple Laplacian-like update to a nonnegative ``redox flux'' field $\Phi$, and boosts $\Phi$ where $|\nabla C|$ exceeds a threshold (interface proxy for catalytic acceleration). This is a \emph{toy} illustration: it is not a molecular simulation of mackinawite surface chemistry.
+
+Observed outputs (fixed seed in script):
+\begin{itemize}
+\item Initial mean redox flow: $0.149$
+\item Final mean redox flow: $50.224$
+\item Peak interface flow: $100.000$ (the imposed numerical cap)
+\end{itemize}
+
+The mean and peak amplification support the claim that, \emph{in this model}, mineral boundaries with steep constraint gradients can sustain elevated local throughput relative to bulk. The peak value reaches the script cap, so the result should be read as a saturation warning as well as an amplification signal.
+
+\textbf{Status: Derived}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{outputs/paper_02/fe_s_redox_interface.png}
+\caption{Toy Fe--S interface diagnostic. The left panel shows the final redox-flux proxy with the mineral boundary overlaid; the right panel shows mean flux and peak interface flux across the run. The figure is an illustration of localization under a constraint gradient, not a molecular simulation.}
+\end{figure}
+
+\section{Geochemical Boundary-Condition Ledger}
+Fe--S chemistry is not a free-floating catalyst list. It becomes origin-of-life relevant only when embedded in a fed environment. In the present paper the required boundary conditions are:
+\begin{itemize}
+\item a sustained donor side, such as Fe$^{2+}$, H$_2$, H$_2$S, or reduced vent fluids;
+\item an acceptor side, such as CO$_2$, oxidized mineral phases, or other environmental oxidants;
+\item a pH or redox discontinuity that keeps $\nabla\Phi$ from immediately relaxing;
+\item porous retention so intermediates survive longer than the reaction time;
+\item repeated replenishment, precipitation, or fracture flow so the mineral does not become a closed dead surface.
+\end{itemize}
+This list prevents the paper from claiming that Fe--S minerals alone make life. They are a scaffold only when the surrounding planet supplies drive, disequilibrium, and renewal.
+
+\textbf{Status: Inferred}
+
+\section{Failure Modes}
+The Fe--S step fails if any of three bottlenecks dominates. First, the system may have surface catalysis without a persistent gradient; this gives transient chemistry but no maintained flux. Second, the gradient may exist but products may be lost faster than they react; this motivates the compartment paper. Third, the mineral may bind molecules too strongly or poison its own sites, converting selection into immobilization. These failures are not weaknesses of the series; they are the reason the next papers are necessary.
+
+\textbf{Status: Derived}
+
+\section{Experimental and Environmental Anchors}
+The Fe--S claim should be attached to real experimental and geological anchors rather than treated as a symbolic first step. Alkaline hydrothermal-vent models provide a natural reason to combine redox gradients, mineral precipitation, pH contrast, and pore-scale confinement~\cite{Russell1994,Martin2007,Sojo2016}. A recent redox-focused review also supports treating early Earth as a multi-environment chemical engine rather than a single-location story~\cite{Moldogazieva2026}. Laboratory vent-reactor work attempts to reproduce some of those coupled conditions by growing mineral membranes under controlled disequilibria~\cite{Barge2014}. These experiments are not a proof of life emergence, but they show that the relevant variables can be made concrete: fluid composition, pH, membrane mineralogy, redox potential, pore growth, and transport.
+
+The framework also needs to acknowledge counterarguments. Jackson argued that natural pH gradients in alkaline vents may not have been sufficient or relevant in the way some origin scenarios require~\cite{Jackson2016}. This objection is valuable for CDFD because it prevents the theory from hiding behind a single favored environment. The model should therefore be tested across a family of fed mineral reactors, not only one idealized vent geometry.
+
+\textbf{Status: Inferred}
+
+\section{Fe--S Clusters as a Later Continuity Signal}
+Modern Fe--S clusters are not evidence that free mineral surfaces were the first catalysts. They are, however, a continuity signal: life still uses iron, sulfur, redox hopping, and ligand-stabilized electron transfer in core metabolism. Prebiotic synthesis of Fe--S-like clusters under photochemical conditions further widens the possible bridge between geochemistry and cofactors~\cite{Bonfio2017}. The conservative CDFD claim is therefore:
+\begin{equation}
+\text{mineral Fe--S function} \rightarrow
+\text{ligand-bound Fe--S function}
+\rightarrow
+\text{enzyme-embedded Fe--S function}.
+\end{equation}
+The arrow is functional, not genealogical. It says the same physical problem---localized, reversible electron transfer---appears at multiple later levels of biological organization.
+
+\textbf{Status: Inferred}
+
+\section{Interpretation}
+The numerical pattern is consistent with the qualitative geochemical picture: interfaces organize flow. The model does not, however, establish which specific Archean mineral facies dominated, nor does it compute absolute reaction rates for prebiotic syntheses~\cite{Huber1997,Wachtershauser1988}. Interpretations of ``first metabolism'' therefore remain at the Hypothesis/Inferred tier pending tighter coupling to kinetics and fluid dynamics.
+
+\textbf{Status: Inferred}
+
+\section{Limitations and Open Problems}
+\begin{itemize}
+\item Interface catalysis is injected via a gradient threshold rule rather than ab initio activation energies.
+\item Polymorph-specific Fe--S properties (mackinawite vs pyrite electronic structure) are not distinguished.
+\item Natural porous networks require topology statistics beyond a single square inclusion.
+\item Three-dimensional fracture--vein systems and coupled fluid flow are not modeled here.
+\end{itemize}
+
+\textbf{Status: Open}
+
+\section{Conclusion}
+Fe--S-rich hydrothermal environments provide a geochemically motivated stage 1 for the OOL series: redox energy, catalytic surfaces, and confinement map naturally onto a constraint-field description with $\Psi_s=(\Phi/C) \cdot S \cdot M_s$. Companion numerics illustrate boundary-local amplification in a controlled idealization; Paper 3 extends the transport story to distributed, mixed-valence mineral conduits.
+
+\textbf{Status: Inferred}
+
+\section{Reproducibility Note}
+\begin{verbatim}
+python supplementary_ool_02.py
+\end{verbatim}
+Uses NumPy only; runtime sub-second on typical laptops. The script writes compact reproducibility outputs under \texttt{outputs/paper\_01/}.
+\bibliographystyle{plain}
+\bibliography{ool_references}
+\end{document}

@@ -1,0 +1,4 @@
+scenario,boundary_specificity,final_host,final_parasite,host_parasite_ratio,state
+open_boundary,0.0,0.9471476284129232,9.832302445115456,0.09633019668586906,parasite_dominated
+weak_specificity,0.35,4.203469955203738,2.7225695849373928,1.5439348101365054,host_retained
+strong_specificity,0.75,5.750642480722979,0.0418411084481718,137.4400128009574,host_retained

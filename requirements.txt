@@ -1,0 +1,9 @@
+# CDFD Part II public science stack for paper-local supplementary scripts.
+
+numpy>=1.24,<3
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+sympy>=1.12
+statsmodels>=0.14
+scikit-learn>=1.3

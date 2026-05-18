@@ -1,0 +1,5 @@
+scenario,input_energy,usable_capacity,dissipative_capacity,overload_proxy,usable_fraction,state,note
+low_capture_no_buffer,1.0,1.5,0.5,0.5,0.75,buffered,low input; no overload
+high_capture_no_buffer,8.0,2.0,0.5,3.2,0.8,overload,capture precedes overload
+high_capture_with_buffer,8.0,2.0,6.0,1.0,0.25,buffered,buffer reduces overload
+high_capture_excessive_screening,8.0,0.8,9.0,0.8163265306122448,0.08163265306122448,buffered,too much screening can block useful capture

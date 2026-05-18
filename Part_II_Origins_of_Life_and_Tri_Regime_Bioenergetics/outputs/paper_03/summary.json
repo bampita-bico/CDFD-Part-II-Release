@@ -1,0 +1,11 @@
+{
+  "paper": 3,
+  "model": "magnetite-like adaptive transport toy model",
+  "initial_network_efficiency": 0.5000330338462972,
+  "final_network_efficiency": 9.89352410302666,
+  "final_mean_s": 50.189523981067445,
+  "final_mean_ms": 56.31790930157808,
+  "min_constraint": 0.1,
+  "max_constraint": 0.8468452461768748,
+  "interpretation": "This parameter set lowers transport resistance but trends toward broad erosion rather than a sharply localized wire."
+}

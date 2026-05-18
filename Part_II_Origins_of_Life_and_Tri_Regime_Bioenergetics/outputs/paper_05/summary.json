@@ -1,0 +1,48 @@
+{
+  "paper": 5,
+  "model": "wet-dry polymerization ratchet toy diagnostic",
+  "threshold_proxy": "c**2*k_a*r/(h*w)",
+  "rows": [
+    {
+      "scenario": "steady_wet",
+      "period": 8.0,
+      "activation": 0.08,
+      "retention": 0.25,
+      "hydrolysis": 0.3,
+      "final_product": 0.15063234148783228,
+      "final_memory": 0.7345530117565234,
+      "ratchet_state": "weak_or_lost"
+    },
+    {
+      "scenario": "fast_cycle",
+      "period": 2.0,
+      "activation": 0.12,
+      "retention": 0.45,
+      "hydrolysis": 0.22,
+      "final_product": 0.2561262373153402,
+      "final_memory": 1.5737900635960287,
+      "ratchet_state": "retained"
+    },
+    {
+      "scenario": "slow_wet_dry",
+      "period": 8.0,
+      "activation": 0.18,
+      "retention": 0.7,
+      "hydrolysis": 0.2,
+      "final_product": 0.2612313509590255,
+      "final_memory": 3.3949771120371786,
+      "ratchet_state": "retained"
+    },
+    {
+      "scenario": "overheated_loss",
+      "period": 8.0,
+      "activation": 0.2,
+      "retention": 0.25,
+      "hydrolysis": 0.65,
+      "final_product": 0.06471905502564537,
+      "final_memory": 0.44392401366558015,
+      "ratchet_state": "weak_or_lost"
+    }
+  ],
+  "interpretation": "A ratchet requires activation, concentration, retention, and survival across rehydration, not dryness alone."
+}

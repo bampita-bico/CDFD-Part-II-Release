@@ -1,0 +1,96 @@
+{
+  "paper": 12,
+  "model": "capstone Life Number and functional synthesis diagnostics",
+  "lambda_rows": [
+    {
+      "scenario": "dispersed_bulk_chemistry",
+      "input_energy": 0.4,
+      "sigma_e": 0.2,
+      "sigma_p": 0.2,
+      "tau_relax": 1.0,
+      "stabilization": 1.5,
+      "life_number": 0.01066666666666667,
+      "regime": "decay_dominated"
+    },
+    {
+      "scenario": "mineral_redox_pore",
+      "input_energy": 2.0,
+      "sigma_e": 0.5,
+      "sigma_p": 0.4,
+      "tau_relax": 4.0,
+      "stabilization": 1.2,
+      "life_number": 1.3333333333333335,
+      "regime": "near_critical"
+    },
+    {
+      "scenario": "photochemical_unbuffered",
+      "input_energy": 6.0,
+      "sigma_e": 0.8,
+      "sigma_p": 0.6,
+      "tau_relax": 2.0,
+      "stabilization": 4.0,
+      "life_number": 1.4400000000000002,
+      "regime": "near_critical"
+    },
+    {
+      "scenario": "buffered_proto_cell",
+      "input_energy": 6.0,
+      "sigma_e": 0.75,
+      "sigma_p": 0.65,
+      "tau_relax": 4.0,
+      "stabilization": 2.0,
+      "life_number": 5.8500000000000005,
+      "regime": "sustained"
+    }
+  ],
+  "phosphate_initial_continuous_flux": 5.0,
+  "phosphate_final_continuous_flux": 1.4599451216938635,
+  "stored_phosphate_packets": 3.540054878306137,
+  "llps_initial_constraint_std": 0.0,
+  "llps_final_constraint_std": 14.029645714706161,
+  "cycle_rows": [
+    {
+      "cycle": 1,
+      "input_energy": 0.6,
+      "life_number": 0.02651785714285715,
+      "localized_loop_survives": false,
+      "memory_factor_after_cycle": 0.75
+    },
+    {
+      "cycle": 2,
+      "input_energy": 3.6,
+      "life_number": 0.4134230110978642,
+      "localized_loop_survives": false,
+      "memory_factor_after_cycle": 0.5625
+    },
+    {
+      "cycle": 3,
+      "input_energy": 1.2,
+      "life_number": 0.4125024037017799,
+      "localized_loop_survives": false,
+      "memory_factor_after_cycle": 0.421875
+    },
+    {
+      "cycle": 4,
+      "input_energy": 4.2,
+      "life_number": 1.236426188755071,
+      "localized_loop_survives": true,
+      "memory_factor_after_cycle": 0.48515624999999996
+    },
+    {
+      "cycle": 5,
+      "input_energy": 0.8,
+      "life_number": 0.38372835436711333,
+      "localized_loop_survives": false,
+      "memory_factor_after_cycle": 0.4
+    },
+    {
+      "cycle": 6,
+      "input_energy": 3.0,
+      "life_number": 1.2144952377210558,
+      "localized_loop_survives": true,
+      "memory_factor_after_cycle": 0.45999999999999996
+    }
+  ],
+  "interpretation": "Life-like persistence is treated as a regime crossing, now integrated with Adaptive Surface Memory."
+}

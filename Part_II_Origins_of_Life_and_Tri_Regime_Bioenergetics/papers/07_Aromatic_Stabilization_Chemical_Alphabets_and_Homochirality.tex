@@ -1,0 +1,210 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{booktabs}
+\onehalfspacing
+
+\title{\textbf{Paper OOL-7: Aromatic Stabilization, Chemical Alphabets, and Homochirality:\\ Pattern Survival Before Genetic Code}}
+\author{Steve Bico Mujjabi, MD\\
+\small Independent Researcher\\
+\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper separates durable chemical alphabets and homochirality from autocatalytic closure. Aromatic scaffolds, redox cofactors, nucleobase-like motifs, and disordered aromatic polymers are treated as persistence mechanisms that may preserve patterns under flux noise. Homochirality is kept chemical and testable: CDFD requires amplification mechanisms, cross-inhibition, solubility effects, or template bias rather than unsupported historical certainty. The companion script separates aromatic persistence from a model-space chirality attractor.
+\end{abstract}
+
+\section{Introduction}
+Paper 6 addressed closure of reaction networks. Even with closure, most polymers hydrolyze or scramble without structural motifs that resist perturbation. Aromatic rings provide deep energy wells via delocalization (H\"uckel $4n+2$ rule in simplified form) and participate in electron--proton coupled chemistry~\cite{Joyce2012}.
+
+Gap from Paper 6: closure without durable patterns cannot carry information.
+
+\textbf{Status: Inferred}
+
+\section{Functional Role of Aromatics}
+Aromatics have two different roles that must not be collapsed. Ordered $\pi$-systems can participate in energy capture and electron transfer; disordered aromatic or polymeric systems can absorb radicals, smooth redox fluctuations, and dissipate excess energy. Neither role requires literal chlorophyll or literal melanin at the origin of life. This paper focuses on pattern persistence: how aromatic scaffolds can survive flux noise long enough to become information-relevant.
+
+Paper 11 uses $B_{\mathrm{stab}}$ for the total stabilization burden in $J=I_E\sigma_e\sigma_p/B_{\mathrm{stab}}$. Here we use $\mathcal{K}_{\mathrm{pat}}$ for pattern resilience under degradation noise, keeping molecular persistence separate from whole-system overload management.
+
+\textbf{Status: Inferred}
+
+\section{Model and Assumptions}
+
+\subsection{Electronic stabilization}
+Delocalized $\pi$ orbitals lower energy relative to localized alternatives,
+\begin{equation}
+E_{\mathrm{aromatic}} < E_{\mathrm{localized}}.
+\end{equation}
+Quinones illustrate reversible redox shuttles,
+\begin{equation}
+Q + 2e^- + 2\mathrm{H}^+ \leftrightarrow QH_2.
+\end{equation}
+
+\textbf{Status: Inferred}
+
+\subsection{Flux coupling}
+Reaction rates for aromatic redox couples scale with available electron and proton currents,
+\begin{equation}
+R_Q \propto |\bm{J}_e\cdot\bm{J}_p|,
+\end{equation}
+in the same phenomenology used throughout the series.
+
+\textbf{Status: Hypothesis}
+
+\subsection{Pattern information (scalar proxy)}
+Let $P$ be pattern survivability. A crude Shannon-like proxy is $I\sim -\log P$. Under flux noise, aromatic motifs maintain larger $P$ than flexible aliphatic chains in the simulation.
+
+\textbf{Status: Hypothesis}
+
+\subsection{Notation guard}
+Draft manuscripts sometimes wrote $S\propto 1/\Lambda$ for pattern stability. We rename this to $\mathcal{K}_{\mathrm{pat}}$ to avoid confusion with tri-regime stabilization burden $B_{\mathrm{stab}}$ in $J=I_E\sigma_e\sigma_p/B_{\mathrm{stab}}$ (Paper 11).
+
+\textbf{Status: Derived}
+
+\section{Disordered Aromatic Polymers as Pattern Stabilizers}
+As aromatic molecules accumulate and interact, polymerization becomes possible through oxidative coupling reactions. One possible outcome is a heterogeneous, disordered aromatic polymer. In this paper the claim is deliberately narrow: polymeric aromatic networks can improve persistence of molecular patterns under flux noise. The broader overload-buffering role, including modern melanin as an example, is deferred to Paper 11 after photochemical energy capture has been introduced.
+\begin{equation}
+\text{Monomer} \rightarrow \text{Oligomer} \rightarrow \text{Disordered aromatic polymer}
+\end{equation}
+
+\subsection{Electronic Structure}
+Unlike simple aromatics, disordered aromatic polymers can exhibit extended $\pi$-electron delocalization, structural heterogeneity, and a broad density of electronic states. This creates a quasi-continuous band structure:
+\begin{equation}
+E(k) \rightarrow \text{continuous distribution}
+\end{equation}
+
+\subsection{Broadband Absorption and Redox Capacity}
+Such polymers can absorb across broad spectral bands,
+\begin{equation}
+J_{\mathrm{abs}} = \int \sigma(\lambda) I(\lambda)\,d\lambda,
+\end{equation}
+and may reversibly store charge:
+\begin{equation}
+M + ne^- \leftrightarrow M^{n-}
+\end{equation}
+This allows for electron buffering and smoothing of redox gradients in model space. At this stage of the series the point is pattern resilience, not yet whole-system photoprotection.
+
+\subsection{Role in Information Stability}
+Disordered aromatic stabilizers can protect information-bearing scaffolds by reducing chemical noise and stabilizing local electron flow. Thus, stable information $I_{\mathrm{stable}}$ can be represented schematically as:
+\begin{equation}
+I_{\mathrm{stable}} \propto \frac{J_e J_H}{C_{\mathrm{eff}}}
+\end{equation}
+with $C_{\mathrm{eff}} = C + C_{\mathrm{buffer}}$.
+
+\subsection{Interpretation}
+The important transition is from single-molecule persistence to a matrix capable of preserving patterns. Paper 11 then asks what happens when external input increases enough that stabilization must become a system-level overload function.
+
+\textbf{Status: Inferred}
+
+\section{Main Results}
+
+\subsection{Conceptual}
+Aromatics bridge metabolism and proto-genetics: quinones shuttle energy; nucleobase-like aromatics support hydrogen-bond patterning~\cite{Higgs2015}. Stacking ($\pi$--$\pi$) organizes spatial order.
+
+\textbf{Status: Inferred}
+
+\section{Numerical Verification}
+Companion script: \texttt{supplementary\_ool\_07.py}.
+\begin{itemize}
+\item Final aliphatic pattern strength: $0.018$
+\item Final aromatic pattern strength: $1.000$
+\item Chirality trajectory (model coordinates): $(L,R)=(1.011,0.989)\rightarrow(23.818,0.007)$
+\end{itemize}
+Large separation between aromatic and aliphatic endpoints supports differential persistence \emph{under the scripted degradation law}. Chirality divergence is a \emph{model-space attractor}; no claim is made that terrestrial biomolecular handedness follows this mechanism without laboratory tests.
+
+\textbf{Status: Derived}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{outputs/paper_07/aromatic_chirality_stability.png}
+\caption{Merged closure/aromatic-information diagnostic. The closure panel shows sub-ignition persistence enhancement rather than runaway metabolism. The aromatic panel shows differential pattern survival under the scripted degradation law. The chirality panel is a model-coordinate divergence, not a historical claim about terrestrial handedness.}
+\end{figure}
+
+\section{Interpretation}
+The simulation illustrates why aromatic scaffolds are privileged in prebiotic reasoning: they couple redox chemistry to structural persistence~\cite{Cleaves2008}. Real selectivity requires stereospecific catalysts and racemization kinetics absent here.
+
+\textbf{Status: Inferred}
+
+
+\section{Chiral Amplification Without Overclaiming}
+Earlier drafts allowed chiral bias to drift into speculative physics. The release version is stricter. Part I permits CDFD to discuss chirality as a constraint-history variable~\cite{MujjabiPartI2026}, but Part II must anchor biological handedness in chemistry. Recent work on prebiotic ligation shows that symmetry breaking and chiral amplification can arise in competitive peptide-forming reactions under plausible chemical constraints~\cite{Deng2024}. The CDFD claim is therefore not that vacuum chirality chooses terrestrial handedness. The claim is that once a small imbalance exists, autocatalytic or ligation networks can amplify it if cross-inhibition, solubility, templating, or differential persistence make one handedness less lossy.
+
+\textbf{Status: Hypothesis/Inferred}
+
+\section{Chemical Alphabets Before Genetic Code}
+Chemical memory requires a bridge from persistent structure to alphabet-like distinctions. CDFD does not claim that nucleobases appear fully formed at this stage. The stronger formulation is that several molecular classes can provide primitive alphabets:
+\begin{itemize}
+\item redox cofactors and quinone-like species encode electron-state differences;
+\item short peptides or amino-acid-like oligomers encode catalytic surface preferences;
+\item nucleobase-like aromatics encode hydrogen-bonding and stacking patterns;
+\item disordered aromatic polymers encode persistence and redox-buffer states, but not sequence information by themselves.
+\end{itemize}
+The transition to heredity requires that at least one alphabet becomes templatable, copyable, and selectable. Paper 9 takes up that stricter requirement.
+
+\textbf{Status: Inferred}
+
+\section{Wet--Dry and Cycling Environments}
+Autocatalytic closure may need more than one steady environment. Wet--dry cycles, freezing/thawing, tidal concentration, evaporation, and vent pulsation can alternately concentrate monomers, drive condensation, rehydrate products, and select stable networks. In the present framework these cycles modulate both $\Phi(t)$ and $C(t)$:
+\begin{equation}
+\Gamma_{\mathrm{closure}}(t)
+=
+\frac{k_{\mathrm{auto}}c(t)L(t)^2 C(t)}
+{1+\ell_{\mathrm{side}}(t)}.
+\end{equation}
+The relevant question is whether a network survives the full cycle, not whether it grows in a single favorable interval.
+
+\textbf{Status: Hypothesis}
+
+\section{Cyanosulfidic and Mixed-Precursor Chemistry}
+Metabolism, peptides, lipids, and nucleotides should not be treated as isolated chemical universes. The cyanosulfidic chemistry program demonstrates that RNA, amino-acid, and lipid precursor chemistry can be connected under shared photoredox and sulfur chemistry assumptions~\cite{Patel2015}. Related work on prebiotic selection from complex mixtures shows that plausible chemistry can enrich biologically relevant building blocks without assuming a clean reagent list~\cite{Islam2017}.
+
+This strengthens the CDFD interpretation of autocatalytic closure. Closure is not merely a loop in an abstract reaction graph. It is a filter on messy chemical space:
+\begin{equation}
+\mathcal{N}_{t+1}
+=
+\mathcal{S}\!\left(\mathcal{N}_t,\Phi,C,\mathrm{feedstock},\mathrm{cycle}\right),
+\end{equation}
+where $\mathcal{S}$ selects reactions that persist through energy input, surface contact, hydration changes, and side-reaction pressure.
+
+\textbf{Status: Inferred}
+
+\section{Nucleotide and Template Chemistry Boundary}
+Activated pyrimidine ribonucleotide synthesis under plausible conditions is a major anchor for any RNA-adjacent OOL story~\cite{Powner2009}. Mineral-surface oligomerization experiments provide a second anchor for polymer formation~\cite{Ferris1996}. However, CDFD should distinguish three layers:
+\begin{itemize}
+\item precursor selection: making feedstock biased toward useful monomers;
+\item oligomer formation: building polymers longer than random hydrolysis permits;
+\item templating: copying sequence or pattern with bounded error.
+\end{itemize}
+Paper 7 reaches the first two layers only in principle. Paper 9 is where templating and error thresholds become explicit.
+
+\textbf{Status: Derived}
+
+\section{Limitations and Open Problems}
+\begin{itemize}
+\item No explicit racemization pathways or chiral mineral surfaces.
+\item Single scalar ``pattern strength'' hides sequence information.
+\item Environmental UV and radical chemistry not modeled.
+\end{itemize}
+
+\textbf{Status: Open}
+
+\section{Conclusion}
+This paper links flux-heavy environments to aromatic survivability and introduces chirality dynamics as a hypothesis. Paper 9 later formalizes replication fidelity and error thresholds~\cite{Orgel1963,Eigen1971}.
+
+\textbf{Status: Inferred}
+
+\section{Reproducibility Note}
+\begin{verbatim}
+python supplementary_ool_07.py
+\end{verbatim}
+The script writes compact reproducibility outputs under \texttt{outputs/paper\_07/}.
+\bibliographystyle{plain}
+\bibliography{ool_references}
+\end{document}

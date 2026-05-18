@@ -1,0 +1,36 @@
+{
+  "paper": 4,
+  "model": "structured interfacial-water proton flux toy model",
+  "minimum_disorder_floor": 0.05,
+  "rows": [
+    {
+      "gradient": 0.5,
+      "final_disorder": 0.05,
+      "final_proton_flux": 38.969231412106616,
+      "final_s": 40.05486772319023,
+      "final_ms": 48.76677620139383
+    },
+    {
+      "gradient": 1.0,
+      "final_disorder": 0.05,
+      "final_proton_flux": 106.23773220645629,
+      "final_s": 73.32877037769747,
+      "final_ms": 78.37205071804209
+    },
+    {
+      "gradient": 3.0,
+      "final_disorder": 0.05,
+      "final_proton_flux": 360.9649063288071,
+      "final_s": 92.52015063590653,
+      "final_ms": 95.66745964995725
+    },
+    {
+      "gradient": 5.0,
+      "final_disorder": 0.05,
+      "final_proton_flux": 613.4818450964598,
+      "final_s": 95.9733769173238,
+      "final_ms": 98.66964097421285
+    }
+  ],
+  "interpretation": "Stronger gradients drive the disorder proxy toward its floor and raise the proton-flux proxy."
+}

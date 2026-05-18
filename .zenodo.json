@@ -1,0 +1,57 @@
+{
+  "title": "CDFD Part II: Origins of Life and Tri-Regime Bioenergetics - Constraint-Driven Flux Dynamics",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Mujjabi, Steve Bico, MD",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0001-0556-5516"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Constraint-Driven Flux Dynamics",
+    "CDFD",
+    "CDFL",
+    "CDFD Runtime",
+    "origins of life",
+    "abiogenesis",
+    "prebiotic chemistry",
+    "geochemistry",
+    "bioenergetics",
+    "alkaline hydrothermal vents",
+    "iron-sulfur chemistry",
+    "magnetite",
+    "interfacial water",
+    "proton gradients",
+    "wet-dry cycling",
+    "thermal gradients",
+    "phosphate activation",
+    "autocatalysis",
+    "chemical memory",
+    "chemical alphabets",
+    "homochirality",
+    "coacervates",
+    "protocells",
+    "thioesters",
+    "RNA aminoacylation",
+    "error threshold",
+    "parasitic threshold",
+    "photochemistry",
+    "photoredox chemistry",
+    "tri-regime bioenergetics",
+    "Life Number",
+    "Mujjabi Life Number",
+    "reproducible research",
+    "open science",
+    "preprint"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20250821",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ],
+  "description": "Public Part II origins-of-life archive for the Constraint-Driven Flux Dynamics project. The release includes a twelve-paper manuscript spine, compiled PDFs, LaTeX sources, supplementary Python scripts, generated figures and checks, interactive panels, bibliography, named laws/tests, and reproducibility instructions. Part II explicitly cites CDFD Part I DOI 10.5281/zenodo.20250821 for CDFL, the public flow-constraint-memory language, and aligns the manuscript archive with the public CDFD Runtime. The archive is released as open preprint material with reproducible toy diagnostics; it is not peer reviewed and does not by itself establish empirical validation of origin-of-life hypotheses."
+}

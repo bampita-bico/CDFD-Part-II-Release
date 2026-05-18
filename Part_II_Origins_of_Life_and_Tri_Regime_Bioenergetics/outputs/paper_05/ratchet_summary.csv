@@ -1,0 +1,5 @@
+scenario,period,activation,retention,hydrolysis,final_product,final_memory,ratchet_state
+steady_wet,8.0,0.08,0.25,0.3,0.15063234148783228,0.7345530117565234,weak_or_lost
+fast_cycle,2.0,0.12,0.45,0.22,0.2561262373153402,1.5737900635960287,retained
+slow_wet_dry,8.0,0.18,0.7,0.2,0.2612313509590255,3.3949771120371786,retained
+overheated_loss,8.0,0.2,0.25,0.65,0.06471905502564537,0.44392401366558015,weak_or_lost

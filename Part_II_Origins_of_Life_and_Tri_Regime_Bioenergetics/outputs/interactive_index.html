@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Part II Interactive Panels</title><style>
+:root{--ink:#18242b;--muted:#5f6c73;--line:#c9d3d8;--bg:#f6f8f9;--paper:#fff;--blue:#286f9f;--red:#ad5149}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+header{padding:26px 34px 15px;border-bottom:1px solid var(--line);background:#fbfcfc}h1{margin:0 0 8px;font-size:26px;line-height:1.2}h2{margin:0 0 12px;font-size:18px}
+p{margin:0 0 10px;line-height:1.45;color:var(--muted)}main{max-width:1240px;margin:0 auto;padding:24px 26px 40px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel,.controls,.note{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:15px}
+.controls{margin-bottom:16px}.row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}label{display:block;font-size:13px;color:var(--muted);margin:0 0 4px}
+select{width:100%;padding:7px;border:1px solid var(--line);background:white}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.metrics div{background:white;border:1px solid var(--line);border-radius:6px;padding:10px}.metrics b{display:block;font-size:16px;overflow-wrap:anywhere}.metrics span{font-size:12px;color:var(--muted)}
+svg{width:100%;height:380px;border:1px solid var(--line);border-radius:8px;background:white}.figure{width:100%;height:500px;border:1px solid var(--line);border-radius:8px;background:white;display:grid;place-items:center;overflow:hidden}
+.figure img{max-width:100%;max-height:100%;display:block}.links a{display:inline-block;margin:0 8px 8px 0;color:var(--blue)}
+table{border-collapse:collapse;width:100%;font-size:12px;background:white}th,td{border:1px solid #d7dee2;padding:5px;text-align:left;vertical-align:top}th{background:#eef3f6}.tablebox{max-height:430px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:white}
+pre{white-space:pre-wrap;overflow:auto;background:white;border:1px solid var(--line);border-radius:8px;padding:10px;margin:0;color:#2a343a}
+@media(max-width:980px){.grid,.row{grid-template-columns:1fr}.figure{height:380px}.metrics{grid-template-columns:1fr 1fr}}
+</style></head>
+<body><header><h1>Part II Interactive Panels</h1><p>Local HTML dashboards for the output-bearing origins-of-life papers.</p></header>
+<main><section class="panel"><p><a href="paper_02/interactive_panel.html">Paper 2: Iron-Sulfur Redox and Mineral Constraint Scaffolds</a></p><p><a href="paper_03/interactive_panel.html">Paper 3: Magnetite Networks and Distributed Electron Transport</a></p><p><a href="paper_04/interactive_panel.html">Paper 4: Interfacial Water and Proto-Chemiosmosis</a></p><p><a href="paper_05/interactive_panel.html">Paper 5: Oscillating Constraints and Polymerization Ratchet</a></p><p><a href="paper_06/interactive_panel.html">Paper 6: Autocatalytic Closure and Chemical Memory</a></p><p><a href="paper_07/interactive_panel.html">Paper 7: Aromatic Alphabets and Homochirality</a></p><p><a href="paper_08/interactive_panel.html">Paper 8: Boundaries and Coacervate Phase Separation</a></p><p><a href="paper_09/interactive_panel.html">Paper 9: Protocell Integration and Error Thresholds</a></p><p><a href="paper_10/interactive_panel.html">Paper 10: Parasitic Threshold and Boundary Logic</a></p><p><a href="paper_11/interactive_panel.html">Paper 11: Photochemical Capture and Overload Stabilization</a></p><p><a href="paper_12/interactive_panel.html">Paper 12: Tri-Regime Bioenergetics and Falsification</a></p></section><section class="note"><p>Panels preview existing figures, render quick charts from CSV outputs, and expose each paper's summary JSON. Paper 1 has no generated panel because it cites no generated diagnostic output.</p></section></main></body></html>

@@ -1,0 +1,566 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{longtable}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\onehalfspacing
+
+\title{\textbf{Paper OOL-12: Master Synthesis of Origins-of-Life CDFD:\\ Tri-Regime Bioenergetics, Life Number, and Falsification Program}}
+\author{Steve Bico Mujjabi, MD\\
+\small Independent Researcher\\
+\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This capstone manuscript synthesizes the revised twelve-paper Part II origins-of-life sequence. The central claim is not that life is proven inevitable, nor that a single molecule or environment is mandatory. The claim is that life-like persistence requires a coupled dependency graph: sustained input, electron transport, proton/ion coupling, retention, autocatalytic closure, information stability, replication with bounded error, defense against parasitic drains, and stabilization against overload. We define the Life Number ($\Lambda_{\mathrm{life}}$) as a release-level bookkeeping gauge for transitions from decay ($\Lambda_{\mathrm{life}}<1$), to near-critical proto-biology ($\Lambda_{\mathrm{life}}\approx1$), to sustained self-maintenance ($\Lambda_{\mathrm{life}}>1$).
+\end{abstract}
+
+\section{Introduction}
+The narrative mapped in this series is a dependency graph rather than a rigid geological clock. Each step supplies a function that the next step uses or stresses.
+\begin{enumerate}
+    \item \textbf{Thermodynamic framing}: sustained disequilibrium creates the possibility of organized dissipation.
+    \item \textbf{Geochemical crucibles}: mineral redox, mixed-valence transport, and interfacial water localize electron and proton/ion work.
+    \item \textbf{Oscillating constraints}: cycling environments provide a route to retained polymers and pattern memory.
+    \item \textbf{Autocatalytic closure}: reaction loops begin to reinforce their own production.
+    \item \textbf{Topological boundaries}: mineral pores, films, coacervates, and soft compartments raise retention and create adaptive surfaces.
+    \item \textbf{Proto-cell integration}: copying, energy flow, and container persistence must covary.
+    \item \textbf{Parasitic threshold}: successful copying creates exploitative failure modes and pressure for boundary logic.
+    \item \textbf{Photochemical expansion}: light or other stronger inputs can expand the energy channel without being required at the first origin step.
+    \item \textbf{Master synthesis}: the chain is evaluated as a tri-regime persistence criterion.
+\end{enumerate}
+
+\section{Notation and Symbol Discipline}
+Part II uses CDFL symbols as measurement targets, not decoration. The local CDFD adaptive ratio remains
+\begin{equation}
+    \Psi_s=\left(\frac{\Phi}{C}\right)SM_s,
+\end{equation}
+where $\Phi$ is local drive, $C$ is effective resistance or constraint, $S$ is responsive organization, and $M_s$ is retained structural memory. In this capstone we reserve $\Lambda_{\mathrm{life}}$ for the integrated Life Number. We reserve $B_{\mathrm{stab}}$ for stabilization burden so that it is not confused with the local responsiveness symbol $S$.
+
+The main capstone variables are:
+\begin{center}
+\small
+\begin{tabular}{p{0.18\textwidth}p{0.68\textwidth}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$I_E$ & Usable environmental energy input after coupling to a chemical or mineral pathway. \\
+$\sigma_e$ & Effective electron-transport conductance. \\
+$\sigma_p$ & Effective proton or ion coupling conductance. \\
+$\tau_{\mathrm{relax}}$ & Time over which structure persists after perturbation. \\
+$B_{\mathrm{stab}}$ & Stabilization burden from radical load, heat, photodamage, hydrolysis, or uncoupled side reactions. \\
+$E_{\mathrm{maintenance}}$ & Energy cost of repair, boundary maintenance, and retained organization. \\
+$\Lambda_{\mathrm{life}}$ & Integrated surplus ratio for decay, near-critical, and sustained regimes. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Status: Derived notation}
+
+\section{Tri-Regime Bioenergetics}
+All of these transitions are governed by a shared physical question: does usable coupled throughput exceed the cost of maintaining organization? We define the Life Number ($\Lambda_{\mathrm{life}}$) as the integrated bioenergetic form of the local adaptive ratio:
+\begin{equation}
+    \Lambda_{\mathrm{life}} =
+    \frac{I_E \cdot \sigma_e \cdot \sigma_p \cdot \tau_{\mathrm{relax}}}
+    {B_{\mathrm{stab}} \cdot E_{\mathrm{maintenance}}}.
+\end{equation}
+
+The classical CDFD parameters map to bioenergetic requirements as follows:
+\begin{itemize}
+    \item \textbf{Flux ($\Phi$)}: represented by energy input ($I_E$) captured through geochemical, photochemical, or hydrothermal means.
+    \item \textbf{Constraint ($C$)}: The maintenance energy ($E_{\mathrm{maintenance}}$) required to repair or preserve boundaries, catalysts, polymers, and inherited organization.
+    \item \textbf{Responsiveness ($S$)}: structural elasticity and routing capacity, amplified by electron transport ($\sigma_e$) and proton/ion coupling ($\sigma_p$).
+    \item \textbf{Memory ($M_s$)}: Reflected in the relaxation time ($\tau_{\mathrm{relax}}$) of the structural network. Stable, high-memory polymers allow the system to maintain its configuration without instantly degrading back into chaos.
+    \item \textbf{Stabilization burden ($B_{\mathrm{stab}}$)}: The damage and dissipation load that must be buffered before extra input becomes useful work.
+\end{itemize}
+
+\subsection{The Three Regimes of Emergence}
+\begin{enumerate}
+    \item \textbf{Decay-dominated ($\Lambda_{\mathrm{life}} < 1$)}: Energy flows, but structures cannot maintain themselves against hydrolysis, dilution, side reactions, and transport loss.
+    \item \textbf{Near-critical proto-biological ($\Lambda_{\mathrm{life}} \approx 1$)}: A compartmental or surface-bound system marginally maintains itself and is sensitive to cycling, feedstock, and boundary perturbations.
+    \item \textbf{Sustained/self-maintaining ($\Lambda_{\mathrm{life}} > 1$)}: Coupled input, transport, retention, memory, and stabilization leave surplus capacity for repair, growth, division, or complexity accumulation.
+\end{enumerate}
+
+\section{The Corrected Synthesis}
+
+The OOL sequence is clearest when written as a dependency graph rather than a substance list. The earliest transition does not require literal chlorophyll, literal melanin, or any single privileged molecule. It requires a system that can keep useful work localized long enough for chemistry to become self-reinforcing.
+
+The corrected one-line thesis is:
+\begin{quote}
+Life begins when constrained flux becomes coupled, retained, self-amplifying, information-stabilizing, and repairable above its maintenance cost.
+\end{quote}
+
+Papers 1--10 establish the mineral, chemical, protocellular, replication, and boundary-defense side of that transition~\cite{Russell1994,Martin2007,Lane2010,Szostak2010}. Paper 11 clarifies that photochemical energy capture expands the energy-input channel but should not be confused with the first emergence of proto-life. This paper joins both tracks into the four-channel/three-regime model.
+
+\textbf{Status: Derived as series synthesis}
+
+\section{Functional Ontology}
+
+\begin{definition}[Functional Material Class]
+A functional material class is any set of substrates that performs a required dynamical role in the CDFD OOL model, regardless of whether the modern exemplar existed at the origin of life.
+\end{definition}
+
+The main classes are:
+\begin{center}
+\small
+\begin{tabular}{p{0.20\textwidth}p{0.13\textwidth}p{0.25\textwidth}p{0.32\textwidth}}
+\toprule
+Role & Symbol & Function & Example implementations \\
+\midrule
+Energy input & $I_E$ & Supplies usable drive & Fe--S redox, electron donors, photoredox minerals, pigments \\
+Electron transport & $\sigma_e$ & Moves reducing equivalents & Fe--S clusters, magnetite-like phases, quinones, ETC cofactors \\
+Proton/ion coupling & $\sigma_p$ & Couples charge flow to work & Interfacial water, pH gradients, proton relays, membranes \\
+Stabilization burden & $B_{\mathrm{stab}}$ & Penalizes damage/dissipation & Radical load, heat, hydrolysis, photodamage, repair burden \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Modern names are mnemonic only. ``Chlorophyll-like'' means energy capture. ``Magnetite-like'' means distributed electron conductance. ``Water-like'' means proton or ion coherence. ``Melanin-like'' means dissipation buffering.
+
+The model is wrong if these labels are read as mandatory historical substances.
+
+\textbf{Status: Derived}
+
+\section{Revised OOL Flow}
+
+\begin{longtable}{p{0.08\textwidth}p{0.24\textwidth}p{0.40\textwidth}p{0.14\textwidth}}
+\toprule
+Stage & Main bottleneck & CDFD resolution & Current paper \\
+\midrule
+\endhead
+1 & No common language for persistence & Thermodynamic notation defines flux, constraint, responsiveness, and memory & Paper 1 \\
+2 & Redox work is not localized & Fe--S redox interfaces localize chemical drive & Paper 2 \\
+3 & Redox sites are isolated & Mixed-valence networks distribute electron flow & Paper 3 \\
+4 & Electrons lack proton/ion partner & Structured interfacial fluids couple charge channels & Paper 4 \\
+5 & Products wash out or hydrolyze & Cycling raises concentration, activation, and retained product memory & Paper 5 \\
+6 & Chemistry is not self-reinforcing & Autocatalytic closure beats diffusive loss & Paper 6 \\
+7 & Patterns decay or scramble & Aromatics, alphabets, and chiral amplification improve pattern persistence & Paper 7 \\
+8 & Chemistry lacks movable retention & Mineral pores, interfaces, coacervates, and vesicles create adaptive boundaries & Paper 8 \\
+9 & Replication loses information & Flux-dependent fidelity bounds error & Paper 9 \\
+10 & Exploiters drain copied systems & Specificity and boundary logic suppress parasitic access & Paper 10 \\
+11 & External energy input can expand & Photochemical/material amplifiers raise $I_E$ when coupled and buffered & Paper 11 \\
+12 & Claims need one falsifiable synthesis & $\Lambda_{\mathrm{life}}$ organizes decay, near-critical, and sustained regimes & Paper 12 \\
+\bottomrule
+\caption{Corrected dependency graph for the Part II origins-of-life sequence. The order is logical rather than a rigid geological timeline.}
+\end{longtable}
+
+This table restores the flow: energy capture comes before overload stabilization, while modern plant biochemistry remains a later example.
+
+\textbf{Status: Derived}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{outputs/paper_12/master_synthesis_regimes.png}
+\caption{Capstone numerical diagnostic. The left panel shows the three-regime Life Number interpretation. The middle panel shows how environmental cycling can move a localized system across the persistence threshold. The right panel illustrates LLPS-like heterogeneity as a compartment-forming constraint field.}
+\end{figure}
+
+
+\section{Relationship to the Part I DOI}
+Part II is the biological-origin continuation of the CDFD program introduced in Part I~\cite{MujjabiPartI2026}. The correct citation chain is therefore explicit: Part I defines CDFL, the public flow--constraint--responsiveness--memory language and broader CDFD threshold grammar; Part II applies that language to origin-of-life dependency order. A reader can reject the stronger physical interpretations in Part I and still evaluate Part II as a coarse-grained origin-of-life control framework.
+
+\textbf{Status: Derived citation boundary}
+
+\section{The Four-Channel Throughput Model}
+
+Let $I_E$ be usable input energy after environmental coupling. It may come from geochemical redox gradients, electron donors, mineral photochemistry, or mature photosynthetic pigments. Let $\bar{\sigma}_e$ be effective electron transport conductance, $\bar{\sigma}_p$ effective proton/ion coupling, and $B_{\mathrm{stab}}$ the stabilization burden.
+
+The mean usable throughput is:
+\begin{equation}
+    \bar{J} =
+    I_E \frac{\bar{\sigma}_e \bar{\sigma}_p}{B_{\mathrm{stab}}}.
+    \label{eq:mean-throughput}
+\end{equation}
+
+The weakest-link constraint remains:
+\begin{equation}
+    J_{\max} \leq
+    \min(I_E,\bar{\sigma}_e,\bar{\sigma}_p,1/B_{\mathrm{stab}}).
+    \label{eq:weakest-link}
+\end{equation}
+
+Equation~\eqref{eq:weakest-link} is why the series cannot be reduced to one favored substance. A better energy absorber does not help if electron transport is absent. Better electron transport does not help if proton coupling is incoherent. Better coupling does not help if products wash out. Better flux does not help if overload destroys the system.
+
+\textbf{Status: Derived}
+
+\section{The Three Regimes and the Life Number}
+
+\begin{definition}[Life Number]
+\begin{equation}
+    \Lambda_{\mathrm{life}} =
+    \frac{I_E \bar{\sigma}_e \bar{\sigma}_p \tau_{\mathrm{relax}}}
+    {B_{\mathrm{stab}} E_{\mathrm{maintenance}}},
+    \label{eq:life-number}
+\end{equation}
+where $\tau_{\mathrm{relax}}$ is the characteristic time over which the system preserves organization and $E_{\mathrm{maintenance}}$ is the energetic cost of maintaining coherent structure over that interval.
+\end{definition}
+
+$\Lambda_{\mathrm{life}}$ is a dimensionless surplus ratio. Its numerator is usable coupled throughput retained over time. Its denominator is the cost of not falling apart.
+
+\begin{center}
+\small
+\begin{tabular}{p{0.20\textwidth}p{0.25\textwidth}p{0.42\textwidth}}
+\toprule
+Condition & Regime & Interpretation \\
+\midrule
+$\Lambda_{\mathrm{life}}<1$ & Decay-dominated & Dissipation, dilution, and damage exceed useful work \\
+$\Lambda_{\mathrm{life}}\approx1$ & Near-critical/proto-biological & Marginal self-maintenance; perturbation-sensitive \\
+$\Lambda_{\mathrm{life}}>1$ & Sustained/self-maintaining & Surplus supports repair, replication, and complexity accumulation \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The phrase ``tri-regime'' therefore refers to three dynamical regimes, not three materials.
+
+\textbf{Status: Derived}
+
+\section{Relation to \texorpdfstring{$\Psi_s=(\Phi/C)SM_s$}{Psi = Phi/C}}
+
+The local CDFD adaptive ratio is:
+\begin{equation}
+    \Psi_s=\left(\frac{\Phi}{C}\right)SM_s.
+\end{equation}
+
+In a single-channel system, higher driving flux $\Phi$, lower effective constraint $C$, stronger responsiveness $S$, or longer memory $M_s$ increases the chance of persistent structure. The Life Number is the multi-channel generalization:
+\begin{equation}
+    \Psi_s \quad \longrightarrow \quad
+    \Lambda_{\mathrm{life}} =
+    \frac{I_E \bar{\sigma}_e \bar{\sigma}_p \tau_{\mathrm{relax}}}
+    {B_{\mathrm{stab}} E_{\mathrm{maintenance}}}.
+\end{equation}
+
+The mapping is not a claim that all channels are literally identical. It says that both quantities compare usable drive and retained organization against constraining cost. $\Psi_s$ is the local adaptive form; $\Lambda_{\mathrm{life}}$ is the integrated bioenergetic form.
+
+\textbf{Status: Derived}
+
+\section{Geochemistry to Biology}
+
+\begin{theorem}[Structural Geochemistry--Biology Isomorphism]
+At the operator level, abiotic geochemical adaptation and biological maintenance can be represented by the same flux-constraint equation class.
+\end{theorem}
+
+\begin{proof}
+For a geochemical system, write:
+\begin{equation}
+    \frac{\partial C_{\mathrm{geo}}}{\partial t}
+    =
+    \alpha_{\mathrm{geo}}|\Phi_{\mathrm{geo}}|
+    -\beta_{\mathrm{geo}}C_{\mathrm{geo}}
+    +\gamma_{\mathrm{geo}}\nabla^2C_{\mathrm{geo}}.
+\end{equation}
+Here $C_{\mathrm{geo}}$ is mineral or transport constraint, $\Phi_{\mathrm{geo}}$ is environmental forcing, $\alpha_{\mathrm{geo}}$ captures precipitation or channel formation, $\beta_{\mathrm{geo}}$ captures dissolution or degradation, and $\gamma_{\mathrm{geo}}$ captures spatial smoothing.
+
+For a biological or proto-biological maintenance system, write:
+\begin{equation}
+    \frac{\partial C_{\mathrm{bio}}}{\partial t}
+    =
+    \alpha_{\mathrm{bio}}|\Phi_{\mathrm{bio}}|
+    -\beta_{\mathrm{bio}}C_{\mathrm{bio}}
+    +\gamma_{\mathrm{bio}}\nabla^2C_{\mathrm{bio}}.
+\end{equation}
+Here $C_{\mathrm{bio}}$ is maintenance burden, damage state, or adaptive constraint; $\Phi_{\mathrm{bio}}$ is metabolic throughput; and the remaining coefficients describe repair, degradation, and spatial propagation.
+
+The equations share the same operator structure under the substitution
+\begin{align*}
+    C_{\mathrm{geo}} &\leftrightarrow C_{\mathrm{bio}},\\
+    \Phi_{\mathrm{geo}} &\leftrightarrow \Phi_{\mathrm{bio}},\\
+    \alpha_{\mathrm{geo}},\beta_{\mathrm{geo}},\gamma_{\mathrm{geo}}
+    &\leftrightarrow
+    \alpha_{\mathrm{bio}},\beta_{\mathrm{bio}},\gamma_{\mathrm{bio}}.
+\end{align*}
+Therefore the transition from geochemistry to biology can be modeled as parameter refinement inside a common equation class, not as the introduction of a new dynamical principle.
+\end{proof}
+
+\textbf{Status: Derived structurally; Open quantitatively}
+
+\begin{corollary}
+The origin of life is a regime crossing in coupled flux-constraint space. It occurs when a localized chemical system raises $\Lambda_{\mathrm{life}}$ from below unity to near or above unity and can maintain that state against dilution, damage, and error.
+\end{corollary}
+
+\textbf{Status: Inferred}
+
+\section{Where Photochemistry Belongs}
+
+Photochemical capture is an energy-input expansion, not the first mandatory step. In early settings, $I_E$ may be supplied by vent redox gradients, Fe$^{2+}$, H$_2$, H$_2$S, pH gradients, or mineral surface chemistry. Photochemical materials become important when they allow the system to harvest light and decouple from a purely local geochemical source.
+
+Modern chlorophyll illustrates the high-performance endpoint:
+\begin{equation}
+    \Phi_{\mathrm{RC}} =
+    \eta_{\mathrm{transfer}} N_{\mathrm{antenna}}
+    \Phi_{\mathrm{photon-per-pigment}}.
+\end{equation}
+
+But the prebiotic claim is broader: any material that increases $I_E$ while remaining coupled to $\bar{\sigma}_e$ and $\bar{\sigma}_p$ can push $\Lambda_{\mathrm{life}}$ upward. This includes weaker and earlier candidates such as photoredox minerals, porphyrinoid precursors, flavins, quinones, and other chromophores.
+
+\textbf{Status: Inferred; Open historical assignment}
+
+\section{Where Stabilization Belongs}
+
+Stabilization follows energy capture in the causal order. Once $I_E$ rises, damage risk rises too:
+\begin{equation}
+    \Psi_{s,\mathrm{overload}} =
+    \frac{I_E}{C_{\mathrm{use}}+C_{\mathrm{diss}}}.
+\end{equation}
+If the usable and dissipative capacities cannot absorb input, side reactions, radical chemistry, photobleaching, and thermal disorder increase $S$.
+
+Melanin-like language means any process that reduces effective $S$ without collapsing useful channels. Modern examples include carotenoids, non-photochemical quenching, melanins, polyphenols, enzymatic antioxidants, and repair cycles. Prebiotic analogues could include disordered aromatic polymers, mineral screens, sacrificial redox buffers, or radical sinks. Literal melanin is not required for the earliest origin.
+
+\textbf{Status: Inferred}
+
+\section{Phosphate Quantization and Phase Separation}
+
+Two later transitions fit naturally into the same model.
+
+First, phosphate chemistry discretizes energy handling:
+\begin{equation}
+    E_{\mathrm{packet}} = n\Delta E_P,\qquad n\in\mathbb{Z}^{+}.
+\end{equation}
+Discrete packets reduce uncontrolled dissipation and make reaction coupling more precise. In Eq.~\eqref{eq:life-number}, this can lower $S$ and improve effective $\bar{\sigma}_p$.
+
+Second, phase separation and soft compartments provide dynamic localization before full lipid-cell architecture. LLPS, coacervates, gels, and mineral-organic films all increase residence time and co-localization~\cite{Hanczyc2003,Szostak2010}. These mechanisms sit between mineral pores and modern membranes in the dependency graph.
+
+\textbf{Status: Inferred}
+
+\section{Additional OOL Transitions Now Captured}
+The current twelve-paper spine should explicitly preserve several ideas that are easy to lose when separate mechanism threads are merged.
+
+\subsection{Mineral to soft compartment}
+Mineral pores localize chemistry first, but soft compartments matter later because they can grow, divide, deform, and inherit internal composition. In CDFD notation this is a transition from externally imposed constraint to partially self-maintained constraint:
+\begin{equation}
+C_{\mathrm{boundary}}
+=
+C_{\mathrm{mineral}}
++\eta(t)C_{\mathrm{organic}}
++\chi(t)C_{\mathrm{amphiphile}}.
+\end{equation}
+When $\eta$ and $\chi$ increase, the boundary becomes less purely geological and more proto-biological.
+
+\subsection{Phosphate and energy packets}
+Continuous flux is not enough for heredity. The system also needs reusable energetic packets or coupling currencies. Phosphate chemistry is one modern endpoint, but the broader claim is quantized coupling: energy must become deliverable to specific reactions instead of remaining diffuse heat or bulk redox disequilibrium.
+
+\subsection{Environmental cycling}
+Drying, rewetting, freezing, heating, vent pulsation, and day--night illumination can act as external clocks. A system that survives only at a steady optimum is fragile. A more realistic proto-biological candidate should persist through cycles:
+\begin{equation}
+\Psi_{s,\mathrm{cycle}}
+=
+\prod_{k=1}^{N}
+\frac{I_E^{(k)}\sigma_e^{(k)}\sigma_p^{(k)}\tau_k}
+{B_{\mathrm{stab}}^{(k)}E_{\mathrm{maintenance}}^{(k)}}.
+\end{equation}
+The product form is schematic, but it captures the idea that repeated sub-events can either accumulate resilience or erase the system.
+
+\subsection{Material agnosticism}
+Named materials are examples. Fe--S, magnetite, structured water, chlorophyll, and melanin are not mandatory steps. The required sequence is functional: input, transport, coupling, retention, closure, information, replication, capture expansion, and overload stabilization.
+
+\textbf{Status: Derived synthesis}
+
+\section{Reference-Layer Synthesis}
+The expanded bibliography clarifies that CDFD is not choosing a single traditional origin scenario. It is integrating constraints from several partially compatible literatures and from field-level reviews that treat origin-of-life research as a plural, planetary problem~\cite{Preiner2020,Sasselov2020}:
+\begin{itemize}
+\item alkaline hydrothermal vents provide a fed redox-gradient and mineral-compartment architecture~\cite{Russell1994,Martin2007,Sojo2016};
+\item critiques of vent-gradient sufficiency force explicit coupling tests instead of narrative certainty~\cite{Jackson2016};
+\item hot-spring and wet--dry settings emphasize cycling, concentration, and dehydration chemistry~\cite{Damer2020};
+\item cyanosulfidic photochemistry links nucleotide, amino-acid, and lipid precursor chemistry under shared environmental assumptions~\cite{Patel2015};
+\item model protocells show that compartments, growth, division, and nonenzymatic replication can be experimentally coupled~\cite{Hanczyc2003,Mansy2008,Adamala2013};
+\item coacervates and phase-separated droplets provide non-lipid soft-compartment routes~\cite{Matsuo2021,Nakashima2021};
+\item UV-environment studies define which surface photochemistry is plausible~\cite{Ranjan2017,Ranjan2022}.
+\end{itemize}
+The series therefore reads as a constraint map across environments rather than as a single-site narrative.
+
+\textbf{Status: Derived}
+
+\section{Master Falsification Matrix}
+The master paper states what would weaken or falsify each layer:
+\begin{center}
+\small
+\begin{tabular}{p{0.20\textwidth}p{0.34\textwidth}p{0.36\textwidth}}
+\toprule
+Layer & CDFD expectation & Strong disconfirming result \\
+\midrule
+Mineral redox & Fed mineral interfaces localize usable work & No product or redox coupling advantage over bulk controls \\
+Transport & Mixed-valence networks improve source--sink coupling & Conductive phases do not alter downstream chemistry \\
+Proton/ion coupling & Electron and proton/ion currents must co-localize & Robust proto-metabolism without local charge compensation \\
+Compartments & Retention changes reaction-network fate & Open dilution performs as well as confined/cycled systems \\
+Information & Durable alphabets must persist through noise & No plausible molecular class can carry persistent patterns \\
+Replication & Bounded error is required for heredity & Long templated heredity persists below error-threshold constraints \\
+Photochemistry & Light helps only when coupled and buffered & Photochemical input only damages, never expands usable throughput \\
+\bottomrule
+\end{tabular}
+\end{center}
+This matrix keeps the series ambitious but falsifiable.
+
+\textbf{Status: Derived}
+
+\section{Validation Program and Future Experiments}
+The framework becomes scientifically useful only if it generates experiments that can fail. The following program translates the twelve-paper chain into test classes.
+
+\begin{enumerate}
+    \item \textbf{Matched mineral-reactor tests.} Build paired fed reactors with identical pH, temperature, feedstock, residence time, and surface area. Vary only the connected Fe--S or mixed-valence bridge. The expected signal is not ``life,'' but a reproducible change in downstream redox state and product distribution relative to disconnected or inert controls.
+    \item \textbf{Electron--proton co-localization tests.} Measure redox current, pH microgradients, ion flux, and product formation in the same pore network. CDFD predicts that chemistry improves when electron and proton/ion channels overlap in space and time, not merely when either channel exists alone.
+    \item \textbf{Cycling-retention tests.} Compare wet--dry, thermal-gradient, freeze--thaw, and continuously wet controls using the same monomer pool. The score is the retained product distribution after many cycles, including hydrolysis losses, not the best single-cycle yield.
+    \item \textbf{Boundary-covariance tests.} In coacervates, vesicles, gels, or mineral--organic films, ask whether internal chemistry changes boundary growth, division, permeability, or survival. A container becomes protocellular only when internal state and boundary fate covary.
+    \item \textbf{Parasitic-drain tests.} Add noncontributing templates or catalytic freeloaders to compartmental copying systems. The CDFD expectation is collapse unless specificity, exclusion, degradation, or boundary partitioning is introduced.
+    \item \textbf{Photochemical-overload tests.} Raise light or photoredox input while independently varying electron transport, proton/ion coupling, and buffering materials. Useful capture should appear only in the coupled-and-buffered region; otherwise light should increase damage, side products, or bleaching.
+    \item \textbf{Cross-environment Life Number ranking.} Estimate $I_E$, $\sigma_e$, $\sigma_p$, $\tau_{\mathrm{relax}}$, $B_{\mathrm{stab}}$, and $E_{\mathrm{maintenance}}$ for vents, ponds, hot springs, ice/eutectic settings, mineral films, and soft compartments. The model predicts ranking by coupled surplus, not by a preferred location name.
+\end{enumerate}
+
+These tests would not prove one historical path by themselves. They would identify which environments solve the required gates and which attractive stories fail under controlled comparison.
+
+\textbf{Status: Open experimental program}
+
+\section{Environmental Cycling as Boundary Condition}
+
+Static chemistry is not enough. Prebiotic systems are driven by environmental cycles that repeatedly create, erase, and re-create gradients. The model therefore treats the environment as a time-dependent boundary condition:
+\begin{align}
+    T(t) &= T_0 + \Delta T \sin(\omega_T t),\\
+    W(t) &= W_0 + \Delta W \sin(\omega_W t),\\
+    E_{\mathrm{redox}}(t) &= E_0 + \Delta E \sin(\omega_E t),\\
+    J_{\mathrm{ext}}(t) &= J_0 + A\sin(\omega_J t).
+\end{align}
+Thermal cycling changes rates and solubility. Wet--dry cycling can favor condensation during low-water phases and mobility during wet phases. Redox cycling alternates available electron donors and acceptors. Hydrodynamic cycling injects nutrients and removes waste.
+
+In CDFD notation these forcings modulate constraints:
+\begin{equation}
+    C(x,t) = C_0(x) + C_{\mathrm{env}}(x,t),
+\end{equation}
+and therefore modulate throughput:
+\begin{equation}
+    \bar{J}(t) =
+    I_E(t)\frac{\bar{\sigma}_e(t)\bar{\sigma}_p(t)}{B_{\mathrm{stab}}(t)}.
+\end{equation}
+Without forcing, many chemical systems relax toward equilibrium. With repeated forcing, systems can be tested over cycles: compartments form and dissolve, polymers synthesize and hydrolyze, and only more persistent networks remain coherent across the cycle.
+
+\textbf{Status: Inferred}
+
+\section{Autonomy, Persistence, and Death Thresholds}
+
+The transition toward individuality is not merely high flux, but persistence of a localized flux loop through environmental change. For a localized domain $\Omega$, define a flux-to-constraint efficiency proxy:
+\begin{equation}
+    \Psi_{s,\Omega} =
+    \frac{\int_{\Omega} |\bm{J}|\,dV}
+    {\int_{\Omega} C\,dV}.
+\end{equation}
+Early domains are expected to be phase-locked to the environment. A more autonomous domain stores energy and maintains internal circulation after external forcing declines.
+
+One can measure this with an autonomy index:
+\begin{equation}
+    A_{\Omega} =
+    1 -
+    \left|
+    \mathrm{corr}\left(\Psi_{s,\Omega}(t),J_{\mathrm{ext}}(t)\right)
+    \right|.
+\end{equation}
+This is only a proposed diagnostic. $A_{\Omega}\approx 0$ means the domain simply follows the environment; $A_{\Omega}\rightarrow 1$ means the internal flux state has partly decoupled from external oscillation.
+
+A localized system dies, in this model, when internal circulation and maintenance fall below the losses needed to preserve identity:
+\begin{equation}
+    \Gamma_{\Omega} =
+    \oint_{\partial\Omega} \bm{J}\cdot d\bm{l}
+    \leq
+    \Gamma_{\mathrm{crit}}.
+\end{equation}
+Equivalently, the Life Number falls below unity for longer than the relaxation time:
+\begin{equation}
+    \Lambda_{\mathrm{life}}(t)<1
+    \quad \text{for} \quad
+    \Delta t \gtrsim \tau_{\mathrm{relax}}.
+\end{equation}
+This provides a simulation criterion for persistence and collapse without claiming that a toy domain is already biologically alive.
+
+\textbf{Status: Hypothesis/Open}
+
+\section{Mature Plant Systems as Later Examples}
+
+Plants, algae, and cyanobacteria are not the origin mechanism; they are mature demonstrations of the same logic. Their channels can be mapped as:
+
+\begin{center}
+\small
+\begin{tabular}{p{0.16\textwidth}p{0.36\textwidth}p{0.38\textwidth}}
+\toprule
+Channel & Early/geochemical implementation & Mature phototroph implementation \\
+\midrule
+$I_E$ & Redox donors, mineral photochemistry & Chlorophyll antennae, photosystems \\
+$\bar{\sigma}_e$ & Fe--S/magnetite-like conductors & Plastoquinone, cytochrome $b_6f$, ferredoxin \\
+$\bar{\sigma}_p$ & Mineral-water pH gradients & Thylakoid proton motive force \\
+$S$ & Radical sinks, mineral screens, polymers & Carotenoids, NPQ, repair, antioxidants \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+C$_3$, C$_4$, and CAM are therefore downstream AFL examples: spatial and temporal solutions to carbon, water, light, and photorespiration constraints.
+
+\textbf{Status: Inferred}
+
+\section{Predictions and Falsifiability}
+
+The corrected model is falsifiable at multiple levels:
+
+\begin{enumerate}
+    \item Systems with higher coupled $I_E\bar{\sigma}_e\bar{\sigma}_p/B_{\mathrm{stab}}$ should maintain organization longer than systems with high input but poor coupling.
+    \item Mineral or soft compartments that increase retention should shift autocatalytic networks closer to closure thresholds.
+    \item Photochemical materials should raise $\Lambda_{\mathrm{life}}$ only when electron and proton/ion channels are available; uncoupled absorption should increase damage or dissipation instead.
+    \item Stabilizing materials should improve survival most strongly under high-input overload, not under starvation.
+    \item Replacing chlorophyll-like or melanin-like examples with different materials should preserve the model if the same functions are preserved.
+\end{enumerate}
+
+The model would be weakened if self-maintaining replication-like chemistry is demonstrated without persistent energy input, without co-localized charge coupling, without retention, and without any mechanism controlling damage or error.
+
+\textbf{Status: Open}
+
+\section{Limitations}
+
+\begin{itemize}
+    \item $\Lambda_{\mathrm{life}}$ is currently a coarse-grained diagnostic, not a calibrated universal constant.
+    \item The material implementation space is broad; assigning historical priority requires experiments and geochemical evidence.
+    \item The isomorphism proof is structural, not a claim that geochemistry and biology have identical coefficients.
+    \item Photochemical routes may be late, parallel, or environment-specific rather than universal.
+    \item Stabilization burden $S$ bundles many processes that should eventually be decomposed.
+\end{itemize}
+
+\textbf{Status: Open}
+
+\section{Conclusion}
+
+The CDFD origins-of-life framework is strongest when it is functional. The series should be read as:
+\begin{equation}
+\begin{aligned}
+\text{redox work}
+&\rightarrow
+\text{transport coupling}
+\rightarrow
+\text{cycling retention} \\
+&\rightarrow
+\text{closure}
+\rightarrow
+\text{information persistence}
+\rightarrow
+\text{bounded replication} \\
+&\rightarrow
+\text{parasitic defense}
+\rightarrow
+\text{photochemical expansion}
+\rightarrow
+\text{overload stabilization}.
+\end{aligned}
+\end{equation}
+
+Chlorophyll enters as a mature and powerful energy-input amplifier, not as a required first molecule. Melanin enters as one possible stabilization exemplar, not as a required origin material. This preserves the original intuition while making the papers clearer and more falsifiable: CDFD predicts the coupled functions a living transition must solve, then leaves the historical material assignment open to evidence.
+
+\textbf{Status: Inferred}
+
+\section{Reproducibility Note}
+
+Supplementary material should be script-first and paper-specific. Paper 1 is analytic and currently the only active manuscript without a generated diagnostic. Papers with generated figures should store only the matching script outputs under \texttt{outputs/paper\_XX/}. Do not include placeholder notebooks solely to preserve one-to-one numbering.
+
+\textbf{Status: Derived}
+\bibliographystyle{plain}
+\bibliography{ool_references}
+\end{document}

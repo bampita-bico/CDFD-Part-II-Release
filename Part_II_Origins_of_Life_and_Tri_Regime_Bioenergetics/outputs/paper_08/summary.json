@@ -1,0 +1,64 @@
+{
+  "paper": 8,
+  "model": "merged compartment localization and mineral-organic interface toy models",
+  "compartment_rows": [
+    {
+      "environment": "Open ocean",
+      "synthesis": 0.5,
+      "pore_constraint": 0.1,
+      "final_psi": 1.0047655089902165,
+      "final_concentration": 0.049999999999999996,
+      "final_s": 1.0086205667843562,
+      "final_ms": 7.124788266663236,
+      "state": "accumulated"
+    },
+    {
+      "environment": "Shallow pool",
+      "synthesis": 0.5,
+      "pore_constraint": 1.0,
+      "final_psi": 1.0346575805315523,
+      "final_concentration": 0.49999989831013597,
+      "final_s": 1.1026027856771425,
+      "final_ms": 7.955550262115224,
+      "state": "accumulated"
+    },
+    {
+      "environment": "Hydrothermal pore",
+      "synthesis": 0.5,
+      "pore_constraint": 5.0,
+      "final_psi": 1.1461361676210202,
+      "final_concentration": 2.377888173762499,
+      "final_s": 1.5233133394626341,
+      "final_ms": 11.161665527322516,
+      "state": "accumulated"
+    },
+    {
+      "environment": "Deep sealed cavity",
+      "synthesis": 0.5,
+      "pore_constraint": 20.0,
+      "final_psi": 2.1848651228417895,
+      "final_concentration": 5.285487453278287,
+      "final_s": 2.9060459071140388,
+      "final_ms": 18.92874558760668,
+      "state": "accumulated"
+    }
+  ],
+  "interface_rows": [
+    {
+      "phase": "baseline_low_drive",
+      "pure_mineral_flux": 0.4639812060221656,
+      "hybrid_flux": 0.4550657575413651
+    },
+    {
+      "phase": "surge_high_drive",
+      "pure_mineral_flux": 1.3218930254176215,
+      "hybrid_flux": 1.2700551080906661
+    },
+    {
+      "phase": "post_surge_recovery",
+      "pure_mineral_flux": 0.029654702300214397,
+      "hybrid_flux": 0.0477682546752802
+    }
+  ],
+  "interpretation": "Confinement increases retention, while hybrid interfaces attenuate flux surges in this parameterization."
+}

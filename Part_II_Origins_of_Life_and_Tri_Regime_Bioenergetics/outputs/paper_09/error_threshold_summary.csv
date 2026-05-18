@@ -1,0 +1,6 @@
+flux_energy,final_master_sequence_fitness,state
+0.2,0.3669582394473313,error_catastrophe
+0.5,0.08293790536844343,error_catastrophe
+1.0,0.013899043014057023,error_catastrophe
+5.0,1.0,survives
+10.0,1.0,survives

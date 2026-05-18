@@ -1,0 +1,5 @@
+scenario,input_energy,sigma_e,sigma_p,stabilization,life_number,regime,note
+geochemical_redox_only,1.2,0.55,0.4,1.2,0.22000000000000003,subcritical,chemical input before phototrophy
+mineral_photoredox,2.4,0.55,0.38,1.4,0.3582857142857143,subcritical,pre-chlorophyll light capture candidate
+porphyrinoid_or_chromophore,4.0,0.65,0.5,1.8,0.7222222222222222,subcritical,stronger pre-chlorophyll capture
+modern_chlorophyll_endpoint,8.0,0.85,0.8,2.2,2.4727272727272727,sustained,late high-performance endpoint

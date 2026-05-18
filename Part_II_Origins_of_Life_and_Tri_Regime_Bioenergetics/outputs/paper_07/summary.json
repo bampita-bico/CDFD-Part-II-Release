@@ -1,0 +1,30 @@
+{
+  "paper": 7,
+  "model": "aromatic stability and chiral amplification toy diagnostic",
+  "summary_rows": [
+    {
+      "metric": "final_aliphatic_pattern",
+      "value": 0.01758794660572155
+    },
+    {
+      "metric": "final_aromatic_pattern",
+      "value": 1.0
+    },
+    {
+      "metric": "initial_left",
+      "value": 1.011
+    },
+    {
+      "metric": "initial_right",
+      "value": 0.989
+    },
+    {
+      "metric": "final_left",
+      "value": 23.818406205386164
+    },
+    {
+      "metric": "final_right",
+      "value": 0.007013081158007374
+    }
+  ]
+}

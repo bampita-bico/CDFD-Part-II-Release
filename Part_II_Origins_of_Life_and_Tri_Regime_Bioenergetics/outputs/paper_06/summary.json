@@ -1,0 +1,35 @@
+{
+  "paper": 6,
+  "model": "autocatalytic closure scan",
+  "gamma": "C*L**2*c_A*k",
+  "rows": [
+    {
+      "initial_phi": 0.1,
+      "constraint": 1.0,
+      "substrate": 1.0,
+      "final_phi": 0.07300589866953758,
+      "closure_state": "sub_ignition"
+    },
+    {
+      "initial_phi": 0.5,
+      "constraint": 1.0,
+      "substrate": 1.0,
+      "final_phi": 0.5538953082421175,
+      "closure_state": "sub_ignition"
+    },
+    {
+      "initial_phi": 0.1,
+      "constraint": 5.0,
+      "substrate": 1.0,
+      "final_phi": 0.10203591930602891,
+      "closure_state": "sub_ignition"
+    },
+    {
+      "initial_phi": 0.5,
+      "constraint": 5.0,
+      "substrate": 1.0,
+      "final_phi": 0.8487797965634019,
+      "closure_state": "sub_ignition"
+    }
+  ]
+}

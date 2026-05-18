@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{booktabs}
+\onehalfspacing
+
+\title{\textbf{Paper OOL-10: The Parasitic Threshold and Boundary Logic:\\ Defense Pressure Before Modern Immunity}}
+\author{Steve Bico Mujjabi, MD\\
+\small Independent Researcher\\
+\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Parasitism becomes meaningful only after replication, retention, and container inheritance exist. This manuscript therefore moves the parasitic threshold after the proto-cell integration gate. In CDFD terms, a parasitic sequence or pathway is an internal flux drain that consumes activated resources while failing to maintain the host network or its boundary. The key claim is conditional and testable: once copying and compartment persistence are coupled, exploitative variants create selection pressure for specificity, exclusion, proofreading, degradation, and boundary control. The paper does not claim literal modern viruses, immune systems, or oncology at the dawn of life. It identifies the earliest functional problem that later defense systems solve.
+\end{abstract}
+
+\section{Introduction}
+Paper 9 established the minimum machinery required for protocellular evolution: information must copy with bounded error, and container success must covary with internal chemistry. Once that machinery exists, exploitation becomes unavoidable in principle. Any variant that uses the replication or catalytic apparatus without contributing to persistence can grow faster than cooperative chemistry over short horizons.
+
+This is the parasitic threshold. It is not a statement that modern viruses existed before cells. It is a statement about a failure mode of coupled autocatalytic and replicative systems, adjacent to classic error-threshold and major-transition logic~\cite{Eigen1971,MaynardSmith1995}.
+
+\section{Parasitic Flux Drain}
+Let the cooperative autocatalytic/replicative network have operational flux $\Phi_{\mathrm{host}}$. A parasitic component consumes resources at rate $\Phi_{\mathrm{loss}}$ while contributing little or nothing to retention, repair, catalytic closure, or boundary persistence. The effective host flux becomes
+\begin{equation}
+    \Phi_{\mathrm{eff}}=\Phi_{\mathrm{host}}-\Phi_{\mathrm{loss}}.
+\end{equation}
+The adaptive ratio becomes
+\begin{equation}
+    \Psi_s=
+    \left(\frac{\Phi_{\mathrm{eff}}}{C_{\mathrm{mem}}}\right)S M_s.
+\end{equation}
+If $\Phi_{\mathrm{loss}}$ grows faster than host repair or exclusion, the system crosses from productive replication to starvation, washout, or loss of inherited organization.
+
+\section{Boundary Logic}
+The response cannot be only ``more flux.'' Extra substrate can amplify the parasite as easily as the host. A surviving protocell-like system needs constraint changes:
+\begin{itemize}
+    \item selective permeability at the boundary,
+    \item catalytic specificity inside the compartment,
+    \item degradation or sequestration of noncontributing templates,
+    \item copying rules that preserve useful heredity while limiting runaway freeloaders.
+\end{itemize}
+These are early functional analogues of defense logic. They are not yet modern immune systems.
+
+\section{Mathematical Gate}
+A simple host-survival inequality is
+\begin{equation}
+\Gamma_{\mathrm{host}}Q_{\mathrm{host}}R_{\mathrm{ret}}
+>
+\Gamma_{\mathrm{parasite}}Q_{\mathrm{parasite}}R_{\mathrm{access}},
+\end{equation}
+where $R_{\mathrm{ret}}$ measures host retention in the container and $R_{\mathrm{access}}$ measures parasite access to host resources. Boundary evolution acts by lowering $R_{\mathrm{access}}$ or increasing the cost of parasitic replication.
+
+The falsifiable implication is direct: in a model or experiment with heritable compartments, increasing noncontributing replicators should collapse cooperative persistence unless some specificity or exclusion mechanism is introduced.
+
+\section{Conclusion}
+The parasitic threshold is the first crisis created by successful proto-cell integration. Once copying, retention, and compartment inheritance exist, exploitative variants force the system to evolve boundary logic. This paper therefore sits after replication/protocell integration and before photochemical expansion in Paper 11 in the revised Part II chain.
+
+\section{Reproducibility Note}
+The companion script \texttt{supplementary\_ool\_10.py} tests a minimal host--parasite competition gate with explicit retention and boundary-specificity variables and writes \texttt{outputs/paper\_10/parasitic\_threshold\_boundary\_logic.png}. No notebook is required.
+
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{outputs/paper_10/parasitic_threshold_boundary_logic.png}
+\caption{Parasitic-threshold diagnostic. The toy model compares host persistence with and without boundary specificity when a noncontributing replicator accesses the same resource stream. The figure is a mechanism diagnostic, not a claim about modern viruses.}
+\end{figure}
+\bibliographystyle{plain}
+\bibliography{ool_references}
+\end{document}

@@ -1,0 +1,30 @@
+{
+  "paper": 10,
+  "model": "host-parasite boundary specificity toy diagnostic",
+  "rows": [
+    {
+      "scenario": "open_boundary",
+      "boundary_specificity": 0.0,
+      "final_host": 0.9471476284129232,
+      "final_parasite": 9.832302445115456,
+      "host_parasite_ratio": 0.09633019668586906,
+      "state": "parasite_dominated"
+    },
+    {
+      "scenario": "weak_specificity",
+      "boundary_specificity": 0.35,
+      "final_host": 4.203469955203738,
+      "final_parasite": 2.7225695849373928,
+      "host_parasite_ratio": 1.5439348101365054,
+      "state": "host_retained"
+    },
+    {
+      "scenario": "strong_specificity",
+      "boundary_specificity": 0.75,
+      "final_host": 5.750642480722979,
+      "final_parasite": 0.0418411084481718,
+      "host_parasite_ratio": 137.4400128009574,
+      "state": "host_retained"
+    }
+  ]
+}

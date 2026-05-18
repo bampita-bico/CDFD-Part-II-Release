@@ -1,0 +1,172 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{listings}
+\onehalfspacing
+
+\title{\textbf{Paper OOL-9: Protocell Integration, Replication, and Error Thresholds:\\ The First Heritable Container Gate}}
+\author{Steve Bico Mujjabi, MD\\
+\small Independent Researcher\\
+\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper is the integration gate. A protocell claim requires bounded copying error, retained internal chemistry, coupled energy throughput, and a boundary whose persistence covaries with its internal state. The paper combines Eigen--Orgel error-threshold logic with a conservative protocell diagnostic and explicitly reports numerical fragility where it appears. That restraint is intentional: Paper 9 defines what must be true before Paper 10 can introduce parasitic exploitation.
+\end{abstract}
+
+\section{Introduction}
+Papers 1--8 build the prerequisite ladder: thermodynamic framing, geochemical energy and transport, oscillating polymerization, autocatalytic closure, and adaptive boundaries. A proto-cell requires these pieces to become coupled. Replication without a boundary may preserve molecular information but does not necessarily create a lineage. A boundary without inherited internal chemistry can divide physically without biological heredity.
+
+Paper 9 therefore asks two linked questions:
+\begin{enumerate}
+    \item When does copying preserve information rather than dissolve into error?
+    \item When does copying affect the persistence and division of the container that carries it?
+\end{enumerate}
+
+\section{Template Growth and Replication Gain}
+For a schematic template $T$ and monomer pool $M_i$,
+\begin{equation}
+    T+M_i\rightarrow TM_i,
+    \qquad
+    R_{\mathrm{rep}}=k_{\mathrm{rep}}c_Tc_M.
+\end{equation}
+Transport-limited monomer supply can be represented phenomenologically as
+\begin{equation}
+    \bm{J}_M=-\frac{1}{C}\nabla c_M.
+\end{equation}
+A well-mixed caricature gives
+\begin{equation}
+\frac{dc_T}{dt}
+=
+k_{\mathrm{rep}}c_Tc_M-\frac{1}{CL^2}c_T
+=
+c_T\left(k_{\mathrm{rep}}c_M-\frac{1}{CL^2}\right).
+\end{equation}
+Define the replication gain
+\begin{equation}
+    \Gamma_{\mathrm{rep}}=k_{\mathrm{rep}}c_MCL^2.
+\end{equation}
+The condition $\Gamma_{\mathrm{rep}}>1$ is only a linearized growth condition. It is not sufficient for life.
+
+\section{Error Threshold}
+If per-step fidelity is $q$ across $n$ additions, the simplest master-sequence survival approximation is
+\begin{equation}
+    Q=q^n,\qquad \epsilon=1-Q.
+\end{equation}
+Information persists only if replication gain outruns error catastrophe. A schematic compatibility condition is
+\begin{equation}
+    \Gamma_{\mathrm{rep}}Q>1,
+    \label{eq:error-threshold}
+\end{equation}
+with the usual warning that real prebiotic copying is not a clean independent-site process~\cite{Orgel1963,Eigen1971}.
+
+The CDFD hypothesis is that fidelity, monomer activation, retention, and damage are coupled to energy throughput. A useful bookkeeping score is
+\begin{equation}
+\mathcal{H}_{\mathrm{copy}}
+=
+\Gamma_{\mathrm{rep}}Q
+R_{\mathrm{mono}}
+R_{\mathrm{ret}}
+R_{\mathrm{damage}}^{-1},
+\end{equation}
+where $R_{\mathrm{mono}}$ is activated-monomer availability, $R_{\mathrm{ret}}$ is retention of templates and products, and $R_{\mathrm{damage}}$ collects hydrolysis, photodamage, side reactions, and strand loss. This is a checklist, not a calibrated law.
+
+\section{Quasispecies Logic Versus Protocell Logic}
+The quasispecies threshold and the protocell threshold are related but not identical. The first asks whether a sequence distribution preserves information. The second asks whether a bounded domain inherits a coupled chemistry that affects its growth or persistence.
+
+The protocell condition can be stated as a covariance requirement:
+\begin{equation}
+\mathrm{Cov}\!\left(
+\mathrm{copied\ internal\ state},
+\mathrm{container\ persistence}
+\right)>0.
+\end{equation}
+Without this covariance, selection may act on free templates or on empty containers, but not yet on a proto-cell lineage.
+
+\section{Integrated Protocell Scaffold}
+An integrated toy protocell has state variables such as
+\begin{equation}
+U=\{c_i,\Phi_e,\Phi_H,C_i,\ldots\},
+\end{equation}
+evolving through transport, reaction, and constraint laws~\cite{SmithMorowitz2016}. A minimal transport skeleton is
+\begin{equation}
+\frac{\partial c_i}{\partial t}
+=
+\nabla\cdot\left(\frac{1}{C_i}\nabla c_i\right)
++R_i(c,\Phi_e,\Phi_H),
+\end{equation}
+with potentials satisfying analogous updates:
+\begin{align}
+\frac{\partial \Phi_e}{\partial t}
+&=
+\nabla\cdot\left(\frac{1}{C_e}\nabla\Phi_e\right)+S_e,\\
+\frac{\partial \Phi_H}{\partial t}
+&=
+\nabla\cdot\left(\frac{1}{C_H}\nabla\Phi_H\right)+S_H.
+\end{align}
+Flux-coupled reactions can be written as
+\begin{equation}
+\bm{J}_e=-\frac{1}{C_e}\nabla\Phi_e,\qquad
+\bm{J}_H=-\frac{1}{C_H}\nabla\Phi_H,
+\end{equation}
+\begin{equation}
+R_i=f_i(c)\,g(|\bm{J}_e\cdot\bm{J}_H|),
+\end{equation}
+for nonnegative $g$.
+
+\section{Numerical Audit}
+The diagnostic for this paper combines a reduced error-threshold sweep with a spatial protocell update. It should be read as a numerical stress test, not as validation. The reduced diagnostic reported:
+\begin{itemize}
+    \item $\Phi=0.2$: final master-sequence fitness $0.367$,
+    \item $\Phi=0.5$: final master-sequence fitness $0.083$,
+    \item $\Phi=1.0$: final master-sequence fitness $0.014$,
+    \item $\Phi=5.0$: final master-sequence fitness $1.000$,
+    \item $\Phi=10.0$: final master-sequence fitness $1.000$.
+\end{itemize}
+The non-monotonic low-to-intermediate response rules out a single universal critical flux in this reduced diagnostic. The correct claim is windowed: copying benefits from energy throughput only when activation, retention, and damage remain bounded.
+
+The integrated protocell diagnostic is more important for what it exposes. It produced finite early snapshots and then non-finite behavior under unbounded explicit updates. That failure blocks any claim of a stable simulated protocell.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{outputs/paper_09/error_threshold_and_protocell.png}
+\caption{Merged error-threshold/protocell diagnostic. The left panel tests flux-dependent master-sequence persistence. The right panel records numerical instability in the integrated protocell update. The figure is a stress test, not a successful protocell simulation.}
+\end{figure}
+
+\section{Hardening Roadmap}
+The next implementation should replace unbounded autocatalytic growth with saturated kinetics such as
+\begin{equation}
+R_{\mathrm{auto}}
+=
+\frac{k\Phi^2}{K+\Phi^2}-\ell\Phi,
+\end{equation}
+then verify timestep refinement, boundedness, and convergence. Operator splitting or implicit updates may be needed for coupled transport and reaction.
+
+\section{Experimental Targets}
+The model protocell literature gives concrete targets: template-directed genetic-polymer synthesis in fatty-acid vesicles~\cite{Mansy2008}, nonenzymatic RNA synthesis inside model protocells~\cite{Adamala2013}, multi-step nonenzymatic primer-extension chemistry~\cite{Walton2018}, and recent water-compatible thioester-mediated RNA aminoacylation/peptidyl-RNA chemistry~\cite{Singh2025}. CDFD should therefore be tested by a coupled score,
+\begin{equation}
+\mathcal{R}_{\mathrm{proto}}
+=
+\Gamma_{\mathrm{rep}}Q
+R_{\mathrm{retention}}
+R_{\mathrm{exchange}}
+R_{\mathrm{division}},
+\end{equation}
+not by replication alone.
+
+\section{Conclusion}
+Paper 6 is the integration gate. It establishes that bounded copying, retained internal chemistry, coupled energy flow, and heritable containers must be tested together. The current numerical status is deliberately conservative: the reduced copying toy is informative, while the full protocell implementation remains unstable. Paper 10 can only discuss parasitic exploitation after this replication/container machinery exists.
+
+\section{Reproducibility Note}
+The companion script \texttt{supplementary\_ool\_09.py} writes \texttt{outputs/paper\_09/error\_threshold\_and\_protocell.png} plus CSV/JSON summaries. No notebook is required.
+\bibliographystyle{plain}
+\bibliography{ool_references}
+\end{document}
