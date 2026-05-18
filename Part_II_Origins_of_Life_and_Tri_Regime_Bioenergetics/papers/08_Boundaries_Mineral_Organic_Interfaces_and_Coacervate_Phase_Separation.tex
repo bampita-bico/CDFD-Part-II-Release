@@ -24,7 +24,7 @@ This paper turns localization into boundary logic. Mineral pores, mineral-organi
 \section{Introduction}
 Early prebiotic chemistry requires a crucible. Molecules dissolved in the vast, turbulent ocean are too dilute to undergo meaningful autocatalysis. Hydrothermal vent pores provide excellent concentration mechanisms, acting as rigid rock matrices. However, an organism locked inside a rock cannot migrate, divide, or hunt for resources.
 
-Life requires a boundary that moves with it. Aleksandr Oparin and Sidney Fox pioneered the idea that coacervates---droplets of concentrated organic macromolecules separating out of aqueous solution---could serve as these early proto-cells. 
+Life requires a boundary that moves with it. Historical coacervate and microsphere programs framed droplets and soft compartments as possible bridges between chemistry and cells; modern protocell experiments make that bridge testable with vesicles, droplets, and coupled internal chemistry.
 
 In CDFD, this phase separation represents a profound evolutionary leap: the transition from a passive external constraint to an active, internally generated constraint.
 
@@ -63,11 +63,11 @@ Porous minerals keep electron-carrying surfaces and proton-transporting pore flu
 \section{Model and Assumptions}
 
 \subsection{Two uses of ``Psi'' avoided}
-CDF equilibrium uses $\Psi_{s,\mathrm{CDF}}=\Phi/C$ for intensity over resistance. Reaction--diffusion theory often defines a dimensionless ratio of reaction to diffusion loss; we denote that
+The CDFD adaptive ratio uses $\Psi_{s,\mathrm{CDFD}}=\Phi/C$ for intensity over resistance. Reaction--diffusion theory often defines a dimensionless ratio of reaction to diffusion loss; we denote that
 \begin{equation}
 \Xi_{\mathrm{loc}} \;=\; \frac{R}{D_{\mathrm{eff}}/L^2}
 \end{equation}
-for characteristic reaction rate $R$, effective diffusivity $D_{\mathrm{eff}}$, and length $L$. This prevents symbol collision with $\Psi_{s,\mathrm{CDF}}$.
+for characteristic reaction rate $R$, effective diffusivity $D_{\mathrm{eff}}$, and length $L$. This prevents symbol collision with $\Psi_{s,\mathrm{CDFD}}$.
 
 \textbf{Status: Derived}
 
@@ -132,12 +132,12 @@ Stronger modeled resistance improves retention monotonically here, matching intu
 
 \textbf{Status: Open}
 
-\section{Conclusion}
+\section{Interim Synthesis: Mineral Compartments}
 Paper 8 formalizes why compartments matter: they reshape transport resistance and shift localization balances. This paper adds organic films and adaptive interfacial regulation atop mineral walls.
 
 \textbf{Status: Inferred}
 
-\section{Reproducibility Note}
+\section{Compartment Diagnostic Note}
 \begin{verbatim}
 python supplementary_ool_08.py
 \end{verbatim}
@@ -266,7 +266,7 @@ The CDFD boundary criterion becomes:
 \approx
 f(J_{\mathrm{internal}},J_{\mathrm{external}}).
 \end{equation}
-A dead container is not enough. A proto-cell boundary must retain, exchange, and adapt.
+A dead container is not enough. A protocell boundary must retain, exchange, and adapt.
 
 \textbf{Status: Inferred}
 

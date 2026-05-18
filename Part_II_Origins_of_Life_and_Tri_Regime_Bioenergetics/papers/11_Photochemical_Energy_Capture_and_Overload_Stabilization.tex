@@ -72,6 +72,8 @@ Modern chlorophyll is a mature endpoint, not the primitive assumption. Earlier e
 \end{itemize}
 The historical question is empirical: did any candidate raise $I_E$ while remaining coupled to $\sigma_e$, $\sigma_p$, and retention?
 
+For this paper, $I_E$ is not total incident light. It is the portion of absorbed or redox input that becomes chemically usable. $\sigma_e$ measures effective electron-transfer capacity, $\sigma_p$ measures proton or ion coupling, and $B_{\mathrm{stab}}$ measures the burden imposed by photodamage, radical leakage, heating, bleaching, and uncoupled side reactions.
+
 \section{Overload Stabilization}
 Once photon capture or chemical input becomes strong, excess flux becomes dangerous. Productive throughput is limited by the slowest coupled channel:
 \begin{equation}
@@ -122,11 +124,20 @@ Material-specific & Chlorophyll/melanin are examples, not necessities & Replace 
 \end{tabular}
 \end{center}
 
+\section{Validation Design}
+Photochemical validation should separate capture from coupling and coupling from damage control. A minimal experiment would compare illuminated and dark reactors with the same feedstock, pH, ionic strength, compartment type, and mineral or organic surface area. It should then vary one channel at a time: absorber identity for $I_E$, mixed-valence or Fe--S availability for $\sigma_e$, pore or pH-gradient geometry for $\sigma_p$, and radical-buffering material for $B_{\mathrm{stab}}$.
+
+The decisive readouts are not color change or total absorption. They are product distribution, redox state, charge separation lifetime, proton/ion-gradient persistence, damage products, and recovery after repeated light cycles. CDFD predicts a non-monotonic surface: extra light helps only when charge transport and buffering prevent overload. If illumination improves products in uncoupled systems just as well as in coupled systems, the coupling claim is weakened. If buffering always suppresses chemistry, rather than improving survival under high input, the overload-stabilization claim is weakened.
+
+\textbf{Status: Open experimental program}
+
 \section{Conclusion}
 Photochemical expansion broadens the energy-input landscape; it is not the first step required for life. The release argument is a dependency graph of functions. Capture precedes overload stabilization, and modern materials are illustrative implementations rather than required historical molecules.
 
 \section{Reproducibility Note}
-The companion script \texttt{supplementary\_ool\_11.py} writes \texttt{outputs/paper\_11/photochemical\_capture\_before\_buffering.png} plus CSV/JSON summaries. No notebook is required; the static figure and small CSV/JSON files are sufficient.
+The companion script \texttt{supplementary\_ool\_11.py} writes the figure
+under \path{outputs/paper_11/} plus CSV/JSON summaries. No notebook is
+required; the static figure and small CSV/JSON files are sufficient.
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

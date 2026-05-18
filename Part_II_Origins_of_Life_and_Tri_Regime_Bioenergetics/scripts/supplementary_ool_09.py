@@ -1,6 +1,6 @@
 """
 Supplementary Material - CDFD OOL Paper 9
-Evolutionary Dynamics, Error Thresholds, and Proto-Cell Integration
+Evolutionary Dynamics, Error Thresholds, and Protocell Integration
 
 This script includes both a flux-dependent error-threshold toy model and the
 deliberately fragile integrated protocell diagnostic for the active
@@ -194,7 +194,7 @@ def main() -> None:
     write_outputs(summary, error_rows, protocell_rows, internal, external, first_nonfinite)
 
     print("=" * 70)
-    print("CDFD OOL Paper 9: Error Thresholds and Proto-Cell Integration")
+    print("CDFD OOL Paper 9: Error Thresholds and Protocell Integration")
     print("=" * 70)
     print("Flux-dependent error threshold:")
     for row in error_rows:

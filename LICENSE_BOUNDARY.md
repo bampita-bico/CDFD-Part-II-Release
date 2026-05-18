@@ -12,5 +12,5 @@ In practical terms:
 
 - cite this archive for the Part II origins-of-life manuscripts;
 - cite Part I for CDFL, the public CDFD framework notation;
-- cite the CDFD Runtime separately when engine code is used;
-- do not treat the CC BY paper archive as relicensing the engine.
+- cite the CDFD Runtime separately when runtime code is used;
+- do not treat the CC BY paper archive as relicensing the CDFD Runtime.

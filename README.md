@@ -97,8 +97,8 @@ flow-constraint-memory language used across the CDFD series. This Part II
 release remains a scholarly archive: its paper-local Python scripts and outputs
 reproduce the diagnostics cited by the origins-of-life manuscripts.
 
-The two layers should be cited and licensed separately until a combined engine
-release DOI exists.
+The two layers should be cited and licensed separately until a combined CDFD
+Runtime release DOI exists.
 
 ## Reference Verification
 

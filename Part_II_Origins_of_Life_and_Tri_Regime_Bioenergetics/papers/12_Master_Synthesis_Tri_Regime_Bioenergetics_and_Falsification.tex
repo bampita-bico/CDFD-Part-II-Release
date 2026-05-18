@@ -33,7 +33,7 @@ The narrative mapped in this series is a dependency graph rather than a rigid ge
     \item \textbf{Oscillating constraints}: cycling environments provide a route to retained polymers and pattern memory.
     \item \textbf{Autocatalytic closure}: reaction loops begin to reinforce their own production.
     \item \textbf{Topological boundaries}: mineral pores, films, coacervates, and soft compartments raise retention and create adaptive surfaces.
-    \item \textbf{Proto-cell integration}: copying, energy flow, and container persistence must covary.
+    \item \textbf{Protocell integration}: copying, energy flow, and container persistence must covary.
     \item \textbf{Parasitic threshold}: successful copying creates exploitative failure modes and pressure for boundary logic.
     \item \textbf{Photochemical expansion}: light or other stronger inputs can expand the energy channel without being required at the first origin step.
     \item \textbf{Master synthesis}: the chain is evaluated as a tri-regime persistence criterion.
@@ -323,7 +323,7 @@ First, phosphate chemistry discretizes energy handling:
 \begin{equation}
     E_{\mathrm{packet}} = n\Delta E_P,\qquad n\in\mathbb{Z}^{+}.
 \end{equation}
-Discrete packets reduce uncontrolled dissipation and make reaction coupling more precise. In Eq.~\eqref{eq:life-number}, this can lower $S$ and improve effective $\bar{\sigma}_p$.
+Discrete packets reduce uncontrolled dissipation and make reaction coupling more precise. In Eq.~\eqref{eq:life-number}, this can lower $B_{\mathrm{stab}}$ and improve effective $\bar{\sigma}_p$.
 
 Second, phase separation and soft compartments provide dynamic localization before full lipid-cell architecture. LLPS, coacervates, gels, and mineral-organic films all increase residence time and co-localization~\cite{Hanczyc2003,Szostak2010}. These mechanisms sit between mineral pores and modern membranes in the dependency graph.
 
@@ -400,19 +400,20 @@ This matrix keeps the series ambitious but falsifiable.
 \textbf{Status: Derived}
 
 \section{Validation Program and Future Experiments}
-The framework becomes scientifically useful only if it generates experiments that can fail. The following program translates the twelve-paper chain into test classes.
+The framework becomes scientifically useful only if it generates experiments that can fail. The following program translates the twelve-paper chain into test classes. Each test must pre-register the variable being changed, the matched controls, and the failure condition; otherwise the CDFD notation risks becoming descriptive rather than predictive.
 
 \begin{enumerate}
-    \item \textbf{Matched mineral-reactor tests.} Build paired fed reactors with identical pH, temperature, feedstock, residence time, and surface area. Vary only the connected Fe--S or mixed-valence bridge. The expected signal is not ``life,'' but a reproducible change in downstream redox state and product distribution relative to disconnected or inert controls.
-    \item \textbf{Electron--proton co-localization tests.} Measure redox current, pH microgradients, ion flux, and product formation in the same pore network. CDFD predicts that chemistry improves when electron and proton/ion channels overlap in space and time, not merely when either channel exists alone.
-    \item \textbf{Cycling-retention tests.} Compare wet--dry, thermal-gradient, freeze--thaw, and continuously wet controls using the same monomer pool. The score is the retained product distribution after many cycles, including hydrolysis losses, not the best single-cycle yield.
-    \item \textbf{Boundary-covariance tests.} In coacervates, vesicles, gels, or mineral--organic films, ask whether internal chemistry changes boundary growth, division, permeability, or survival. A container becomes protocellular only when internal state and boundary fate covary.
-    \item \textbf{Parasitic-drain tests.} Add noncontributing templates or catalytic freeloaders to compartmental copying systems. The CDFD expectation is collapse unless specificity, exclusion, degradation, or boundary partitioning is introduced.
-    \item \textbf{Photochemical-overload tests.} Raise light or photoredox input while independently varying electron transport, proton/ion coupling, and buffering materials. Useful capture should appear only in the coupled-and-buffered region; otherwise light should increase damage, side products, or bleaching.
-    \item \textbf{Cross-environment Life Number ranking.} Estimate $I_E$, $\sigma_e$, $\sigma_p$, $\tau_{\mathrm{relax}}$, $B_{\mathrm{stab}}$, and $E_{\mathrm{maintenance}}$ for vents, ponds, hot springs, ice/eutectic settings, mineral films, and soft compartments. The model predicts ranking by coupled surplus, not by a preferred location name.
+    \item \textbf{Matched mineral-reactor tests.} Build paired fed reactors with identical pH, temperature, feedstock, residence time, and surface area. Vary only the connected Fe--S or mixed-valence bridge. The expected signal is not ``life,'' but a reproducible change in downstream redox state, product distribution, and persistence time relative to disconnected, inert, or poisoned-surface controls.
+    \item \textbf{Electron--proton co-localization tests.} Measure redox current, pH microgradients, ion flux, and product formation in the same pore network. CDFD predicts that chemistry improves when electron and proton/ion channels overlap in space and time, not merely when either channel exists alone. A failure condition is robust product improvement in geometries where charge channels are deliberately separated.
+    \item \textbf{Cycling-retention tests.} Compare wet--dry, thermal-gradient, freeze--thaw, and continuously wet controls using the same monomer pool. The score is the retained product distribution after many cycles, including hydrolysis losses, not the best single-cycle yield. The response should be windowed over period, amplitude, temperature, surface, and activation chemistry.
+    \item \textbf{Boundary-covariance tests.} In coacervates, vesicles, gels, or mineral--organic films, ask whether internal chemistry changes boundary growth, division, permeability, or survival. A container becomes protocellular only when internal state and boundary fate covary. Empty-boundary controls and free-template controls are required to show that selection is acting on the coupled unit.
+    \item \textbf{Autocatalytic-closure tests.} Track reaction-network composition through serial transfer or repeated environmental cycles. The required signal is not a transient product spike, but mutual reinforcement: products from one cycle increase the probability of regenerating the same network in later cycles. Failure is amplification without retained network identity.
+    \item \textbf{Parasitic-drain tests.} Add noncontributing templates or catalytic freeloaders to compartmental copying systems. The CDFD expectation is collapse unless specificity, exclusion, degradation, or boundary partitioning is introduced. The falsifiable readouts are host fraction, compartment survival, leakage, and host-boundary covariance after serial passage.
+    \item \textbf{Photochemical-overload tests.} Raise light or photoredox input while independently varying electron transport, proton/ion coupling, and buffering materials. Useful capture should appear only in the coupled-and-buffered region; otherwise light should increase damage, side products, or bleaching. The control is total absorption without productive charge coupling.
+    \item \textbf{Cross-environment Life Number ranking.} Estimate $I_E$, $\sigma_e$, $\sigma_p$, $\tau_{\mathrm{relax}}$, $B_{\mathrm{stab}}$, and $E_{\mathrm{maintenance}}$ for vents, ponds, hot springs, ice/eutectic settings, mineral films, and soft compartments. The model predicts ranking by coupled surplus, not by a preferred location name. Ranking fails if uncoupled high-input environments outperform coupled environments after maintenance and damage costs are included.
 \end{enumerate}
 
-These tests would not prove one historical path by themselves. They would identify which environments solve the required gates and which attractive stories fail under controlled comparison.
+These tests would not prove one historical path by themselves. They would identify which environments solve the required gates and which attractive stories fail under controlled comparison. The practical standard is therefore comparative: same feedstock, same measurement window, one changed CDFD channel, and an explicit criterion for weakening the claim.
 
 \textbf{Status: Open experimental program}
 
@@ -522,7 +523,7 @@ The model would be weakened if self-maintaining replication-like chemistry is de
     \item The material implementation space is broad; assigning historical priority requires experiments and geochemical evidence.
     \item The isomorphism proof is structural, not a claim that geochemistry and biology have identical coefficients.
     \item Photochemical routes may be late, parallel, or environment-specific rather than universal.
-    \item Stabilization burden $S$ bundles many processes that should eventually be decomposed.
+    \item Stabilization burden $B_{\mathrm{stab}}$ bundles many processes that should eventually be decomposed.
 \end{itemize}
 
 \textbf{Status: Open}

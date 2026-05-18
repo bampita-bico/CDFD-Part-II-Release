@@ -41,11 +41,11 @@ A minimal water-volume cycle can be written
 \begin{equation}
     V_{\mathrm{H_2O}}(t)=V_0+\Delta V\cos(\omega t).
 \end{equation}
-As $V_{\mathrm{H_2O}}$ falls, monomer concentration rises and the system can enter a condensation-favoring window. As water returns, hydrolysis and dilution resume. A ratchet exists only if the retained product fraction after one cycle is greater than the lost fraction over many cycles:
+Here $V_{\mathrm{H_2O}}$ is the available water volume, $V_0$ is the mean volume, $\Delta V$ is the cycle amplitude, and $\omega$ is the angular frequency. As $V_{\mathrm{H_2O}}$ falls, monomer concentration rises and the system can enter a condensation-favoring window. As water returns, hydrolysis and dilution resume. A ratchet exists only if the retained product fraction after one cycle is greater than the lost fraction over many cycles:
 \begin{equation}
     M_s(t+nT)>M_s(t)
 \end{equation}
-for at least some range of periods $T$, temperatures, solute mixtures, surfaces, and degradation rates.
+for at least some range of cycle periods $T=2\pi/\omega$, temperatures, solute mixtures, surfaces, and degradation rates. The memory variable $M_s$ should therefore be measured as retained product length, sequence/composition bias, catalytic activity, or surface-bound product fraction after rehydration, not as a single best-cycle yield.
 
 \begin{figure}[ht]
 \centering
@@ -58,6 +58,13 @@ for at least some range of periods $T$, temperatures, solute mixtures, surfaces,
 The cycling argument has strengthened since older wet--dry sketches. Heat-flow crack experiments show that geological non-equilibria can concentrate and purify many prebiotically relevant molecules while enhancing reaction yields~\cite{Matreux2024}. Related work on phosphate shows that heat flows can solubilize apatite-derived phosphate and support trimetaphosphate formation under conditions relevant to prebiotic activation~\cite{Matreux2025Phosphate}. Meanwhile, aqueous-origin reviews emphasize that condensation polymer growth is not solved by saying ``remove water''; useful chemistry must store activation energy in precursors, release it selectively, and survive hydrolysis pressure~\cite{WhitakerPowner2024}. In CDFD terms, the ratchet is not only wet versus dry. It is the repeated alignment of activation, concentration, retention, and survival.
 
 \textbf{Status: Inferred}
+
+\section{Validation Targets and Controls}
+A serious validation program must test cycling as a repeated-selection process, not as a one-shot concentration trick. The primary observables are (i) retained product mass after rehydration, (ii) length distribution or compositional bias across cycles, (iii) hydrolysis loss per wet phase, and (iv) whether products from one cycle seed the next cycle. Controls should include continuously wet mixtures, dry-only mixtures without remixing, inert-surface controls, mineral-surface variants, and identical feedstocks with different cycle periods.
+
+The CDFD prediction is narrow: cycling improves memory only inside a window. Too little dehydration gives dilution and hydrolysis; too much dehydration traps or destroys reactants; too rapid cycling prevents reaction completion; too slow cycling allows degradation to dominate. A future experiment should therefore report the full response surface over $T$, temperature, ionic strength, pH, surface type, and activated precursor chemistry.
+
+\textbf{Status: Open experimental program}
 
 \section{Claim Boundary}
 The claim is not that static submerged vents are impossible or that hot springs are mandatory. The claim is that a complete CDFD origin chain must include an environmental or material mechanism that solves the same functional problem:
@@ -76,7 +83,9 @@ The output of this step is not life. It is a population of longer-lived patterns
 Oscillating constraints provide a plausible way to turn environmental fluctuation into retained chemical structure. In the Part II chain, this paper supplies the transition from geochemical throughput to memory-bearing chemistry while keeping the historical setting open to empirical testing.
 
 \section{Reproducibility Note}
-The companion script \texttt{supplementary\_ool\_05.py} writes \texttt{outputs/paper\_05/wet\_dry\_polymerization\_ratchet.png} plus CSV/JSON summaries. No notebook is required.
+The companion script \texttt{supplementary\_ool\_05.py} writes the figure
+\path{outputs/paper_05/wet_dry_polymerization_ratchet.png} plus CSV/JSON
+summaries. No notebook is required.
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}
