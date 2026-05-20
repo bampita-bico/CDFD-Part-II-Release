@@ -1,6 +1,6 @@
 # Part II Final Sweep Handoff
 
-Last updated: 2026-05-20 03:23 Africa/Kampala.
+Last updated: 2026-05-20 03:24 Africa/Kampala.
 
 ## Current Goal
 
@@ -36,9 +36,8 @@ outputs and PDFs, commit the release state, and push `main` to GitHub.
    `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/PDFs/`. Final log
    scans found no undefined citations/references, rerun requests, LaTeX/BibTeX
    errors, or overfull boxes.
-5. Commit final Part II sweep and push to GitHub. Status: local commit done;
-   push attempted but blocked by missing noninteractive GitHub credentials for
-   the HTTPS remote.
+5. Commit final Part II sweep and push to GitHub. Status: done; release commit
+   `2499831` was pushed to `origin/main`.
 
 ## Important Context
 
@@ -143,3 +142,7 @@ remote to an authenticated SSH URL before pushing.
   password/token failed with GitHub's `Invalid username or token. Password
   authentication is not supported for Git operations.` No `.git-credentials`,
   `gh` auth file, SSH key, or configured credential helper was found afterward.
+- User then provided a GitHub PAT directly. A one-time noninteractive
+  `GIT_ASKPASS` push succeeded and advanced
+  `https://github.com/bampita-bico/CDFD-Part-II-Release.git` from `11d67f1` to
+  `2499831` on `main`.
