@@ -1,6 +1,6 @@
 {
   "paper": 10,
-  "model": "host-parasite boundary specificity toy diagnostic",
+  "model": "host-parasite boundary specificity toy diagnostic with 2D boundary gate",
   "rows": [
     {
       "scenario": "open_boundary",
@@ -26,5 +26,29 @@
       "host_parasite_ratio": 137.4400128009574,
       "state": "host_retained"
     }
-  ]
+  ],
+  "spatial_rows": [
+    {
+      "scenario": "open_boundary_2d",
+      "specificity": 0.0,
+      "host_parasite_ratio": 0.8528835792907032
+    },
+    {
+      "scenario": "strong_specificity_2d",
+      "specificity": 0.75,
+      "host_parasite_ratio": 5.247140365941778
+    }
+  ],
+  "open_spatial_advantage": {
+    "all_finite": true,
+    "min": -3.0,
+    "max": 0.04219985068027332,
+    "mean": -0.34262792775927453
+  },
+  "strong_spatial_advantage": {
+    "all_finite": true,
+    "min": -3.0,
+    "max": 0.14651111705809278,
+    "mean": -0.3255380015680011
+  }
 }

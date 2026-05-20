@@ -31,6 +31,16 @@ experiment establishes it historically or physically.
 | Mujjabi Boundary-Covariance Test | Protocell candidates become selectable only when internal chemistry covaries with boundary persistence. | Covariance between copied internal state and growth/division/retention. | Containers divide or persist independently of internal chemistry. |
 | Mujjabi Parasitic-Drain Test | Noncontributing replicators collapse cooperative persistence unless specificity or exclusion is introduced. | Host-parasite ratio with controlled boundary access. | Parasite access does not change cooperative persistence under matched resources. |
 | Mujjabi Photochemical Overload Test | Energy capture helps only when stabilization prevents destructive overload. | Capture yield, damage markers, recovery, and retained chemistry. | Extra light always damages or always helps independently of buffering capacity. |
+| Mujjabi Dependency-Gate Test | A candidate origin setting must occupy a finite near-critical band rather than a single magic point. | Joint map of drive, constraint, routing, and retained memory. | Any one variable alone predicts persistence as well as the coupled gate. |
+| Mujjabi Spatial Parasite-Gate Test | Boundary specificity should remain protective in spatial diffusion models, not only well-mixed equations. | Host/parasite ratio inside bounded compartments under matched resource inflow. | Spatial leakage eliminates the claimed host-retention advantage. |
+
+## Runtime Discovery Triage
+
+Root-level CDFD Runtime experiments are hypothesis selectors, not empirical
+proof. The current OOL phase sweep scans a `50 x 50` energy-input/constraint
+grid and identifies a small near-critical Life Number band. Part II uses that
+result to choose follow-up windows for paper-local diagnostics and wet-lab
+controls; it does not treat runtime grid points as real prebiotic environments.
 
 ## Engineering Meaning
 

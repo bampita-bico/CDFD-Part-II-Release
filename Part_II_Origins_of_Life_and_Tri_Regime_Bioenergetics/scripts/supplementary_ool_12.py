@@ -21,19 +21,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+from partii_runtime import finite_summary, life_number as cdfd_life_number, output_dir, regime_from_value
+
 KAPPA_S = 0.05
 D_M = 0.01
-
-def life_number(
-    input_energy: float,
-    sigma_e: float,
-    sigma_p: float,
-    tau_relax: float,
-    stabilization: float,
-    maintenance_energy: float = 1.0,
-) -> float:
-    return input_energy * sigma_e * sigma_p * tau_relax / max(stabilization * maintenance_energy, 1e-12)
-
 
 def life_number_rows() -> list[dict[str, object]]:
     scenarios = [
@@ -46,14 +37,9 @@ def life_number_rows() -> list[dict[str, object]]:
     S = 1.0
     M_s = 1.0
     for label, input_energy, sigma_e, sigma_p, tau, stabilization in scenarios:
-        lam_base = life_number(input_energy, sigma_e, sigma_p, tau, stabilization)
+        lam_base = cdfd_life_number(input_energy, sigma_e, sigma_p, tau, stabilization)
         lam = lam_base * S * M_s
-        if lam < 1.0:
-            regime = "decay_dominated"
-        elif lam < 2.0:
-            regime = "near_critical"
-        else:
-            regime = "sustained"
+        regime = regime_from_value(lam)
         rows.append(
             {
                 "scenario": label,
@@ -114,7 +100,7 @@ def environmental_cycle_rows() -> list[dict[str, object]]:
     S = 1.0
     M_s = 0.1
     for cycle, input_energy in enumerate(cycle_inputs, start=1):
-        lam_base = life_number(input_energy, 0.55, 0.45, tau_relax=2.5 * memory, stabilization=1.4)
+        lam_base = cdfd_life_number(input_energy, 0.55, 0.45, tau_relax=2.5 * memory, stabilization=1.4)
         lam = lam_base * S * M_s
 
         dM_s = max(min(lam_base * S - D_M * M_s, 10.0), -10.0)
@@ -143,8 +129,7 @@ def write_outputs(
     cycle_rows: list[dict[str, object]],
     llps_constraint: np.ndarray,
 ) -> None:
-    out_dir = Path(__file__).resolve().parent.parent / "outputs" / "paper_12"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_dir = output_dir(__file__, "paper_12")
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     with (out_dir / "life_number_regimes.csv").open("w", newline="") as handle:
         writer = csv.DictWriter(
@@ -217,6 +202,7 @@ def main() -> None:
         "stored_phosphate_packets": phosphate_packets,
         "llps_initial_constraint_std": initial_llps_std,
         "llps_final_constraint_std": final_llps_std,
+        "llps_constraint_summary": finite_summary(llps_constraint),
         "cycle_rows": cycle_rows,
         "interpretation": "Life-like persistence is treated as a regime crossing, now integrated with Adaptive Surface Memory.",
     }
@@ -228,7 +214,7 @@ def main() -> None:
     print("Life Number regimes:")
     for row in lambda_rows:
         print(
-            f"  {row['scenario']:<28} Lambda={row['life_number']:.3f} "
+            f"  {row['scenario']:<28} Life Number={row['life_number']:.3f} "
             f"{row['regime']}"
         )
     print("Phosphate and LLPS:")

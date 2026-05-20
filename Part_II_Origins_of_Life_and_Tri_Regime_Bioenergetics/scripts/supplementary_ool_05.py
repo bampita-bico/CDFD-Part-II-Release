@@ -24,6 +24,8 @@ import pandas as pd
 import sympy as sp
 from scipy.integrate import solve_ivp
 
+from partii_runtime import finite_summary, output_dir
+
 
 def water_activity(t: float, period: float) -> float:
     return 0.5 + 0.5 * np.cos(2.0 * np.pi * t / period)
@@ -75,6 +77,40 @@ def threshold_expression() -> str:
     return str(retained)
 
 
+def ratchet_response_surface() -> tuple[pd.DataFrame, np.ndarray, np.ndarray, np.ndarray]:
+    """Fast 2D scan over cycle period and hydrolysis pressure."""
+    periods = np.linspace(1.5, 12.0, 32)
+    hydrolysis_values = np.linspace(0.08, 0.75, 32)
+    memory_grid = np.zeros((len(periods), len(hydrolysis_values)))
+    rows: list[dict[str, float | str]] = []
+    for i, period in enumerate(periods):
+        for j, hydrolysis in enumerate(hydrolysis_values):
+            monomer = 1.0
+            product = 0.01
+            memory = 0.01
+            dt = period / 30.0
+            for step in range(12 * 30):
+                t = step * dt
+                wet = water_activity(t, period)
+                dry = 1.0 - wet
+                concentration = 1.0 + 3.8 * dry
+                condensation = 0.16 * concentration * monomer**2
+                loss = hydrolysis * wet * product
+                monomer = max(monomer + dt * (-2.0 * condensation + 0.12 * wet * (1.0 - monomer)), 0.0)
+                product = max(product + dt * (condensation - loss), 0.0)
+                memory = max(memory + dt * (0.55 * product - 0.10 * wet * memory), 0.0)
+            memory_grid[i, j] = memory
+            rows.append(
+                {
+                    "period": float(period),
+                    "hydrolysis": float(hydrolysis),
+                    "final_memory": float(memory),
+                    "ratchet_state": "retained" if memory > 1.0 else "weak_or_lost",
+                }
+            )
+    return pd.DataFrame(rows), periods, hydrolysis_values, memory_grid
+
+
 def main() -> None:
     scenarios = [
         ("steady_wet", 8.0, 0.08, 0.25, 0.30),
@@ -89,20 +125,22 @@ def main() -> None:
         rows.append(row)
         frames.append(frame)
     data = pd.concat(frames, ignore_index=True)
-    out_dir = Path(__file__).resolve().parent.parent / "outputs" / "paper_05"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    surface_frame, periods, hydrolysis_values, memory_grid = ratchet_response_surface()
+    out_dir = output_dir(__file__, "paper_05")
     data.to_csv(out_dir / "wet_dry_timeseries.csv", index=False)
     pd.DataFrame(rows).to_csv(out_dir / "ratchet_summary.csv", index=False)
+    surface_frame.to_csv(out_dir / "ratchet_response_surface.csv", index=False)
     summary = {
         "paper": 5,
         "model": "wet-dry polymerization ratchet toy diagnostic",
         "threshold_proxy": threshold_expression(),
         "rows": rows,
+        "response_surface": finite_summary(memory_grid),
         "interpretation": "A ratchet requires activation, concentration, retention, and survival across rehydration, not dryness alone.",
     }
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
 
-    fig, axes = plt.subplots(1, 3, figsize=(14, 4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 4, figsize=(18, 4), constrained_layout=True)
     for label, frame in data.groupby("scenario"):
         axes[0].plot(frame["time"], frame["product"], label=label, lw=2)
         axes[1].plot(frame["time"], frame["memory"], label=label, lw=2)
@@ -122,6 +160,18 @@ def main() -> None:
     axes[2].set_title("ratchet gate")
     axes[2].set_ylabel("final memory")
     axes[0].legend(frameon=False, fontsize=8)
+    im = axes[3].imshow(
+        memory_grid.T,
+        origin="lower",
+        aspect="auto",
+        extent=[periods.min(), periods.max(), hydrolysis_values.min(), hydrolysis_values.max()],
+        cmap="viridis",
+    )
+    axes[3].contour(periods, hydrolysis_values, memory_grid.T, levels=[1.0], colors="white", linewidths=1.4)
+    axes[3].set_title("2D ratchet window")
+    axes[3].set_xlabel("cycle period")
+    axes[3].set_ylabel("hydrolysis pressure")
+    fig.colorbar(im, ax=axes[3], fraction=0.046, pad=0.04, label="final memory")
     fig.savefig(out_dir / "wet_dry_polymerization_ratchet.png", dpi=220)
     plt.close(fig)
 

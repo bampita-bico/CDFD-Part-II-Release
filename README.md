@@ -103,8 +103,9 @@ Runtime release DOI exists.
 ## Reference Verification
 
 All DOI-backed bibliography entries were checked online against Crossref or
-DataCite on 2026-05-18. The bibliography includes real DOI-backed references
-plus the Part I Zenodo DOI.
+DataCite on 2026-05-18. The 2024-2026 release anchors used for the final sweep
+were rechecked against publisher or PubMed records on 2026-05-20. The
+bibliography includes real DOI-backed references plus the Part I Zenodo DOI.
 
 ## License
 

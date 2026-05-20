@@ -1,0 +1,5 @@
+condition,symbolic_gate,failure_mode
+sustained_disequilibrium,Phi > 0 over repeated cycles,no work source; chemistry equilibrates or decays
+finite_constraint,0 < C < infinity,washout when C is too low; isolation when C is too high
+responsive_routing,S > 0 and coupled to product-forming pathways,drive becomes heat/noise without selective chemistry
+retained_memory,M_s(t + nT) > M_s(t) for some n,products do not seed later cycles

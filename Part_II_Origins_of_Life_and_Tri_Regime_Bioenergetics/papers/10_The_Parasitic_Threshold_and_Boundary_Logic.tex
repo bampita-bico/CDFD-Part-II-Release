@@ -68,19 +68,40 @@ Useful observables include host-template fraction after serial transfer, compart
 
 \textbf{Status: Open experimental program}
 
+\section{Spatial Boundary Gate}
+The final release expands the companion script beyond a well-mixed
+host--parasite ODE. A second diagnostic places host-like and parasite-like
+fields on a two-dimensional compartment grid. The boundary gate modifies
+parasite access to the interior while the top of the domain receives resource
+inflow. This remains a toy stress test, but it makes the physical point
+visible: boundary specificity is not just a scalar penalty; it changes where
+resource-consuming variants can spatially persist.
+
+The two-dimensional panel should be read as a falsification target. If parasite
+suppression appears only in a well-mixed equation but disappears once diffusion,
+leakage, and boundary access are represented spatially, the boundary-logic
+claim is too weak. Conversely, if gated compartments retain host-dominant
+interiors across parameter sweeps while open boundaries do not, the model earns
+a stronger experimental target.
+
+\textbf{Status: Derived diagnostic}
+
 \section{Conclusion}
 The parasitic threshold is the first crisis created by successful protocell integration. Once copying, retention, and compartment inheritance exist, exploitative variants force the system to evolve boundary logic. This paper therefore sits after replication/protocell integration and before photochemical expansion in Paper 11 in the revised Part II chain.
 
 \section{Reproducibility Note}
-The companion script \texttt{supplementary\_ool\_10.py} tests a minimal host--parasite competition gate with explicit retention and boundary-specificity variables and writes the figure
-\path{outputs/paper_10/parasitic_threshold_boundary_logic.png}. No notebook is required.
+The companion script \texttt{supplementary\_ool\_10.py} tests a minimal
+host--parasite competition gate with explicit retention, boundary specificity,
+and a two-dimensional spatial boundary diagnostic. It writes
+\path{parasitic_threshold_boundary_logic.png} under \path{outputs/paper_10/},
+plus well-mixed and spatial CSV/JSON summaries. No notebook is required.
 
 
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{outputs/paper_10/parasitic_threshold_boundary_logic.png}
-\caption{Parasitic-threshold diagnostic. The toy model compares host persistence with and without boundary specificity when a noncontributing replicator accesses the same resource stream. The figure is a mechanism diagnostic, not a claim about modern viruses.}
+\caption{Parasitic-threshold diagnostic. The toy model compares host persistence with and without boundary specificity when a noncontributing replicator accesses the same resource stream, then shows a two-dimensional boundary-gate stress test. The figure is a mechanism diagnostic, not a claim about modern viruses.}
 \end{figure}
 \bibliographystyle{plain}
 \bibliography{ool_references}

@@ -50,8 +50,25 @@ for at least some range of cycle periods $T=2\pi/\omega$, temperatures, solute m
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{outputs/paper_05/wet_dry_polymerization_ratchet.png}
-\caption{Wet--dry polymerization-ratchet diagnostic. The diagnostic separates product formation from retained memory across several cycling regimes. The model supports a conditional ratchet claim: activation, concentration, retention, and survival must align over repeated cycles.}
+\caption{Wet--dry polymerization-ratchet diagnostic. The diagnostic separates product formation from retained memory across several cycling regimes and adds a two-dimensional period--hydrolysis response surface. The model supports a conditional ratchet claim: activation, concentration, retention, and survival must align over repeated cycles.}
 \end{figure}
+
+\section{Two-Dimensional Ratchet Window}
+The final release expands the companion script from a few named scenarios to a
+response surface. The scan varies the cycle period $T$ and hydrolysis pressure
+$h$ while keeping the feed chemistry fixed. For each grid point, the model runs
+repeated wet--dry substeps and records final retained memory. The retained
+region is not monotonic. Short periods fail because chemistry has too little
+time to complete; long periods can fail because products spend too much time in
+destructive phases; high hydrolysis erases the memory even when product is made.
+
+This is the central CDFD lesson of Paper 5: the ratchet is a window, not a
+slogan. Saying ``wet--dry cycling helps'' is too weak and often misleading. The
+testable claim is that a finite region in $(T,h,\mathrm{surface},\mathrm{pH},
+\mathrm{activation})$ space should outperform steady controls in retained
+product distribution after rehydration.
+
+\textbf{Status: Derived diagnostic}
 
 
 \section{Recent Experimental Anchors}
@@ -63,6 +80,15 @@ The cycling argument has strengthened since older wet--dry sketches. Heat-flow c
 A serious validation program must test cycling as a repeated-selection process, not as a one-shot concentration trick. The primary observables are (i) retained product mass after rehydration, (ii) length distribution or compositional bias across cycles, (iii) hydrolysis loss per wet phase, and (iv) whether products from one cycle seed the next cycle. Controls should include continuously wet mixtures, dry-only mixtures without remixing, inert-surface controls, mineral-surface variants, and identical feedstocks with different cycle periods.
 
 The CDFD prediction is narrow: cycling improves memory only inside a window. Too little dehydration gives dilution and hydrolysis; too much dehydration traps or destroys reactants; too rapid cycling prevents reaction completion; too slow cycling allows degradation to dominate. A future experiment should therefore report the full response surface over $T$, temperature, ionic strength, pH, surface type, and activated precursor chemistry.
+
+The strongest falsification would be a broad negative result: across realistic
+precursor chemistries and surfaces, no cycling protocol improves retained
+length, composition, catalytic activity, or seeding capacity relative to matched
+steady controls. A weaker but still important falsification would show that
+cycling increases gross product only by producing chemically dead material that
+does not seed later cycles. Either outcome would force the Part II chain to
+replace wet--dry cycling with another mechanism that solves the same memory
+problem.
 
 \textbf{Status: Open experimental program}
 
@@ -85,7 +111,8 @@ Oscillating constraints provide a plausible way to turn environmental fluctuatio
 \section{Reproducibility Note}
 The companion script \texttt{supplementary\_ool\_05.py} writes the figure
 \path{outputs/paper_05/wet_dry_polymerization_ratchet.png} plus CSV/JSON
-summaries. No notebook is required.
+summaries, including \path{outputs/paper_05/ratchet_response_surface.csv}. No
+notebook is required.
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

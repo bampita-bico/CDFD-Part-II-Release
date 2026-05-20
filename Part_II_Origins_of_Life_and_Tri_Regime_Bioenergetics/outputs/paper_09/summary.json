@@ -28,33 +28,45 @@
       "state": "survives"
     }
   ],
-  "first_nonfinite_step": 74,
+  "first_nonfinite_step": null,
   "protocell_snapshots": [
     {
       "time": 10,
-      "external_psi": 6.217421240519457,
-      "internal_psi": 0.10357553894700025
+      "external_psi": 19.110590392018665,
+      "internal_psi": 0.0068284213488567945
     },
     {
       "time": 50,
-      "external_psi": 3.0526649629538793,
-      "internal_psi": 0.03129997040876754
+      "external_psi": 1059.5728555869578,
+      "internal_psi": 0.006133986015291854
     },
     {
       "time": 100,
-      "external_psi": null,
-      "internal_psi": null
+      "external_psi": 2411.1118326861088,
+      "internal_psi": 0.004189490112206345
     },
     {
       "time": 150,
-      "external_psi": null,
-      "internal_psi": null
+      "external_psi": 3261.651046348173,
+      "internal_psi": 0.0025613315716581154
     },
     {
       "time": 199,
-      "external_psi": null,
-      "internal_psi": null
+      "external_psi": 3255.668261290386,
+      "internal_psi": 0.0015029592104146363
     }
   ],
-  "interpretation": "The replication toy model supports high-flux sequence persistence, while the integrated explicit update remains numerically fragile."
+  "internal_psi_summary": {
+    "all_finite": true,
+    "min": 0.0015029592104146363,
+    "max": 0.006876263602145436,
+    "mean": 0.004295158146081257
+  },
+  "external_psi_summary": {
+    "all_finite": true,
+    "min": 1.6273654500664805,
+    "max": 3433.936320427282,
+    "mean": 1995.4594997980676
+  },
+  "interpretation": "The replication toy model is windowed in flux, and the bounded 2D protocell diagnostic stays finite under the release parameters."
 }

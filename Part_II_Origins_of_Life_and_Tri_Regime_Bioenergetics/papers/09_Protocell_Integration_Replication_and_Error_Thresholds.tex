@@ -123,7 +123,9 @@ R_i=f_i(c)\,g(|\bm{J}_e\cdot\bm{J}_H|),
 for nonnegative $g$.
 
 \section{Numerical Audit}
-The diagnostic for this paper combines a reduced error-threshold sweep with a spatial protocell update. It should be read as a numerical stress test, not as validation. The reduced diagnostic reported:
+The diagnostic for this paper combines a reduced error-threshold sweep with a
+bounded two-dimensional protocell update. It should be read as a numerical
+stress test, not as validation. The reduced diagnostic reported:
 \begin{itemize}
     \item $\Phi=0.2$: final master-sequence fitness $0.367$,
     \item $\Phi=0.5$: final master-sequence fitness $0.083$,
@@ -133,22 +135,32 @@ The diagnostic for this paper combines a reduced error-threshold sweep with a sp
 \end{itemize}
 The non-monotonic low-to-intermediate response rules out a single universal critical flux in this reduced diagnostic. The correct claim is windowed: copying benefits from energy throughput only when activation, retention, and damage remain bounded.
 
-The integrated protocell diagnostic is more important for what it exposes. It produced finite early snapshots and then non-finite behavior under unbounded explicit updates. That failure blocks any claim of a stable simulated protocell.
+The final release replaces the earlier unbounded explicit autocatalytic update
+with saturated kinetics and bounded adaptive $S,M_s$ updates. Under those
+release parameters, the two-dimensional protocell diagnostic remains finite for
+the full run. The result should still be read conservatively: the simulated
+boundary protects a low internal $\Psi_s$ region while the exterior experiences
+large drive, which is a stress-test picture of compartmental buffering rather
+than a demonstration of real protocell reproduction.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{outputs/paper_09/error_threshold_and_protocell.png}
-\caption{Merged error-threshold/protocell diagnostic. The left panel tests flux-dependent master-sequence persistence. The right panel records numerical instability in the integrated protocell update. The figure is a stress test, not a successful protocell simulation.}
+\caption{Merged error-threshold/protocell diagnostic. The left panel tests flux-dependent master-sequence persistence. The right panel shows a bounded two-dimensional protocell stress test with finite internal and external adaptive-ratio traces. The figure is a mechanism diagnostic, not a successful protocell simulation.}
 \end{figure}
 
 \section{Hardening Roadmap}
-The next implementation should replace unbounded autocatalytic growth with saturated kinetics such as
+The release implementation now uses saturated kinetics such as
 \begin{equation}
 R_{\mathrm{auto}}
 =
 \frac{k\Phi^2}{K+\Phi^2}-\ell\Phi,
 \end{equation}
-then verify timestep refinement, boundedness, and convergence. Operator splitting or implicit updates may be needed for coupled transport and reaction.
+and verifies boundedness in the generated summary JSON. The next hardening step
+is stronger: timestep refinement, grid-size refinement, and comparison against
+operator-split or implicit updates for coupled transport and reaction. The
+model should only be promoted from stress test to prediction if those
+refinement checks preserve the qualitative result.
 
 \section{Experimental Targets}
 The model protocell literature gives concrete targets: template-directed genetic-polymer synthesis in fatty-acid vesicles~\cite{Mansy2008}, nonenzymatic RNA synthesis inside model protocells~\cite{Adamala2013}, multi-step nonenzymatic primer-extension chemistry~\cite{Walton2018}, and recent water-compatible thioester-mediated RNA aminoacylation/peptidyl-RNA chemistry~\cite{Singh2025}. CDFD should therefore be tested by a coupled score,
@@ -163,7 +175,13 @@ R_{\mathrm{division}},
 not by replication alone.
 
 \section{Conclusion}
-Paper 9 is the integration gate. It establishes that bounded copying, retained internal chemistry, coupled energy flow, and heritable containers must be tested together. The current numerical status is deliberately conservative: the reduced copying toy is informative, while the full protocell implementation remains unstable. Paper 10 can only discuss parasitic exploitation after this replication/container machinery exists.
+Paper 9 is the integration gate. It establishes that bounded copying, retained
+internal chemistry, coupled energy flow, and heritable containers must be tested
+together. The current numerical status is deliberately conservative: the
+reduced copying toy is informative, while the two-dimensional protocell
+implementation is a bounded stress test that still needs refinement before it
+can be treated as a prediction. Paper 10 can only discuss parasitic exploitation
+after this replication/container machinery exists.
 
 \section{Reproducibility Note}
 The companion script \texttt{supplementary\_ool\_09.py} writes the figure

@@ -79,10 +79,11 @@ tables, plots, or regime diagnostics rather than decorative dependencies.
 ## Script And Output Policy
 
 Part II is script-first. Placeholder `.ipynb` notebooks are not included in the
-active release. Paper 1 is analytic and has no generated output folder. Papers
-2-12 include outputs only because their manuscripts cite generated diagnostics.
-The interactive panels are generated from those outputs and do not introduce a
-separate computational source of truth.
+active release. Paper 1 now includes a lightweight dependency-gate surface so
+the opening CDFL notation is reproducible in the same script-first style as the
+rest of the release. Papers 2-12 include outputs because their manuscripts cite
+generated diagnostics. The interactive panels are generated from those outputs
+and do not introduce a separate computational source of truth.
 
 ## Review Status
 

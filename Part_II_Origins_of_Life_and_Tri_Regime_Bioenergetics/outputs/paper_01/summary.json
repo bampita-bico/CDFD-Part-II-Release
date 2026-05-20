@@ -1,0 +1,13 @@
+{
+  "paper": 1,
+  "model": "CDFL dependency-gate surface for the Part II opening paper",
+  "grid_points": 3600,
+  "near_critical_points": 425,
+  "psi_summary": {
+    "all_finite": true,
+    "min": 0.0023437488347177937,
+    "max": 24.100639751395033,
+    "mean": 1.7773661401069263
+  },
+  "interpretation": "The near-critical band is a necessary-condition map: flux, constraint, responsiveness, and memory must be co-present before later OOL mechanisms matter."
+}

@@ -44,5 +44,11 @@
       "ratchet_state": "weak_or_lost"
     }
   ],
+  "response_surface": {
+    "all_finite": true,
+    "min": 0.6445351138553497,
+    "max": 6.249974432388314,
+    "mean": 1.7815413074377615
+  },
   "interpretation": "A ratchet requires activation, concentration, retention, and survival across rehydration, not dryness alone."
 }

@@ -68,6 +68,59 @@ The adaptive ratio
 \end{equation}
 is not introduced as a universal constant. It is a bookkeeping device for tracking whether the components needed for persistence are co-present. A high flux without retention burns out. A strong constraint without flux freezes. A responsive surface without memory remains transient.
 
+\section{Necessary Conditions for the Part II Model}
+The Part II claim holds only if four necessary conditions are met together.
+They are stated explicitly because origin-of-life narratives often over-weight
+one ingredient: a favored molecule, a favored setting, or a favored energy
+source. CDFD treats those ingredients as incomplete unless they satisfy a
+coupled gate.
+
+\begin{enumerate}
+    \item \textbf{Sustained disequilibrium.}  The environment must supply
+    repeatable drive, not a single pulse. Operationally, $\Phi$ must remain
+    positive over the relevant renewal interval.
+    \item \textbf{Finite constraint.}  The system must be neither freely mixed
+    nor sealed off. In symbols, $0<C<\infty$: too little constraint gives
+    washout, while too much constraint prevents exchange and renewal.
+    \item \textbf{Responsive routing.}  The local structure must alter product
+    distributions or retention. A surface, pore, droplet, or polymer has CDFD
+    significance only when it changes where flux goes, represented by $S>0$.
+    \item \textbf{Retained memory.}  Some product, pattern, boundary state, or
+    catalytic bias must survive later destructive phases. The working test is
+    $M_s(t+nT)>M_s(t)$ over at least one repeated environmental sequence.
+\end{enumerate}
+
+\textbf{Status: Derived release guardrail}
+
+\section{Dependency-Gate Diagnostic}
+The final release adds a lightweight script for this opening paper,
+\texttt{supplementary\_ool\_01.py}. The script scans a two-dimensional grid of
+drive $\Phi$ and constraint $C$, then computes Eq.~\eqref{eq:psi} using bounded
+phenomenological functions for $S$ and $M_s$. The result is not a simulation of
+life. It is a necessary-condition map showing where the opening notation is
+subcritical, near-critical, or overloaded.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{outputs/paper_01/dependency_gate_surface.png}
+\caption{Dependency-gate diagnostic for Paper 1. The near-critical band marks
+where drive, finite constraint, responsive routing, and retained memory are
+co-present in the toy surface. It is an interpretive map for the twelve-paper
+chain, not evidence that abiogenesis has occurred.}
+\end{figure}
+
+The scan reports 3,600 grid points, of which 425 fall in the near-critical
+window $0.85\leq\Psi_s\leq1.15$. That number has no universal meaning. Its
+purpose is to force the release to distinguish three regimes:
+\begin{itemize}
+    \item underdriven or overconstrained systems, where chemistry cannot build
+    persistent memory;
+    \item near-critical systems, where later mechanisms may matter;
+    \item overloaded systems, where excess drive outruns retention or control.
+\end{itemize}
+
+\textbf{Status: Derived diagnostic}
+
 \section{Dissipative Structuring}
 Driven systems can form structures that route energy more effectively than homogeneous diffusion. In prebiotic settings, the relevant question is whether such structures can become chemically consequential: mineral interfaces, pores, films, droplets, polymers, and reaction loops all change the effective relationship between $\Phi$ and $C$.
 
@@ -81,11 +134,27 @@ If a prebiotic environment supplies sustained disequilibrium, spatial constraint
 
 This is not a proof that a particular vent, pool, mineral, or molecule was historically necessary. The later papers narrow those possibilities by adding Fe--S redox chemistry, distributed mineral transport, proton/ion coupling, cycling polymerization, autocatalysis, chemical alphabets, compartments, replication thresholds, parasitic failure modes, and photochemical expansion.
 
+\section{Series-Level Falsification Logic}
+The opening paper can fail in several ways. If prebiotic experiments show that
+product persistence is independent of constraint architecture, then $C$ is a
+weak or decorative variable. If surfaces change flux but not endpoint chemistry,
+then $S$ is not a useful organizing parameter. If repeated cycles do not improve
+retained product distributions relative to matched steady controls, then $M_s$
+does not describe chemical memory in the relevant setting. Finally, if each
+paper in the series requires a different incompatible definition of
+$\Psi_s$, the CDFL grammar fails as a unifying language even if individual
+origin-of-life mechanisms remain interesting.
+
+\textbf{Status: Falsifiable framing}
+
 \section{Conclusion}
 The thermodynamic opening move is a dependency graph, not a victory lap. Life-like organization requires flux, constraint, responsive routing, and retained memory to reinforce one another. Paper 2 therefore begins the concrete chain with the most immediate physical substrate: iron--sulfur redox and mineral constraint scaffolds.
 
 \section{Reproducibility Note}
-This paper is analytic and conceptual. It does not require a notebook or generated output for release. Any toy visualization of Eq.~\eqref{eq:psi} should be treated as an illustration, not as validation of abiogenesis.
+The companion script \texttt{supplementary\_ool\_01.py} writes
+\path{dependency_gate_surface.png} under \path{outputs/paper_01/}, plus a grid
+CSV, a necessary-conditions CSV, and summary JSON. The output is a
+necessary-condition visualization, not validation of abiogenesis.
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

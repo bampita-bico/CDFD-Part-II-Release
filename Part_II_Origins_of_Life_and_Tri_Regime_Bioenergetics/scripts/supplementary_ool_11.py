@@ -22,14 +22,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-KAPPA_S = 0.05
-D_M = 0.01
-
-def life_number(input_energy: float, sigma_e: float, sigma_p: float, stabilization: float, tau: float = 1.0) -> float:
-    maintenance = 1.0
-    S = 1.0
-    M_s = 1.0
-    return (input_energy * sigma_e * sigma_p * tau / max(stabilization * maintenance, 1e-12)) * S * M_s
+from partii_runtime import life_number, output_dir
 
 
 def capture_scenarios() -> list[dict[str, object]]:
@@ -41,7 +34,7 @@ def capture_scenarios() -> list[dict[str, object]]:
     ]
     rows: list[dict[str, object]] = []
     for label, input_energy, sigma_e, sigma_p, stabilization, note in scenarios:
-        lam = life_number(input_energy, sigma_e, sigma_p, stabilization)
+        lam = life_number(input_energy, sigma_e, sigma_p, tau_relax=1.0, stabilization=stabilization)
         rows.append(
             {
                 "scenario": label,
@@ -90,8 +83,7 @@ def write_outputs(
     capture_rows: list[dict[str, object]],
     overload_rows: list[dict[str, object]],
 ) -> None:
-    out_dir = Path(__file__).resolve().parent.parent / "outputs" / "paper_11"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_dir = output_dir(__file__, "paper_11")
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     with (out_dir / "capture_chain.csv").open("w", newline="") as handle:
         writer = csv.DictWriter(
@@ -168,7 +160,7 @@ def main() -> None:
     print("Capture chain:")
     for row in capture_rows:
         print(
-            f"  {row['scenario']:<30} Lambda={row['life_number']:.3f} "
+            f"  {row['scenario']:<30} Life Number={row['life_number']:.3f} "
             f"{row['regime']}"
         )
     print("Overload buffering:")

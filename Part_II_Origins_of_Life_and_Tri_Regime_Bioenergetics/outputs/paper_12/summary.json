@@ -48,6 +48,12 @@
   "stored_phosphate_packets": 3.540054878306137,
   "llps_initial_constraint_std": 0.0,
   "llps_final_constraint_std": 14.029645714706161,
+  "llps_constraint_summary": {
+    "all_finite": true,
+    "min": 0.132619555894753,
+    "max": 57.37356321500368,
+    "mean": 13.34957026588541
+  },
   "cycle_rows": [
     {
       "cycle": 1,

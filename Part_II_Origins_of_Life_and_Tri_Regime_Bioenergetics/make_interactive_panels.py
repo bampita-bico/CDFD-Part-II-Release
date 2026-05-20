@@ -16,6 +16,7 @@ BASE = Path(__file__).resolve().parent
 OUT = BASE / "outputs"
 
 PAPER_ORDER = [
+    ("paper_01", "Paper 1: Thermodynamic Mandate and Dependency-Gate Surface"),
     ("paper_02", "Paper 2: Iron-Sulfur Redox and Mineral Constraint Scaffolds"),
     ("paper_03", "Paper 3: Magnetite Networks and Distributed Electron Transport"),
     ("paper_04", "Paper 4: Interfacial Water and Proto-Chemiosmosis"),
@@ -115,7 +116,7 @@ def make_index() -> None:
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Part II Interactive Panels</title><style>{STYLE}</style></head>
 <body><header><h1>Part II Interactive Panels</h1><p>Local HTML dashboards for the output-bearing origins-of-life papers.</p></header>
-<main><section class="panel">{''.join(links)}</section><section class="note"><p>Panels preview existing figures, render quick charts from CSV outputs, and expose each paper's summary JSON. Paper 1 has no generated panel because it cites no generated diagnostic output.</p></section></main></body></html>
+<main><section class="panel">{''.join(links)}</section><section class="note"><p>Panels preview existing figures, render quick charts from CSV outputs, and expose each paper's summary JSON. Paper 1 now includes a dependency-gate surface so the series-level notation is reproducible from the same script-first workflow as the rest of the release.</p></section></main></body></html>
 """
     (OUT / "interactive_index.html").write_text(html_text, encoding="utf-8")
 
