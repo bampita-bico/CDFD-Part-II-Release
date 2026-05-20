@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this archive, cite this Part II release and also cite the Part I Zenodo DOI for CDFL, the CDFD framework language."
 title: "CDFD Part II: Origins of Life and Tri-Regime Bioenergetics - Constraint-Driven Flux Dynamics"
 version: "1.0.0"
+doi: 10.5281/zenodo.20264779
 date-released: 2026-05-18
 license: CC-BY-4.0
 authors:

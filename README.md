@@ -1,5 +1,7 @@
 # CDFD Part II: Origins of Life and Tri-Regime Bioenergetics
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20264779.svg)](https://doi.org/10.5281/zenodo.20264779)
+
 This release contains the public Part II origins-of-life archive for the
 Constraint-Driven Flux Dynamics project.
 
