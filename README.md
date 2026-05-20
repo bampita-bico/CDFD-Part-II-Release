@@ -10,12 +10,7 @@ ORCID: https://orcid.org/0009-0001-0556-5516
 
 ## Release Naming
 
-Recommended repository name: `CDFD-Part-II-Release`  
-Primary manuscript folder:
-`Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/`
-
-The versioned archive name should be:
-`CDFD-Part-II-Origins-of-Life-and-Tri-Regime-Bioenergetics-v1.0.0.zip`
+CDFD Part II: Origins of Life and Tri-Regime Bioenergetics
 
 ## Keywords
 
@@ -31,7 +26,7 @@ photochemistry; photoredox chemistry; overload stabilization; tri-regime
 bioenergetics; Life Number; Mujjabi Life Number; CDFL; CDFD Runtime;
 reproducible research; open science; preprint.
 
-## Recommended GitHub Topics
+## GitHub Topics
 
 `cdfd`, `cdfd-runtime`, `cdfl`, `constraint-driven-flux-dynamics`,
 `origins-of-life`, `abiogenesis`, `prebiotic-chemistry`, `bioenergetics`,
@@ -105,7 +100,7 @@ Runtime release DOI exists.
 All DOI-backed bibliography entries were checked online against Crossref or
 DataCite on 2026-05-18. The 2024-2026 release anchors used for the final sweep
 were rechecked against publisher or PubMed records on 2026-05-20. The
-bibliography includes real DOI-backed references plus the Part I Zenodo DOI.
+bibliography includes real DOI-backed references, Part II Zenodo DOI, plus the Part I Zenodo DOI.
 
 ## License
 
@@ -114,16 +109,9 @@ International License (CC BY 4.0). See `LICENSE` and `LICENSE_BOUNDARY.md`.
 
 ## Citation
 
-Until a Zenodo DOI is assigned for Part II, cite the repository and version:
-
-Steve Bico Mujjabi, MD. CDFD Part II: Origins of Life and Tri-Regime
-Bioenergetics. Version 1.0.0.
-
-Also cite Part I for the CDFD framework notation:
+Mujjabi, S. B. (2026). CDFD Part II: Origins of Life and Tri-Regime Bioenergetics - Constraint-Driven Flux Dynamics. Zenodo.
+https://doi.org/10.5281/zenodo.20264779
 
 Steve Bico Mujjabi, MD. CDFD Part I: Fundamental Physics. Zenodo.
 https://doi.org/10.5281/zenodo.20250821
 
-After the Part II Zenodo deposit is created, add the exact release DOI to
-`CITATION.cff`, `.zenodo.json`, and this section, then add the DOI badge near
-the top of this README.
