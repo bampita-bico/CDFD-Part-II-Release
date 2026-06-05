@@ -1,6 +1,6 @@
 # Reproducibility
 
-Last local verification: 2026-05-20.
+Last local verification: 2026-05-30.
 
 ## Environment Used
 
@@ -30,6 +30,10 @@ From `CDFD-Part-II-Release`:
 
 Paper 1 now has a lightweight dependency-gate diagnostic. It remains a
 necessary-condition visualization, not a historical abiogenesis simulation.
+Paper 7 now includes `aromatic_source_mix.csv` and a three-panel figure that
+separates aromatic pattern persistence, model-space chirality, and feedstock
+provenance. Paper 11 labels chlorophyll and eumelanin as mature endpoints of
+wider functional classes, not origin requirements.
 
 ## Build Local Interactive Panels
 
@@ -50,11 +54,9 @@ From `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics`:
 
 ```bash
 mkdir -p /tmp/cdfd_partii_build PDFs
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory /tmp/cdfd_partii_build papers/01_The_Thermodynamic_Mandate_and_Dissipative_Structuring.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=/tmp/cdfd_partii_build papers/*.tex
 ```
 
-For papers with citations, run `bibtex /tmp/cdfd_partii_build/<basename>`
-between the first and second `pdflatex` passes, then run `pdflatex` twice more.
 Copy the final active PDFs from `/tmp/cdfd_partii_build/` to `PDFs/`.
 
 ## What This Verifies
@@ -66,6 +68,7 @@ origin-of-life hypotheses.
 ## Current Verification Result
 
 The active script outputs, interactive panels, and twelve-paper PDF set were
-regenerated locally on 2026-05-20 during the final release sweep. The final
-LaTeX log scan found no undefined citations, unresolved references, rerun
-requests, LaTeX/BibTeX errors, or overfull boxes in the active PDF build logs.
+regenerated locally on 2026-05-30 after the Paper 7 source-mix and Paper 11
+eumelanin endpoint updates. The final LaTeX log scan found no undefined
+citations, unresolved references, rerun requests, or LaTeX/BibTeX errors in the
+active PDF build logs.

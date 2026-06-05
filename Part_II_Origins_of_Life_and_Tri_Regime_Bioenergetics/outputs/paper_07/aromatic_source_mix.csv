@@ -1,0 +1,6 @@
+scenario,terrestrial_feedstock,exogenous_feedstock,raw_pool,retention_factor,retained_pool,coupling_factor,damage_load,functional_score,interpretation
+terrestrial_synthesis,1.0,0.0,1.0,0.6,0.6,0.7,0.4,0.3,local synthesis with moderate retention
+meteoritic_pulse_unretained,0.2,1.4,1.5999999999999999,0.2,0.32,0.35,0.8,0.062222222222222213,exogenous pulse without localization
+meteoritic_seed_retained,0.5,0.8,1.3,0.75,0.9750000000000001,0.65,0.5,0.42250000000000004,delivered organics retained in a boundary
+mixed_source_surface_trap,0.8,0.5,1.3,0.85,1.105,0.8,0.45,0.6096551724137931,local plus exogenous feedstock trapped at a surface
+high_feedstock_overload,0.7,1.5,2.2,0.7,1.54,0.7,1.8,0.38499999999999995,feedstock enrichment with damaging overload

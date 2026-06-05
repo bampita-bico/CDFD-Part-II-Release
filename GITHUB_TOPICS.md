@@ -1,4 +1,4 @@
-# Recommended GitHub Topics
+# GitHub Topics
 
 Use these topics for the public repository. GitHub currently accepts up to 20
 topics per repository, so this list is intentionally capped at 20 high-signal

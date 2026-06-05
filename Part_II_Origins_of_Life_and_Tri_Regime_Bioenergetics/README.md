@@ -61,11 +61,11 @@ Part II as a coarse-grained origins framework.
 | 4 | Adds the proton/ion and interfacial-water side of proto-chemiosmotic coupling. |
 | 5 | Turns environmental cycling into a polymerization and retention ratchet. |
 | 6 | Defines autocatalytic closure and chemical memory without overclaiming ignition. |
-| 7 | Separates durable chemical alphabets and homochirality from genetic code. |
+| 7 | Separates durable chemical alphabets, source-mix provenance, and homochirality from genetic code. |
 | 8 | Moves from geological confinement to adaptive compartments and soft boundaries. |
 | 9 | Tests replication, error thresholds, and protocell integration together. |
 | 10 | Defines the parasitic threshold after copying and boundary inheritance exist. |
-| 11 | Adds photochemical capture and overload stabilization as later functional expansion. |
+| 11 | Adds photochemical capture and overload stabilization as later functional expansion; chlorophyll and eumelanin remain mature endpoint examples. |
 | 12 | Synthesizes the tri-regime Life Number and falsification program. |
 
 ## Scientific Python Stack
@@ -82,8 +82,11 @@ Part II is script-first. Placeholder `.ipynb` notebooks are not included in the
 active release. Paper 1 now includes a lightweight dependency-gate surface so
 the opening CDFL notation is reproducible in the same script-first style as the
 rest of the release. Papers 2-12 include outputs because their manuscripts cite
-generated diagnostics. The interactive panels are generated from those outputs
-and do not introduce a separate computational source of truth.
+generated diagnostics. Paper 7 writes `aromatic_source_mix.csv` to separate
+terrestrial and exogenous feedstock from retention and coupling. Paper 11 writes
+photochemical capture and overload-buffering tables while labeling eumelanin as
+a mature endpoint exemplar. The interactive panels are generated from those
+outputs and do not introduce a separate computational source of truth.
 
 ## Review Status
 

@@ -51,13 +51,46 @@ def chirality_breaking() -> pd.DataFrame:
     return pd.DataFrame({"time": sol.t, "left": sol.y[0], "right": sol.y[1]})
 
 
+def source_mix_diagnostic() -> pd.DataFrame:
+    scenarios = [
+        ("terrestrial_synthesis", 1.0, 0.0, 0.60, 0.70, 0.40, "local synthesis with moderate retention"),
+        ("meteoritic_pulse_unretained", 0.2, 1.4, 0.20, 0.35, 0.80, "exogenous pulse without localization"),
+        ("meteoritic_seed_retained", 0.5, 0.8, 0.75, 0.65, 0.50, "delivered organics retained in a boundary"),
+        ("mixed_source_surface_trap", 0.8, 0.5, 0.85, 0.80, 0.45, "local plus exogenous feedstock trapped at a surface"),
+        ("high_feedstock_overload", 0.7, 1.5, 0.70, 0.70, 1.80, "feedstock enrichment with damaging overload"),
+    ]
+    rows = []
+    for label, terrestrial, exogenous, retention, coupling, damage, note in scenarios:
+        raw_pool = terrestrial + exogenous
+        retained_pool = retention * raw_pool
+        functional_score = retained_pool * coupling / (1.0 + damage)
+        rows.append(
+            {
+                "scenario": label,
+                "terrestrial_feedstock": terrestrial,
+                "exogenous_feedstock": exogenous,
+                "raw_pool": raw_pool,
+                "retention_factor": retention,
+                "retained_pool": retained_pool,
+                "coupling_factor": coupling,
+                "damage_load": damage,
+                "functional_score": functional_score,
+                "interpretation": note,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def main() -> None:
     pattern = aromatic_stabilization(5.0)
     chiral = chirality_breaking()
+    source_mix = source_mix_diagnostic()
     out_dir = Path(__file__).resolve().parent.parent / "outputs" / "paper_07"
     out_dir.mkdir(parents=True, exist_ok=True)
     pattern.to_csv(out_dir / "aromatic_stability_timeseries.csv", index=False)
     chiral.to_csv(out_dir / "chirality_timeseries.csv", index=False)
+    source_mix.to_csv(out_dir / "aromatic_source_mix.csv", index=False)
+    best_source_row = source_mix.loc[source_mix["functional_score"].idxmax()]
     summary_rows = [
         {"metric": "final_aliphatic_pattern", "value": float(pattern["aliphatic"].iloc[-1])},
         {"metric": "final_aromatic_pattern", "value": float(pattern["aromatic"].iloc[-1])},
@@ -65,10 +98,19 @@ def main() -> None:
         {"metric": "initial_right", "value": float(chiral["right"].iloc[0])},
         {"metric": "final_left", "value": float(chiral["left"].iloc[-1])},
         {"metric": "final_right", "value": float(chiral["right"].iloc[-1])},
+        {"metric": "best_source_mix_score", "value": float(best_source_row["functional_score"])},
     ]
     pd.DataFrame(summary_rows).to_csv(out_dir / "aromatic_chirality_summary.csv", index=False)
-    (out_dir / "summary.json").write_text(json.dumps({"paper": 7, "model": "aromatic stability and chiral amplification toy diagnostic", "summary_rows": summary_rows}, indent=2) + "\n")
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4), constrained_layout=True)
+    summary = {
+        "paper": 7,
+        "model": "aromatic stability, chiral amplification, and aromatic source-mix diagnostic",
+        "provenance_guardrail": "source supply is upstream of retention and coupling; exogenous delivery is not itself a Life Number gate",
+        "best_source_mix": best_source_row.to_dict(),
+        "summary_rows": summary_rows,
+        "source_mix_rows": source_mix.to_dict(orient="records"),
+    }
+    (out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    fig, axes = plt.subplots(1, 3, figsize=(15.5, 4.2), constrained_layout=True)
     axes[0].plot(pattern["step"], pattern["aliphatic"], label="aliphatic", lw=2)
     axes[0].plot(pattern["step"], pattern["aromatic"], label="aromatic", lw=2)
     axes[0].set_title("pattern persistence")
@@ -81,6 +123,14 @@ def main() -> None:
     axes[1].set_xlabel("time")
     axes[1].set_ylabel("abundance proxy")
     axes[1].legend(frameon=False)
+    labels = [label.replace("_", "\n") for label in source_mix["scenario"]]
+    scores = source_mix["functional_score"].to_numpy()
+    colors = ["#4f8f5b" if score == scores.max() else "#7a9cc6" for score in scores]
+    axes[2].bar(np.arange(len(scores)), scores, color=colors)
+    axes[2].set_xticks(np.arange(len(scores)))
+    axes[2].set_xticklabels(labels, fontsize=7)
+    axes[2].set_title("aromatic source mix")
+    axes[2].set_ylabel("retained functional score")
     fig.savefig(out_dir / "aromatic_chirality_stability.png", dpi=220)
     plt.close(fig)
     print("=" * 70)
@@ -88,6 +138,7 @@ def main() -> None:
     print("=" * 70)
     for row in summary_rows:
         print(f"  {row['metric']:<28} {row['value']:.3f}")
+    print(f"  {'best_source_mix':<28} {best_source_row['scenario']}")
     print("  Figure: outputs/paper_07/aromatic_chirality_stability.png")
     print("=" * 70)
 

@@ -11,6 +11,8 @@
 \title{\textbf{Paper OOL-7: Aromatic Stabilization, Chemical Alphabets, and Homochirality:\\ Pattern Survival Before Genetic Code}}
 \author{Steve Bico Mujjabi, MD\\
 \small Independent Researcher\\
+\small Founder, Vura Labs\\
+\small Kampala, Uganda\\
 \small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
 \date{May 2026}
 
@@ -21,10 +23,63 @@
 This paper separates durable chemical alphabets and homochirality from autocatalytic closure. Aromatic scaffolds, redox cofactors, nucleobase-like motifs, and disordered aromatic polymers are treated as persistence mechanisms that may preserve patterns under flux noise. Homochirality is kept chemical and testable: CDFD requires amplification mechanisms, cross-inhibition, solubility effects, or template bias rather than unsupported historical certainty. The companion script separates aromatic persistence from a model-space chirality attractor.
 \end{abstract}
 
+\section*{Symbol Conventions}
+
+\noindent\textbf{CDFD origins-of-life symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
+\toprule
+Symbol & Meaning in Part II & Origins-of-life reading \\
+\midrule
+$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
+$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
+$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
+$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
+$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
+$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
+\bottomrule
+\end{tabular}
+}
+\end{center}
+
+\noindent\textbf{Greek-symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
+\toprule
+Symbol & Local role & Interpretation rule \\
+\midrule
+$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
+$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
+$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
+$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
+$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
+$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
+$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
+\bottomrule
+\end{tabular}
+}
+\end{center}
+
+
 \section{Introduction}
 Paper 6 addressed closure of reaction networks. Even with closure, most polymers hydrolyze or scramble without structural motifs that resist perturbation. Aromatic rings provide deep energy wells via delocalization (H\"uckel $4n+2$ rule in simplified form) and participate in electron--proton coupled chemistry~\cite{Joyce2012}.
 
 Gap from Paper 6: closure without durable patterns cannot carry information.
+
+\textbf{Status: Inferred}
+
+\section{Possible Sources of Aromatic Feedstock}
+The CDFD claim is source-agnostic. Aromatic feedstock could be produced locally by terrestrial photoredox, cyanosulfidic, mineral-surface, or thermal chemistry, and it could also be supplemented by exogenous delivery. Carbonaceous meteorites, especially Murchison, contain extraterrestrial organic matter and reported aromatic hydrocarbons~\cite{Kvenvolden1970,Pering1971,Oro1971,SchmittKopplin2010}. This does not prove that the first useful aromatics on early Earth arrived from space. It widens the reservoir of molecules that a surface, pore, film, or cycling environment could retain and test.
+
+In the notation of the series, provenance is upstream of function:
+\begin{equation}
+A_{\mathrm{eff}}
+=
+\Xi_{\mathrm{loc}}\left(A_{\mathrm{terr}}+A_{\mathrm{exo}}\right),
+\end{equation}
+where $A_{\mathrm{terr}}$ is terrestrial aromatic production, $A_{\mathrm{exo}}$ is externally delivered aromatic feedstock, and $\Xi_{\mathrm{loc}}$ is the retention/localization factor. A meteoritic pulse that disperses without retention does not become information-relevant. A smaller mixed pool that is trapped, cycled, and coupled to redox chemistry can matter more.
 
 \textbf{Status: Inferred}
 
@@ -116,15 +171,16 @@ Companion script: \texttt{supplementary\_ool\_07.py}.
 \item Final aliphatic pattern strength: $0.018$
 \item Final aromatic pattern strength: $1.000$
 \item Chirality trajectory (model coordinates): $(L,R)=(1.011,0.989)\rightarrow(23.818,0.007)$
+\item Best retained mixed-source functional score: $0.610$
 \end{itemize}
-Large separation between aromatic and aliphatic endpoints supports differential persistence \emph{under the scripted degradation law}. Chirality divergence is a \emph{model-space attractor}; no claim is made that terrestrial biomolecular handedness follows this mechanism without laboratory tests.
+Large separation between aromatic and aliphatic endpoints supports differential persistence \emph{under the scripted degradation law}. Chirality divergence is a \emph{model-space attractor}; no claim is made that terrestrial biomolecular handedness follows this mechanism without laboratory tests. The source-mix diagnostic writes \texttt{aromatic\_source\_mix.csv}; it is a provenance guardrail, not historical proof. It shows that exogenous supply helps only when feedstock is retained and functionally coupled.
 
 \textbf{Status: Derived}
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{outputs/paper_07/aromatic_chirality_stability.png}
-\caption{Merged closure/aromatic-information diagnostic. The closure panel shows sub-ignition persistence enhancement rather than runaway metabolism. The aromatic panel shows differential pattern survival under the scripted degradation law. The chirality panel is a model-coordinate divergence, not a historical claim about terrestrial handedness.}
+\caption{Merged aromatic-information diagnostic. The pattern panel shows differential survival under the scripted degradation law. The chirality panel is a model-coordinate divergence, not a historical claim about terrestrial handedness. The source-mix panel separates aromatic provenance from functional selection: delivery only matters when retained and coupled.}
 \end{figure}
 
 \section{Interpretation}

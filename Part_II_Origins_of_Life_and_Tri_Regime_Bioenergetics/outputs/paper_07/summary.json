@@ -1,6 +1,19 @@
 {
   "paper": 7,
-  "model": "aromatic stability and chiral amplification toy diagnostic",
+  "model": "aromatic stability, chiral amplification, and aromatic source-mix diagnostic",
+  "provenance_guardrail": "source supply is upstream of retention and coupling; exogenous delivery is not itself a Life Number gate",
+  "best_source_mix": {
+    "scenario": "mixed_source_surface_trap",
+    "terrestrial_feedstock": 0.8,
+    "exogenous_feedstock": 0.5,
+    "raw_pool": 1.3,
+    "retention_factor": 0.85,
+    "retained_pool": 1.105,
+    "coupling_factor": 0.8,
+    "damage_load": 0.45,
+    "functional_score": 0.6096551724137931,
+    "interpretation": "local plus exogenous feedstock trapped at a surface"
+  },
   "summary_rows": [
     {
       "metric": "final_aliphatic_pattern",
@@ -25,6 +38,72 @@
     {
       "metric": "final_right",
       "value": 0.007013081158007374
+    },
+    {
+      "metric": "best_source_mix_score",
+      "value": 0.6096551724137931
+    }
+  ],
+  "source_mix_rows": [
+    {
+      "scenario": "terrestrial_synthesis",
+      "terrestrial_feedstock": 1.0,
+      "exogenous_feedstock": 0.0,
+      "raw_pool": 1.0,
+      "retention_factor": 0.6,
+      "retained_pool": 0.6,
+      "coupling_factor": 0.7,
+      "damage_load": 0.4,
+      "functional_score": 0.3,
+      "interpretation": "local synthesis with moderate retention"
+    },
+    {
+      "scenario": "meteoritic_pulse_unretained",
+      "terrestrial_feedstock": 0.2,
+      "exogenous_feedstock": 1.4,
+      "raw_pool": 1.5999999999999999,
+      "retention_factor": 0.2,
+      "retained_pool": 0.32,
+      "coupling_factor": 0.35,
+      "damage_load": 0.8,
+      "functional_score": 0.062222222222222213,
+      "interpretation": "exogenous pulse without localization"
+    },
+    {
+      "scenario": "meteoritic_seed_retained",
+      "terrestrial_feedstock": 0.5,
+      "exogenous_feedstock": 0.8,
+      "raw_pool": 1.3,
+      "retention_factor": 0.75,
+      "retained_pool": 0.9750000000000001,
+      "coupling_factor": 0.65,
+      "damage_load": 0.5,
+      "functional_score": 0.42250000000000004,
+      "interpretation": "delivered organics retained in a boundary"
+    },
+    {
+      "scenario": "mixed_source_surface_trap",
+      "terrestrial_feedstock": 0.8,
+      "exogenous_feedstock": 0.5,
+      "raw_pool": 1.3,
+      "retention_factor": 0.85,
+      "retained_pool": 1.105,
+      "coupling_factor": 0.8,
+      "damage_load": 0.45,
+      "functional_score": 0.6096551724137931,
+      "interpretation": "local plus exogenous feedstock trapped at a surface"
+    },
+    {
+      "scenario": "high_feedstock_overload",
+      "terrestrial_feedstock": 0.7,
+      "exogenous_feedstock": 1.5,
+      "raw_pool": 2.2,
+      "retention_factor": 0.7,
+      "retained_pool": 1.54,
+      "coupling_factor": 0.7,
+      "damage_load": 1.8,
+      "functional_score": 0.38499999999999995,
+      "interpretation": "feedstock enrichment with damaging overload"
     }
   ]
 }

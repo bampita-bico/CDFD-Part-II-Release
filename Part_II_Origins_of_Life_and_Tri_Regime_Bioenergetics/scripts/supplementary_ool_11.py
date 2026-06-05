@@ -4,7 +4,8 @@ Photochemical Energy Capture and Functional Bioenergetic Materials
 
 This script makes the corrected chain explicit: photochemical capture is tested
 before surplus stabilization. Literal chlorophyll and literal melanin are not
-assumed at the origin; they are mature examples of wider functions.
+assumed at the origin; chlorophyll and eumelanin are mature examples of wider
+functions.
 
 Outputs are written to outputs/paper_11/.
 """
@@ -148,7 +149,8 @@ def main() -> None:
         "model": "photochemical capture before overload stabilization",
         "corrected_chain": "capture -> couple -> retain -> close -> stabilize surplus",
         "chlorophyll_status": "late high-performance endpoint of energy-input amplification",
-        "melanin_status": "mature exemplar of surplus stabilization, not an origin requirement",
+        "melanin_status": "eumelanin is a mature endpoint exemplar of surplus stabilization, not an origin requirement",
+        "eumelanin_status": "modern broadband absorption, redox, and radical-buffering exemplar; prebiotic analogues may be chemically different",
         "capture_rows": capture_rows,
         "overload_rows": overload_rows,
     }

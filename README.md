@@ -7,8 +7,13 @@ Constraint-Driven Flux Dynamics project.
 
 ## Author
 
-Steve Bico Mujjabi, MD  
+Steve Bico Mujjabi, MD<br>
+Independent Researcher<br>
+Founder, Vura Labs<br>
+Kampala, Uganda<br>
 ORCID: https://orcid.org/0009-0001-0556-5516
+
+Institutional home: **Vura Labs**
 
 ## Release Naming
 
@@ -87,6 +92,12 @@ paper cites a generated figure, table, or diagnostic. The optional
 `make_interactive_panels.py` script builds local HTML viewers over those
 generated outputs.
 
+The May 2026 follow-up adds a guarded Paper 7 aromatic source-mix diagnostic
+(`outputs/paper_07/aromatic_source_mix.csv`) and keeps Paper 11 eumelanin
+language as a mature photochemical endpoint example, not an origin requirement.
+The best retained source-mix row is `mixed_source_surface_trap` with functional
+score `0.610`; the result is a provenance guardrail, not historical proof.
+
 ## Public CDFD Runtime
 
 The CDFD Runtime is the reusable implementation target for CDFL, the
@@ -94,15 +105,18 @@ flow-constraint-memory language used across the CDFD series. This Part II
 release remains a scholarly archive: its paper-local Python scripts and outputs
 reproduce the diagnostics cited by the origins-of-life manuscripts.
 
-The two layers should be cited and licensed separately until a combined CDFD
-Runtime release DOI exists.
+Cite and license the two layers separately until a combined CDFD Runtime release
+DOI exists.
 
 ## Reference Verification
 
 All DOI-backed bibliography entries were checked online against Crossref or
 DataCite on 2026-05-18. The 2024-2026 release anchors used for the final sweep
 were rechecked against publisher or PubMed records on 2026-05-20. The
-bibliography includes real DOI-backed references, Part II Zenodo DOI, plus the Part I Zenodo DOI.
+Murchison aromatic/organic and eumelanin endpoint anchors added after release
+were rechecked against publisher, PubMed, or DOI records on 2026-05-30. The
+bibliography includes real DOI-backed references, Part II Zenodo DOI, plus the
+Part I Zenodo DOI.
 
 ## License
 
@@ -116,4 +130,3 @@ https://doi.org/10.5281/zenodo.20264779
 
 Steve Bico Mujjabi, MD. CDFD Part I: Fundamental Physics. Zenodo.
 https://doi.org/10.5281/zenodo.20250821
-
