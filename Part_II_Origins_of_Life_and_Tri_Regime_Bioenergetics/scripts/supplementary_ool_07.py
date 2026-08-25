@@ -110,7 +110,7 @@ def main() -> None:
         "source_mix_rows": source_mix.to_dict(orient="records"),
     }
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
-    fig, axes = plt.subplots(1, 3, figsize=(15.5, 4.2), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(14.3, 6.6), constrained_layout=True)
     axes[0].plot(pattern["step"], pattern["aliphatic"], label="aliphatic", lw=2)
     axes[0].plot(pattern["step"], pattern["aromatic"], label="aromatic", lw=2)
     axes[0].set_title("pattern persistence")

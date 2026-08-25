@@ -8,13 +8,12 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-4: Interfacial Water, Proton/Ion Coupling, and Proto-Chemiosmosis:\\ Closing the Electron-Proton Loop}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{Interfacial Water, Proton/Ion Coupling, and Proto-Chemiosmosis:\\ Closing the Electron-Proton Loop}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
@@ -23,55 +22,22 @@
 Electron transport is incomplete without charge compensation, proton/ion motion, and hydrated interfaces. This paper gives the proton side of the geochemical coupling layer: mineral-water boundaries, surface charge, Grotthuss-like transport, pH gradients, and pore geometry. CDFD treats interfacial water as a conditional coupling layer, not as an exotic permanent phase. The central test is whether electron and proton/ion currents overlap in space and time strongly enough to support work-like chemistry.
 \end{abstract}
 
+\noindent\textbf{Keywords:} proto-chemiosmosis; interfacial water; proton gradients; mineral interfaces; origins of life.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
+
 \section*{Symbol Conventions}
-
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+See Paper~1, \S Symbol Conventions, for the full CDFD origins-of-life symbol table. Per the series-wide note in Paper~1, Papers~2--4 restrict discussion to the ratio $\Psi_s=\Phi/C$, with $S$ and $M_s$ held implicitly at neutral values until later papers develop them. This paper introduces the electron/proton channel pair $(C_e,C_p)$ and conductance proxies $\sigma_e\sim 1/C_e$, $\sigma_p\sim 1/C_p$ (Model and Assumptions).
 
 \section{Introduction}
-Chemiosmosis stores energy in electrochemical potential differences, chiefly transmembrane proton gradients in modern cells. Before lipid bilayers, mineral--water interfaces could still sustain localized pH and potential differences~\cite{Lane2010,Martin2007}. Paper OOL-4 therefore asks: \textbf{how should proton transport be represented next to electron transport in a single constraint-driven framework?}
+Chemiosmosis stores energy in electrochemical potential differences, chiefly transmembrane proton gradients in modern cells. Before lipid bilayers, mineral--water interfaces could still sustain localized pH and potential differences~\cite{Lane2010,Martin2007}. This paper asks: \textbf{how should proton transport be represented next to electron transport in a single constraint-driven framework?}
 
-Carried gap from Paper 3: distributed electrons require a matching proton subsystem for redox coupling and vectorial chemistry.
-
-\textbf{Status: Inferred}
+\paragraph{Prior gap from Papers 2--3.}
+Distributed electrons require a matching proton subsystem for redox coupling and vectorial chemistry.
 
 \paragraph{Capstone channel mapping.}
-Paper 12 maps structured interfacial water to the proton/ion coupling channel $\sigma_p$. This paper supplies the lower-level mechanism: electron transport alone is incomplete unless charge compensation, proton motion, or ion gradients can be coupled to the redox field. The conductance proxies relate to the local resistances as $\sigma_e\sim 1/C_e$ and $\sigma_p\sim 1/C_p$.
+Paper 12 maps structured interfacial water to the proton/ion coupling channel $\sigma_p$. This paper supplies the lower-level mechanism: electron transport alone is incomplete unless charge compensation, proton motion, or ion gradients can be coupled to the redox field.
 
 \section{Model and Assumptions}
 
@@ -83,17 +49,11 @@ Electron and proton channels each admit flux laws
 \end{equation}
 with nonnegative resistances $C_e,C_p$. The CDFD adaptive ratios are $\Psi_{s,e}=\Phi_e/C_e$, $\Psi_{s,p}=\Phi_p/C_p$. In tri-regime language (Paper 12), $\sigma_e\sim 1/C_e$ and $\sigma_p\sim 1/C_p$ are conductance proxies.
 
-\textbf{Status: Derived}
-
 \subsection{Bulk and interfacial water}
 Liquid water is a fluctuating hydrogen-bond network. Near polar mineral surfaces, dipole orientation, density, and mobility differ from bulk~\cite{Fenter2004}. Such interfacial order can enhance or gate proton hopping depending on surface charge and ionic strength.
 
-\textbf{Status: Inferred}
-
 \subsection{Grotthuss mechanism}
 Proton displacement along hydrogen bonds proceeds via bond rearrangement (classical and quantum contributions) with effective mobility exceeding that of hydrodynamic diffusion~\cite{Agmon1995}. Large-scale modeling often collapses this physics into an effective conductivity tensor; here we use a scalar disorder parameter.
-
-\textbf{Status: Inferred}
 
 \subsection{Proto-chemiosmotic loop (hypothesis)}
 Coupling requires correlated electrochemical potentials,
@@ -102,19 +62,13 @@ Coupling requires correlated electrochemical potentials,
 \end{equation}
 so that redox exergonicity can pump protons or vice versa. Mineral--water--solute microenvironments may realize primitive analogs before lipid encapsulation~\cite{Branscomb2018}.
 
-\textbf{Status: Hypothesis}
-
 \subsection{Toy scalar feedback model (script)}
 \texttt{supplementary\_ool\_04.py} tracks disorder $C_p\ge C_{\min}$ with $C_{\min}=0.05$, driven by imposed gradient $G$ and throughput $J_p\approx G/C_p$. Feedback reduces $C_p$ when $J_p$ is large, modeling flow-aligned ordering. This is not molecular dynamics.
-
-\textbf{Status: Hypothesis}
 
 \section{Main Results}
 
 \subsection{Conceptual}
 Structured water provides the proton counterpart to mineral electron pathways. Constraint fields $C_p$ encode network disorder; reductions in $C_p$ map to higher effective Grotthuss throughput in the phenomenology.
-
-\textbf{Status: Inferred}
 
 \section{Numerical Verification}
 Companion script: \texttt{supplementary\_ool\_04.py}.
@@ -126,18 +80,14 @@ Strong driving lowers disorder to the model floor and sharply raises
 throughput. This is consistent with ``ordering under flux,'' but it does not
 prove a specific geological site.
 
-\textbf{Status: Derived}
-
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{outputs/paper_04/structured_water_gradient_scan.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_04/structured_water_gradient_scan.png}
 \caption{Structured-water gradient diagnostic. Stronger imposed gradients drive the toy disorder variable toward its lower bound and increase the proton-flux proxy. The calculation motivates an interfacial proton-coupling role, but it is not molecular dynamics.}
 \end{figure}
 
 \section{What ``Structured Water'' Means Here}
-The phrase does not require a permanent exotic phase of water. In this paper it means transient orientational and hydrogen-bond organization near charged, mineral, or confined interfaces. Such organization can alter proton hopping, local dielectric response, ion mobility, and residence time. In the OOL chain, this function is needed because electron transport alone cannot perform chemical work unless charge compensation and proton chemistry remain nearby.
-
-\textbf{Status: Inferred}
+The phrase does not require a permanent exotic phase of water. In this paper it means transient orientational and hydrogen-bond organization near charged, mineral, or confined interfaces. Such organization can alter proton hopping, local dielectric response, ion mobility, and residence time. This function is needed because electron transport alone cannot perform chemical work unless charge compensation and proton chemistry remain nearby.
 
 \section{Coupling to Early Chemiosmosis}
 Modern cells use membranes, pumps, and protein complexes to manage proton gradients. The early analogue need not be a membrane protein. A mineral pore can separate alkaline and acidic fluids; interfacial water can provide proton-relay structure; redox-active minerals can supply electron flow. The dependency is therefore:
@@ -146,9 +96,7 @@ Modern cells use membranes, pumps, and protein complexes to manage proton gradie
 \quad \Rightarrow \quad
 \text{redox chemistry can become work-like}.
 \end{equation}
-Paper 8 then asks how long these coupled products stay localized before dilution destroys the loop.
-
-\textbf{Status: Inferred}
+How long coupled products stay localized before dilution destroys the loop is examined in the compartment paper (Paper~8).
 
 \section{Proton Gradients: Useful but Contested}
 The vent-gradient literature is central but not settled. The alkaline-vent view argues that natural pH differences and thin inorganic barriers could provide primitive chemiosmotic structure before enzymes and lipid membranes~\cite{Lane2010,Sojo2016,Lane2017}. The critique is that natural gradients may dissipate, may not couple to early chemistry efficiently, or may be too different from biological membranes to do the required work~\cite{Jackson2016}. CDFD does not hide this disagreement; it reframes the question as a measurable coupling problem:
@@ -160,8 +108,6 @@ The vent-gradient literature is central but not settled. The alkaline-vent view 
 \left(\int_{\Omega}|\bm{J}_H|^2dV\right)^{1/2}}.
 \end{equation}
 The exact normalization can be improved, but the aim is clear: electron and proton/ion currents must overlap in space and time. A pH gradient alone is insufficient if it is geometrically decoupled from redox chemistry.
-
-\textbf{Status: Hypothesis}
 
 \section{Surface Charge, Screening, and Pore Geometry}
 The phrase ``structured water'' becomes more defensible when tied to ordinary interfacial physics. Charged mineral walls organize counterions and water dipoles over a finite electrostatic length scale. In dilute electrolyte the Debye length can be written schematically as
@@ -180,9 +126,7 @@ Thus the claim is not that all water in a vent or pool becomes a coherent proton
 \quad\Rightarrow\quad
 \mathrm{interfacial\ transport\ can\ influence\ bulk\ chemistry}.
 \end{equation}
-Small pores, charged walls, thin films, and mineral lamellae make this ratio larger. Open water makes it smaller. This connects Paper 4 directly to Paper 8: compartments are not only retention devices; they also increase the fraction of chemistry exposed to interfacial proton/ion physics.
-
-\textbf{Status: Derived guardrail}
+Small pores, charged walls, thin films, and mineral lamellae make this ratio larger. Open water makes it smaller. This connects interfacial proton physics directly to compartment retention: compartments are not only retention devices; they also increase the fraction of chemistry exposed to interfacial proton/ion physics.
 
 \section{Electron--Proton Coupling Ledger}
 The minimum requirement for proto-chemiosmotic relevance is co-localization of three layers:
@@ -198,39 +142,41 @@ Retaining geometry & Products and gradients wash out & Residence time, concentra
 \bottomrule
 \end{tabular}
 \end{center}
-Paper 4 owns the middle row, but it only works in the full sequence. If electron transport is missing, proton gradients are uncoupled acidity. If retention is missing, proton coupling becomes a transient flash. If the proton path is missing, electron transfer becomes charge-imbalanced chemistry with poor work extraction.
-
-\textbf{Status: Derived synthesis}
+Interfacial proton coupling occupies the middle of the dependency sequence and only works when electron transport and retention are co-present. If electron transport is missing, proton gradients are uncoupled acidity. If retention is missing, proton coupling becomes a transient flash. If the proton path is missing, electron transfer becomes charge-imbalanced chemistry with poor work extraction.
 
 \section{Water, UV, and Surface Boundary Conditions}
-Interfacial water also controls which photochemical routes remain plausible. UV transmission depends strongly on water depth, dissolved ions, suspended minerals, and atmospheric filtering~\cite{Ranjan2017,Ranjan2022}. A shallow surface pool, a mineral pore, and a hydrothermal chimney do not expose chemistry to the same radiation or hydration regime. This is why structured water is not only a proton-wire concept; it is part of the environmental boundary condition that decides whether chemistry is hydrated, dehydrated, shielded, or irradiated.
+Interfacial water also controls which photochemical routes remain plausible. UV transmission depends strongly on water depth, dissolved ions, suspended minerals, and atmospheric filtering~\cite{Ranjan2017,Ranjan2022}. A shallow surface pool, a mineral pore, and a hydrothermal chimney do not expose chemistry to the same radiation or hydration regime --- relevant to the photochemical energy-capture stage (Paper~11). This is why structured water is not only a proton-wire concept; it is part of the environmental boundary condition that decides whether chemistry is hydrated, dehydrated, shielded, or irradiated.
 
-\textbf{Status: Inferred}
-
-\section{Interpretation}
+\section{Interpretation and Limitations}
 The results support treating interfacial water as an active participant, not a passive solvent~\cite{Lane2010}. Quantitative predictions require atomistic or at least continuum Poisson--Nernst--Planck treatments absent here.
 
-\textbf{Status: Inferred}
-
-\section{Limitations and Open Problems}
-\begin{itemize}
-\item Scalar disorder cannot capture anisotropic hydrogen-bond chains.
-\item Floor saturation may dominate at high drive, masking richer physics.
-\item Coupling constants between $\Phi_e$ and $\Phi_p$ are not identified from data.
-\end{itemize}
-
-\textbf{Status: Open}
+\paragraph{Limitations.}
+Scalar disorder cannot capture anisotropic hydrogen-bond chains; floor saturation may dominate at high drive, masking richer physics; coupling constants between $\Phi_e$ and $\Phi_p$ are not identified from data.
 
 \section{Conclusion}
-Paper OOL-4 closes the electron--proton loop at the field-description level and motivates interfacial structuring as a constraint problem. Paper OOL-8 examines how porous compartments and adaptive boundaries change persistence thresholds against dilution.
-
-\textbf{Status: Inferred}
+This paper closes the electron--proton loop at the field-description level and motivates interfacial structuring as a constraint problem. Paper~8 examines how porous compartments and adaptive boundaries change persistence thresholds against dilution.
 
 \section{Reproducibility Note}
 \begin{verbatim}
 python supplementary_ool_04.py
 \end{verbatim}
 The script writes compact reproducibility outputs under \texttt{outputs/paper\_04/}.
+
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors are cited in the body and bibliography.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

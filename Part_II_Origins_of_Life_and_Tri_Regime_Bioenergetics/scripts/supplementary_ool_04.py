@@ -74,7 +74,7 @@ def write_outputs(summary: dict[str, object], rows: list[dict[str, float]]) -> N
     final_s = [row["final_s"] for row in rows]
     final_ms = [row["final_ms"] for row in rows]
 
-    fig, (ax1, ax3) = plt.subplots(1, 2, figsize=(14, 4.5), constrained_layout=True)
+    fig, (ax1, ax3) = plt.subplots(1, 2, figsize=(12.9, 6.5), constrained_layout=True)
 
     ax1.plot(gradients, final_flux, marker="o", lw=2, color="#2f6f9f", label="proton flux proxy")
     ax1.set_xlabel("imposed gradient")

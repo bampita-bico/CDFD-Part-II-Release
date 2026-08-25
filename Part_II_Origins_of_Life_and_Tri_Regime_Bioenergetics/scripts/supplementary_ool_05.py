@@ -140,7 +140,7 @@ def main() -> None:
     }
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
 
-    fig, axes = plt.subplots(1, 4, figsize=(18, 4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 4, figsize=(16.6, 7.7), constrained_layout=True)
     for label, frame in data.groupby("scenario"):
         axes[0].plot(frame["time"], frame["product"], label=label, lw=2)
         axes[1].plot(frame["time"], frame["memory"], label=label, lw=2)

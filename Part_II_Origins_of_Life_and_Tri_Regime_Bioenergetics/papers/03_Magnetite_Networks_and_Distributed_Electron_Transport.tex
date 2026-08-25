@@ -8,83 +8,46 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-3: Magnetite Networks and Distributed Electron Transport:\\ Mixed-Valence Coupling Before Biology}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{Magnetite Networks as Candidate Distributed Redox Couplers:\\ A CDFD Toy Model}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This paper separates distributed electron transport from the local Fe--S catalysis of Paper 2. Magnetite-like and mixed-valence mineral networks are treated as possible redox couplers, not as independent origins of life. The key question is whether a connected mineral graph can move reducing equivalents between separated donor, acceptor, and reaction zones. The companion toy model supports the narrow claim of adaptive conductance improvement while leaving real mineral percolation, defect chemistry, and endpoint product tests open.
+This paper separates distributed electron transport from the local Fe--S catalysis of Paper~2. Magnetite-like and mixed-valence mineral networks are treated as possible redox couplers, not as independent origins of life. The key question is whether a connected mineral graph can move reducing equivalents between separated donor, acceptor, and reaction zones. The companion toy model supports the narrow claim of adaptive conductance improvement while leaving real mineral percolation, defect chemistry, and endpoint product tests open. This paper's own diagnostic (\S4) shows the model achieves global resistance lowering, not clearly localized channelization---the title's framing should therefore be read as a stated target, not yet a demonstrated result.
 \end{abstract}
 
+\noindent\textbf{Keywords:} magnetite; electron transport; mixed-valence minerals; prebiotic chemistry; computational modelling.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
+
 \section*{Symbol Conventions}
-
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+See Paper~1, \S Symbol Conventions, for the full CDFD origins-of-life symbol table. Per the series-wide note in Paper~1, Papers~2--4 restrict discussion to the ratio $\Psi_s=\Phi/C$, with $S$ and $M_s$ held implicitly at neutral values until later papers develop them. The constraint field $C$ is nonnegative.
 
 \section{Introduction}
-Metabolism, even in protocellular form, requires spatial integration: donors and acceptors are not co-located. Minerals that only catalyze local reactions cannot, by themselves, span separation scales. Magnetite's inverse spinel structure hosts Fe$^{2+}$ and Fe$^{3+}$ on octahedral sites, enabling thermally activated electron hopping~\cite{Skomurski2010}. In the OOL narrative, magnetite-like phases are therefore candidates for \textbf{distributed} redox coupling atop Fe--S surface chemistry~\cite{Martin2007,Russell1994}.
+Metabolism, even in protocellular form, requires spatial integration: donors and acceptors are not co-located. Minerals that only catalyze local reactions cannot, by themselves, span separation scales. Magnetite's inverse spinel structure hosts Fe$^{2+}$ and Fe$^{3+}$ on octahedral sites, enabling thermally activated electron hopping~\cite{Skomurski2010}. In the Part II narrative, magnetite-like phases are therefore candidates for \textbf{distributed} redox coupling atop Fe--S surface chemistry~\cite{Martin2007,Russell1994}.
 
-\textbf{Unresolved gap carried from Paper 2:} Fe--S establishes interfaces; Paper OOL-3 asks whether \emph{extended} conduction can self-organize transport bottlenecks into usable pathways.
-
-\textbf{Status: Inferred}
+\textbf{Unresolved gap from Paper~2:} Fe--S establishes interfaces; this paper asks whether \emph{extended} conduction can self-organize transport bottlenecks into usable pathways.
 
 \paragraph{Capstone channel mapping.}
-Mixed-valence magnetite implements the sketch's \emph{electron-motion} strategy (Fe$^{2+}\leftrightarrow$Fe$^{3+}$ hopping). In Paper 12 notation this maps to the conductance proxy $\sigma_e$ appearing in $J=I_E\sigma_e\sigma_p/B_{\mathrm{stab}}$; adaptive erosion or channelization of $C$ is the discrete-network caricature of raising $C_{\mathrm{electron}}$ or $\sigma_e$ until another capacity becomes limiting.
+Mixed-valence magnetite implements the sketch's \emph{electron-motion} strategy (Fe$^{2+}\leftrightarrow$Fe$^{3+}$ hopping). In the synthesis notation this maps to the conductance proxy $\sigma_e$ appearing in $J=I_E\sigma_e\sigma_p/B_{\mathrm{stab}}$; adaptive erosion or channelization of $C$ is the discrete-network caricature of raising $C_{\mathrm{electron}}$ or $\sigma_e$ until another capacity becomes limiting.
 
 \section{Model and Assumptions}
 
 \subsection{Notation}
-We retain $\Psi_s=(\Phi/C) \cdot S \cdot M_s$ for the local equilibrium ratio. The constraint field $C$ is nonnegative; small $C$ means ``easy'' transport in the phenomenological flux law
+Consistent with the series-stage restriction, we work with $\Psi_s=\Phi/C$. The constraint field $C$ is nonnegative; small $C$ means ``easy'' transport in the phenomenological flux law
 \begin{equation}
 \bm{J}_e = -\frac{1}{C}\nabla\Phi.
 \end{equation}
 When $C$ changes over time, we read it as annealing, dissolution,
 reprecipitation, or, in the toy code, erosion rules. Those rules lower
 resistance along high-flux corridors.
-
-\textbf{Status: Derived}
 
 \subsection{Crystal chemistry and hopping}
 Electron transfer between adjacent iron sites,
@@ -93,34 +56,23 @@ Electron transfer between adjacent iron sites,
 \end{equation}
 supports nonmetallic conduction with thermally activated rates $k\propto \exp(-E_a/k_BT)$. Unlike free-electron metals, transport is localized and structure-sensitive; defects and grain boundaries dominate macroscopic resistance.
 
-\textbf{Status: Inferred}
-
 \subsection{Network geometry}
 In rocks, magnetite often appears as anastomosing grains rather than isolated cubes. Intergrowth topology matters: percolation thresholds control whether a conductive cluster spans the sample. We do not compute percolation explicitly here; the numerics use a 2D grid with two fixed-potential ``poles'' and allow $C$ to adapt.
-
-\textbf{Status: Hypothesis}
 
 \subsection{Toy adaptive-constraint dynamics (script-level)}
 The supplementary code combines diffusive relaxation of $\Phi$ with rules that reduce $C$ where $|\nabla(\Phi/C)|$ is large. This is a stand-in for ``flow opens channels'' feedback. It is \emph{not} a first-principles model of magnetite defect chemistry.
 
-\textbf{Status: Hypothesis}
-
 \section{Main Results}
 
 \subsection{Physical narrative}
-At field level, magnetite couples distant Fe--S reaction sites: electrons may traverse the oxide lattice or grain-contact networks, while protons remain chiefly aqueous (OOL-3). Magnetic order, spin-dependent hopping, and defect chemistry add structure beyond a scalar $C$ field; these effects are noted but not resolved.
-
-\textbf{Status: Inferred}
+At field level, magnetite couples distant Fe--S reaction sites: electrons may traverse the oxide lattice or grain-contact networks, while protons remain chiefly aqueous. Magnetic order, spin-dependent hopping, and defect chemistry add structure beyond a scalar $C$ field; these effects are noted but not resolved.
 
 \subsection{Constraint feedback (qualitative)}
-Motivated by adaptive flux limitation (AFL) style laws used elsewhere in the
-CDFD/AFL manuscripts, one writes schematically
+One writes schematically
 \begin{equation}
 \frac{\partial C}{\partial t} = \alpha |\bm{J}_e| - \beta C + \text{diffusion},
 \end{equation}
 signifying that sustained current can anneal pathways (lower $C$) while aging or precipitation raises resistance. Coefficients are environment-specific; we do not fit them to experiments in this manuscript.
-
-\textbf{Status: Hypothesis}
 
 \section{Numerical Verification}
 Run \texttt{supplementary\_ool\_03.py}. The script reports ``network efficiency'' from boundary flux metrics under adaptive $C$.
@@ -135,11 +87,9 @@ Observed outputs:
 
 The dramatic efficiency increase supports the \emph{model} claim that erosion-style feedback can lower global resistance. The narrow final range of $C$ suggests near-uniform lowering in this parameter set; localized ``wire'' formation is not clearly resolved. Claims should emphasize global optimization unless future metrics (e.g., conductance centralities) show channelization.
 
-\textbf{Status: Derived}
-
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_03/magnetite_transport_network.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_03/magnetite_transport_network.png}
 \caption{Magnetite-like transport diagnostic. The toy model lowers transport resistance under sustained drive, but the final constraint field is nearly uniform in this parameterization. The figure therefore supports distributed conductance improvement, not a strong claim of sharply localized mineral wires.}
 \end{figure}
 
@@ -150,8 +100,6 @@ Fe--S interfaces supply localized catalytic nodes. Magnetite-like phases add a d
 \end{equation}
 This matters because early reaction zones need both local activation and long-range balancing. A single pore wall can reduce barriers, but a connected oxide/sulfide network can move reducing equivalents between sites that are not chemically identical.
 
-\textbf{Status: Inferred}
-
 \section{Network Diagnostics Missing from the Toy Model}
 The current script reports mean resistance and a final field. A stronger future version should measure:
 \begin{itemize}
@@ -159,11 +107,9 @@ The current script reports mean resistance and a final field. A stronger future 
 \item percolation probability across many random mineral geometries;
 \item persistence of corridors after forcing is removed;
 \item sensitivity to dissolution, precipitation, and sulfidation;
-\item whether electron transport co-localizes with proton/ion coupling from Paper 4.
+\item whether electron transport co-localizes with proton/ion coupling from interfacial proton/ion coupling.
 \end{itemize}
 These diagnostics would separate true channel formation from the near-uniform erosion observed here.
-
-\textbf{Status: Open}
 
 \section{Percolation, Defects, and Mineral Mosaics}
 Magnetite is not merely an oxide label; its relevance here is the possibility of spatially extended, mixed-valence conduction. In a natural setting, however, the relevant object is rarely a pure magnetite block. It is a mineral mosaic containing oxides, sulfides, carbonates, silica, clays, grain boundaries, fractures, inclusions, and redox-altered rims. The transport question is therefore topological:
@@ -188,8 +134,6 @@ C_{\mathrm{lattice}}
 \end{equation}
 The paper's strong claim is not that magnetite always lowers $C_e$. The defensible claim is conditional: if a mixed-valence phase forms a spanning redox graph and terminates at chemically active interfaces, then it can reduce effective source--sink resistance relative to disconnected mineral grains.
 
-\textbf{Status: Inferred/Open}
-
 \section{Endpoint Chemistry Is the Real Test}
 Electrical or electrochemical conductance alone is not enough. The origin-of-life claim only becomes meaningful if a conductive network changes chemistry at its endpoints. A clean experimental score would compare product yields with and without a connected mixed-valence bridge:
 \begin{equation}
@@ -201,9 +145,7 @@ Y_{\mathrm{disconnected}},
 \end{equation}
 under matched donor, acceptor, pH, temperature, mineral mass, and surface-area conditions. The network claim is supported when $\Delta Y_{\mathrm{endpoint}}>0$ for products requiring transported reducing equivalents, not merely when an electrode detects current.
 
-This distinction prevents an overclaim. Magnetite-like transport is a \emph{coupler}. It should alter downstream product distribution, redox state, or persistence time at a reaction interface. If it only dissipates energy as heat or background current, it has not advanced the OOL sequence.
-
-\textbf{Status: Derived experimental guardrail}
+This distinction prevents an overclaim. Magnetite-like transport is a \emph{coupler}. It should alter downstream product distribution, redox state, or persistence time at a reaction interface. If it only dissipates energy as heat or background current, it has not advanced the Part II sequence.
 
 \section{Transport Networks as Couplers, Not Origins by Themselves}
 Magnetite-like phases should not be presented as a second independent origin mechanism. Their role is to couple locations. A redox-active mineral network matters only if it connects an electron donor region, an electron acceptor region, and a reaction interface where chemical work can occur. The minimal coupling graph is:
@@ -214,9 +156,7 @@ Magnetite-like phases should not be presented as a second independent origin mec
 \xrightarrow{\;\sigma_e\;}
 \mathrm{reaction\ interface}.
 \end{equation}
-If the network conducts but does not terminate in chemistry, it is just a dissipative wire. If the chemistry exists but the network is disconnected, it is just a local catalyst. Paper 2 is therefore the bridge between Paper 1's local Fe--S activation and Paper 4's proton/ion co-channel.
-
-\textbf{Status: Derived}
+If the network conducts but does not terminate in chemistry, it is just a dissipative wire. If the chemistry exists but the network is disconnected, it is just a local catalyst. Distributed conduction therefore bridges local Fe--S activation and later proton/ion co-channel descriptions.
 
 \section{Environmental Robustness Tests}
 Future magnetite-network claims should be tested across temperature, pH, ionic
@@ -229,12 +169,8 @@ a mandatory universal material.
 
 The immediate measurable prediction is modest: adding a connected mixed-valence phase to otherwise similar mineral compartments should increase source--sink redox coupling and alter product distribution at downstream catalytic sites. That is the right experimental target, not an unsupported claim that any magnetite-bearing rock becomes proto-biological.
 
-\textbf{Status: Open}
-
 \section{Interpretation}
 Magnetite provides a geologically plausible bridge from localized catalysis to spatially extended redox coupling~\cite{Skomurski2010}. The simulation strengthens the \emph{conceptual} point---adaptive transport resistance can reorganize under forcing---without proving Archean network morphologies.
-
-\textbf{Status: Inferred}
 
 \section{Limitations and Open Problems}
 \begin{itemize}
@@ -243,18 +179,30 @@ Magnetite provides a geologically plausible bridge from localized catalysis to s
 \item Coupling to fluid flow and sulfidation pathways is absent.
 \end{itemize}
 
-\textbf{Status: Open}
-
 \section{Conclusion}
-Paper OOL-3 positions mixed-valence oxide networks as the distributed-transport counterpart to Fe--S interface catalysis. Numerics show strong efficiency gains in an idealized adaptive-resistance model; morphology claims remain tempered. OOL-3 introduces structured water and proton fields required for chemiosmotic coupling.
-
-\textbf{Status: Inferred}
+This paper positions mixed-valence oxide networks as the distributed-transport counterpart to Fe--S interface catalysis. Numerics show strong efficiency gains in an idealized adaptive-resistance model; morphology claims remain tempered pending the localization diagnostics identified in \S6. Structured water and proton fields required for chemiosmotic coupling are developed in Paper~4.
 
 \section{Reproducibility Note}
 \begin{verbatim}
 python supplementary_ool_03.py
 \end{verbatim}
-The script writes compact reproducibility outputs under \texttt{outputs/paper\_02/}.
+The script writes compact reproducibility outputs under \texttt{outputs/paper\_03/}.
+
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors for magnetite electron hopping and alkaline-vent Fe--S context: Skomurski et~al.~\cite{Skomurski2010}; Martin and Russell~\cite{Martin2007}; Russell et~al.~\cite{Russell1994}; Barge et~al.~\cite{Barge2014}.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

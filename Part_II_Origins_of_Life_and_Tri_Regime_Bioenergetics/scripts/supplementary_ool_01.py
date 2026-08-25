@@ -111,7 +111,7 @@ def main() -> None:
     }
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(13.8, 6.4), constrained_layout=True)
     im0 = axes[0].imshow(
         psi.T,
         origin="lower",

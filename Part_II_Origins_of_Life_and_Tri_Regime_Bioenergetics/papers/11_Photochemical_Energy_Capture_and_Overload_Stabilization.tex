@@ -8,13 +8,12 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-11: Photochemical Energy Capture and Overload Stabilization:\\ Functional Bioenergetic Materials After the Core Gate}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{Photochemical Energy Capture and Overload Stabilization:\\ Functional Bioenergetic Materials After the Core Gate}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
@@ -23,45 +22,14 @@
 Papers 1--10 are sufficient to describe a geochemical and protocellular path toward primitive life without requiring modern photosynthesis. This manuscript adds a later expansion channel: photochemical energy capture. The corrected claim is functional rather than molecule-specific. ``Chlorophyll-like'' means energy-input amplification, not literal chlorophyll at the earliest origin; ``melanin-like'' means surplus stabilization, not a required first pigment. CDFD predicts that once usable input rises, systems must couple capture to electron transport, proton/ion transport, retention, closure, information stability, and overload buffering. The paper therefore preserves the plant and pigment insights as mature exemplars while keeping the origin-of-life mechanism chemically open.
 \end{abstract}
 
+\noindent\textbf{Keywords:} photochemistry; energy capture; overload buffering; prebiotic pigments; origins of life.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces an illustrative diagnostic reported below. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
+
 \section*{Symbol Conventions}
 
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+\noindent See Paper~1, \S Symbol Conventions, for the base CDFD and Greek-symbol tables. This paper introduces $I_E$ (usable environmental energy input), $\sigma_e/\sigma_p$ (electron/proton conductance proxies), and $B_{\mathrm{stab}}$ (net stabilization burden) --- the vocabulary Paper~12 assembles into the full tri-regime model.
 
 \section{Why This Paper Exists}
 Papers 1--10 build the core chain: thermodynamic framing, redox/proton
@@ -95,8 +63,8 @@ The names are mnemonic labels for functional channels. They should not be read a
 \section{Capture Before Stabilization}
 Let $I_E$ denote usable environmental energy input. A minimal throughput expression is
 \begin{equation}
-    J_{\mathrm{bio}}=I_E\frac{\sigma_e\sigma_p}{B_{\mathrm{stab}}}.
-    \label{eq:functional-throughput}
+ J_{\mathrm{bio}}=I_E\frac{\sigma_e\sigma_p}{B_{\mathrm{stab}}}.
+ \label{eq:functional-throughput}
 \end{equation}
 Here $B_{\mathrm{stab}}$ is a net stabilization burden: radical load, thermal disorder, photodamage risk, hydrolysis pressure, and uncoupled side reactions. A stabilizing material lowers effective $B_{\mathrm{stab}}$ only if it absorbs or redirects excess flux without blocking productive electron/proton coupling.
 
@@ -110,11 +78,11 @@ Chlorophyll-like functions belong at the capture stage. Melanin-like functions b
 \section{Pre-Chlorophyll Photochemical Amplification}
 Modern chlorophyll is a mature endpoint, not the primitive assumption. Earlier energy-input materials could have performed weaker versions of the same role:
 \begin{itemize}
-    \item Fe--S and metal sulfide surfaces that couple light or redox energy to surface reactions,
-    \item semiconducting minerals that create electron-hole separation under illumination,
-    \item porphyrin-like or metal-organic precursors with conjugated absorption,
-    \item flavins, quinones, and aromatic cofactors that shuttle electrons,
-    \item retinal-like or other simple chromophore systems in later protocellular settings.
+ \item Fe--S and metal sulfide surfaces that couple light or redox energy to surface reactions,
+ \item semiconducting minerals that create electron-hole separation under illumination,
+ \item porphyrin-like or metal-organic precursors with conjugated absorption,
+ \item flavins, quinones, and aromatic cofactors that shuttle electrons,
+ \item retinal-like or other simple chromophore systems in later protocellular settings.
 \end{itemize}
 The historical question is empirical: did any candidate raise $I_E$ while remaining coupled to $\sigma_e$, $\sigma_p$, and retention?
 
@@ -123,13 +91,13 @@ For this paper, $I_E$ is not total incident light. It is the portion of absorbed
 \section{Overload Stabilization}
 Once photon capture or chemical input becomes strong, excess flux becomes dangerous. Productive throughput is limited by the slowest coupled channel:
 \begin{equation}
-    J_{\max}\leq \min(I_E,\sigma_e,\sigma_p,1/B_{\mathrm{stab}}).
+ J_{\max}\leq \min(I_E,\sigma_e,\sigma_p,1/B_{\mathrm{stab}}).
 \end{equation}
 If $I_E$ exceeds the capacity of electron transport, proton/ion coupling, carbon fixation, repair, or dissipation, the surplus becomes damage:
 \begin{equation}
-    \Psi_{s,\mathrm{overload}}
-    =
-    \frac{I_E}{C_{\mathrm{use}}+C_{\mathrm{diss}}}.
+ \Psi_{s,\mathrm{overload}}
+ =
+ \frac{I_E}{C_{\mathrm{use}}+C_{\mathrm{diss}}}.
 \end{equation}
 Modern plants solve this with carotenoids, xanthophyll cycling, non-photochemical quenching, repair of PSII, and related dissipative controls. Melanin-like polymers and other disordered aromatics are mature examples of broadband buffering and redox smoothing, not required first molecules~\cite{Cleaves2008,Higgs2015}.
 
@@ -150,10 +118,10 @@ It is
 \text{mature photosynthetic pigments}.
 \]
 
-\section{Numerical Visualization}
-\begin{figure}[ht]
+\section{Illustrative Diagnostic}
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_11/photochemical_capture_before_buffering.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_11/photochemical_capture_before_buffering.png}
 \caption{Photochemical capture before surplus stabilization. The first panel treats chlorophyll as the mature endpoint of a wider energy-capture function. The second panel shows why buffering becomes relevant only after captured input creates overload.}
 \end{figure}
 
@@ -178,8 +146,6 @@ Photochemical validation should separate capture from coupling and coupling from
 
 The decisive readouts are not color change or total absorption. They are product distribution, redox state, charge separation lifetime, proton/ion-gradient persistence, damage products, and recovery after repeated light cycles. CDFD predicts a non-monotonic surface: extra light helps only when charge transport and buffering prevent overload. If illumination improves products in uncoupled systems just as well as in coupled systems, the coupling claim is weakened. If buffering always suppresses chemistry, rather than improving survival under high input, the overload-stabilization claim is weakened.
 
-\textbf{Status: Open experimental program}
-
 \section{Conclusion}
 Photochemical expansion broadens the energy-input landscape; it is not the first step required for life. The release argument is a dependency graph of functions. Capture precedes overload stabilization, and modern materials are illustrative implementations rather than required historical molecules.
 
@@ -187,6 +153,22 @@ Photochemical expansion broadens the energy-input landscape; it is not the first
 The companion script \texttt{supplementary\_ool\_11.py} writes the figure
 under \path{outputs/paper_11/} plus CSV/JSON summaries. No notebook is
 required; the static figure and small CSV/JSON files are sufficient.
+
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors are cited in the body and bibliography.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

@@ -9,11 +9,11 @@ Constraint-Driven Flux Dynamics project.
 
 Steve Bico Mujjabi, MD<br>
 Independent Researcher<br>
-Founder, Vura Labs<br>
+Founder, VuraLabs<br>
 Kampala, Uganda<br>
 ORCID: https://orcid.org/0009-0001-0556-5516
 
-Institutional home: **Vura Labs**
+Institutional home: **VuraLabs**
 
 ## Release Naming
 
@@ -45,7 +45,7 @@ reproducible research; open science; preprint.
 
 - `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/` - Part II
   manuscripts, PDFs, supplementary scripts, generated outputs, bibliography,
-  named laws/tests, interactive panels, and reproducibility instructions.
+  named hypotheses/tests, interactive panels, and reproducibility instructions.
 - `CITATION.cff` - GitHub citation metadata.
 - `.zenodo.json` - Zenodo deposit metadata.
 - `requirements.txt` - Python dependencies for the public supplementary
@@ -78,10 +78,14 @@ historical origin-of-life pathway.
 ## Suggested Reading Order
 
 1. `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/README.md`
-2. `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/MUJJABI_LIFE_LAWS_AND_TESTS.md`
+2. `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/CLAIM_STATUS.md`
 3. `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/REPRODUCIBILITY.md`
 4. `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/outputs/interactive_index.html`
 5. `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/PDFs/`
+
+Honesty audit for Φ/C / Life Number novelty (Parts II & III):  
+The detailed cross-release audit was moved to the separate local archive on
+2026-08-24; this release's `CLAIM_STATUS.md` is the binding public boundary.
 
 ## Reproducibility
 

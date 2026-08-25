@@ -142,7 +142,7 @@ def write_outputs(
         )
         writer.writeheader()
         writer.writerows(protocell_rows)
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 2, figsize=(10.1, 5.8), constrained_layout=True)
     axes[0].plot(
         [float(row["flux_energy"]) for row in error_rows],
         [float(row["final_master_sequence_fitness"]) for row in error_rows],

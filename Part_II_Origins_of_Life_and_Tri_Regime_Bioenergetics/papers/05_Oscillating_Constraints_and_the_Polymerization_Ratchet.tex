@@ -8,60 +8,27 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-5: Oscillating Constraints and the Polymerization Ratchet:\\ Environmental Cycling as Chemical Memory}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{Oscillating Constraints and the Polymerization Ratchet:\\ Environmental Cycling as Chemical Memory}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This manuscript addresses the water paradox in origin-of-life chemistry: aqueous environments enable transport and encounter, while condensation chemistry is opposed by hydrolysis in bulk water. CDFD reframes the problem as a temporal constraint problem. Wet--dry, freeze--thaw, tidal, geothermal, or other cycling environments can alternately mix reactants, concentrate them, and then preserve a fraction of the resulting products~\cite{Damer2020,Ferris1996}. The claim is not that one setting is proven to be universal. The claim is that an origin sequence needs some mechanism that periodically changes effective water activity, concentration, retention, and degradation pressure so that polymer-length or pattern-memory gains can accumulate.
+This manuscript addresses the water paradox in origin-of-life chemistry: aqueous environments enable transport and encounter, while condensation chemistry is opposed by hydrolysis in bulk water. CDFD reframes the problem as a temporal constraint problem. Wet--dry, freeze--thaw, tidal, geothermal, or other cycling environments can alternately mix reactants, concentrate them, and then preserve a fraction of the resulting products. The claim is not that one setting is proven to be universal --- the claim is that an origin sequence needs some mechanism that periodically changes effective water activity, concentration, retention, and degradation pressure so that polymer-length or pattern-memory gains can accumulate.
 \end{abstract}
 
+\noindent\textbf{Keywords:} wet-dry cycling; polymerization ratchet; prebiotic polymers; oscillating constraints; origins of life.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
+
 \section*{Symbol Conventions}
-
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+See Paper~1, \S Symbol Conventions, for the full CDFD origins-of-life symbol table. This is the first paper in the series to use the full four-term product $\Psi_s=(\Phi/C)\cdot S\cdot M_s$ with time-dependent terms (Oscillating Adaptive Ratios).
 
 \section{Introduction}
 Papers 2--4 established geochemical redox, electron transport, and proton/ion coupling as the first concrete substrate. That is not enough. A system also needs a route from small molecules to longer-lived chemical patterns. Polymerization is difficult in bulk water because condensation reactions compete with hydrolysis and product loss. CDFD therefore asks what environmental topology can raise the forward polymerization opportunity without permanently destroying transport. This includes wet--dry cycling, mineral-surface oligomerization, and activated nucleotide chemistry as different ways to change the same constraint landscape~\cite{Powner2009,Patel2015}.
@@ -69,33 +36,33 @@ Papers 2--4 established geochemical redox, electron transport, and proton/ion co
 \section{Oscillating Adaptive Ratios}
 The shared adaptive ratio is
 \begin{equation}
-    \Psi_s=\left(\frac{\Phi}{C}\right)S M_s.
+ \Psi_s=\left(\frac{\Phi}{C}\right)S M_s.
 \end{equation}
 In a cycling environment, the relevant quantities are time dependent:
 \begin{equation}
-    \Psi_s(t)=\left(\frac{\Phi_{\mathrm{chem}}(t)}
-    {C_{\mathrm{hydro}}(t)}\right)S(t)M_s(t).
+ \Psi_s(t)=\left(\frac{\Phi_{\mathrm{chem}}(t)}
+ {C_{\mathrm{hydro}}(t)}\right)S(t)M_s(t).
 \end{equation}
 Wet phases can increase encounter rates and transport. Dry or concentrated phases can raise monomer activity and reduce the effective hydrolytic penalty for selected reactions. Rehydration then tests whether any products survive long enough to seed another cycle.
 
 \section{The Polymerization Ratchet}
 A minimal water-volume cycle can be written
 \begin{equation}
-    V_{\mathrm{H_2O}}(t)=V_0+\Delta V\cos(\omega t).
+ V_{\mathrm{H_2O}}(t)=V_0+\Delta V\cos(\omega t).
 \end{equation}
 Here $V_{\mathrm{H_2O}}$ is the available water volume, $V_0$ is the mean volume, $\Delta V$ is the cycle amplitude, and $\omega$ is the angular frequency. As $V_{\mathrm{H_2O}}$ falls, monomer concentration rises and the system can enter a condensation-favoring window. As water returns, hydrolysis and dilution resume. A ratchet exists only if the retained product fraction after one cycle is greater than the lost fraction over many cycles:
 \begin{equation}
-    M_s(t+nT)>M_s(t)
+ M_s(t+nT)>M_s(t)
 \end{equation}
 for at least some range of cycle periods $T=2\pi/\omega$, temperatures, solute mixtures, surfaces, and degradation rates. The memory variable $M_s$ should therefore be measured as retained product length, sequence/composition bias, catalytic activity, or surface-bound product fraction after rehydration, not as a single best-cycle yield.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_05/wet_dry_polymerization_ratchet.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_05/wet_dry_polymerization_ratchet.png}
 \caption{Wet--dry polymerization-ratchet diagnostic. The diagnostic separates product formation from retained memory across several cycling regimes and adds a two-dimensional period--hydrolysis response surface. The model supports a conditional ratchet claim: activation, concentration, retention, and survival must align over repeated cycles.}
 \end{figure}
 
-\section{Two-Dimensional Ratchet Window}
+\section{Computational Results: Two-Dimensional Ratchet Window}
 The final release expands the companion script from a few named scenarios to a
 response surface. The scan varies the cycle period $T$ and hydrolysis pressure
 $h$ while keeping the feed chemistry fixed. For each grid point, the model runs
@@ -110,13 +77,8 @@ testable claim is that a finite region in $(T,h,\mathrm{surface},\mathrm{pH},
 \mathrm{activation})$ space should outperform steady controls in retained
 product distribution after rehydration.
 
-\textbf{Status: Derived diagnostic}
-
-
 \section{Recent Experimental Anchors}
 The cycling argument has strengthened since older wet--dry sketches. Heat-flow crack experiments show that geological non-equilibria can concentrate and purify many prebiotically relevant molecules while enhancing reaction yields~\cite{Matreux2024}. Related work on phosphate shows that heat flows can solubilize apatite-derived phosphate and support trimetaphosphate formation under conditions relevant to prebiotic activation~\cite{Matreux2025Phosphate}. Meanwhile, aqueous-origin reviews emphasize that condensation polymer growth is not solved by saying ``remove water''; useful chemistry must store activation energy in precursors, release it selectively, and survive hydrolysis pressure~\cite{WhitakerPowner2024}. In CDFD terms, the ratchet is not only wet versus dry. It is the repeated alignment of activation, concentration, retention, and survival.
-
-\textbf{Status: Inferred}
 
 \section{Validation Targets and Controls}
 A serious validation program must test cycling as a repeated-selection process, not as a one-shot concentration trick. The primary observables are (i) retained product mass after rehydration, (ii) length distribution or compositional bias across cycles, (iii) hydrolysis loss per wet phase, and (iv) whether products from one cycle seed the next cycle. Controls should include continuously wet mixtures, dry-only mixtures without remixing, inert-surface controls, mineral-surface variants, and identical feedstocks with different cycle periods.
@@ -128,33 +90,47 @@ precursor chemistries and surfaces, no cycling protocol improves retained
 length, composition, catalytic activity, or seeding capacity relative to matched
 steady controls. A weaker but still important falsification would show that
 cycling increases gross product only by producing chemically dead material that
-does not seed later cycles. Either outcome would force the Part II chain to
+does not seed later cycles. Either outcome would force the origins sequence to
 replace wet--dry cycling with another mechanism that solves the same memory
 problem.
-
-\textbf{Status: Open experimental program}
 
 \section{Claim Boundary}
 The claim is not that static submerged vents are impossible or that hot springs are mandatory. The claim is that a complete CDFD origin chain must include an environmental or material mechanism that solves the same functional problem:
 \begin{itemize}
-    \item periodic concentration or compartmental concentration,
-    \item partial dehydration or equivalent activation chemistry,
-    \item product retention against washout,
-    \item survival of useful products across the next destructive phase.
+ \item periodic concentration or compartmental concentration,
+ \item partial dehydration or equivalent activation chemistry,
+ \item product retention against washout,
+ \item survival of useful products across the next destructive phase.
 \end{itemize}
 Wet--dry cycling is one strong implementation of that function; mineral surfaces, eutectic phases, gels, and compartment interiors may supply related effects.
 
-\section{Bridge to Paper 6}
-The output of this step is not life. It is a population of longer-lived patterns, oligomers, and surface-bound products. Paper 6 asks when such patterns become self-reinforcing through autocatalytic closure and chemical memory.
+\section{Bridge to Autocatalytic Closure}
+The output of this step is not life. It is a population of longer-lived patterns, oligomers, and surface-bound products. When such patterns become self-reinforcing through autocatalytic closure, chemical memory is examined in Paper~6.
 
 \section{Conclusion}
-Oscillating constraints provide a plausible way to turn environmental fluctuation into retained chemical structure. In the Part II chain, this paper supplies the transition from geochemical throughput to memory-bearing chemistry while keeping the historical setting open to empirical testing.
+Oscillating constraints provide a plausible way to turn environmental fluctuation into retained chemical structure. This paper supplies the transition from geochemical throughput to memory-bearing chemistry while keeping the historical setting open to empirical testing.
 
 \section{Reproducibility Note}
 The companion script \texttt{supplementary\_ool\_05.py} writes the figure
 \path{outputs/paper_05/wet_dry_polymerization_ratchet.png} plus CSV/JSON
 summaries, including \path{outputs/paper_05/ratchet_response_surface.csv}. No
 notebook is required.
+
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors are cited in the body and bibliography.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

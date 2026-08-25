@@ -1,0 +1,8 @@
+scenario,n_reps,support_frac,contradict_frac,mean_n_final,mean_similarity,mean_fusion,mean_hgt,outcome_mode
+balanced_baseline,16,1.0,0.0,1.0,1.0,4.0,15.375,fusion_mediated_mono_lineage
+competition_dominant,16,0.75,0.25,1.25,0.907964009355764,0.0,2.4375,competitive_mono_lineage
+fusion_enabled,16,1.0,0.0,1.0,1.0,4.0,5.625,fusion_mediated_mono_lineage
+harsh_extinction_cascade,16,0.6875,0.3125,0.6875,1.0,0.0,0.625,competitive_mono_lineage
+hgt_without_fusion,16,0.0,1.0,4.375,0.9480288872639167,0.0,141.25,information_homogenized_coexistence
+niche_abundance_coexistence,16,0.0,1.0,4.875,0.721821478499692,0.0,12.625,multi_lineage_coexistence
+parasitic_drain,16,0.0625,0.9375,3.3125,0.8237459994831288,0.0,30.9375,multi_lineage_coexistence

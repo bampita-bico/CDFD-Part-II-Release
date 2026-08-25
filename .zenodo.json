@@ -1,11 +1,11 @@
 {
   "title": "CDFD Part II: Origins of Life and Tri-Regime Bioenergetics - Constraint-Driven Flux Dynamics",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "doi": "10.5281/zenodo.20264779",
   "creators": [
     {
       "name": "Mujjabi, Steve Bico, MD",
-      "affiliation": "Vura Labs",
+      "affiliation": "VuraLabs",
       "orcid": "0009-0001-0556-5516"
     }
   ],
@@ -54,5 +54,5 @@
       "scheme": "doi"
     }
   ],
-  "description": "Public Part II origins-of-life archive for the Constraint-Driven Flux Dynamics project. The release includes a twelve-paper manuscript spine, compiled PDFs, LaTeX sources, supplementary Python scripts, generated figures and checks, interactive panels, bibliography, named laws/tests, and reproducibility instructions. Part II explicitly cites CDFD Part I DOI 10.5281/zenodo.20250821 for CDFL, the public flow-constraint-memory language, and aligns the manuscript archive with the public CDFD Runtime. The archive is released as open preprint material with reproducible toy diagnostics; it is not peer reviewed and does not by itself establish empirical validation of origin-of-life hypotheses."
+  "description": "Public Part II origins-of-life archive for Constraint-Driven Flux Dynamics (release v1.1.0, 2026-08-25). Twelve-paper manuscript spine with supplementary scripts, multi-origin convergence diagnostics, interactive panels, bibliography, claim-status ledger, and falsification-centered master synthesis. Psi_s / Life Number packaging is notation/gauge only. Open preprint; not peer reviewed; does not establish empirical validation of any historical origin-of-life pathway."
 }

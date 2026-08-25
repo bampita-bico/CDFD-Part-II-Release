@@ -120,7 +120,7 @@ def write_outputs(
         writer.writeheader()
         writer.writerows(interface_rows)
 
-    fig, axes = plt.subplots(1, 3, figsize=(16, 4.2), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(14.7, 6.8), constrained_layout=True)
     labels = [str(row["environment"]) for row in compartment_rows]
     x = np.arange(len(labels))
     axes[0].bar(x - 0.18, [float(row["final_psi"]) for row in compartment_rows], width=0.36, label="final Psi")

@@ -1,17 +1,17 @@
 cff-version: 1.2.0
 message: "If you use this archive, cite this Part II release and also cite the Part I Zenodo DOI for CDFL, the CDFD framework language."
 title: "CDFD Part II: Origins of Life and Tri-Regime Bioenergetics - Constraint-Driven Flux Dynamics"
-version: "1.0.2"
+version: "1.1.0"
 doi: 10.5281/zenodo.20264779
-date-released: 2026-06-05
+date-released: 2026-08-25
 license: CC-BY-4.0
 authors:
   - family-names: Mujjabi
     given-names: Steve Bico
     name-suffix: MD
-    affiliation: Vura Labs
+    affiliation: VuraLabs
     orcid: "https://orcid.org/0009-0001-0556-5516"
-abstract: "Public Part II origins-of-life archive for the Constraint-Driven Flux Dynamics project, including a twelve-paper manuscript spine, supplementary scripts, generated outputs, interactive panels, bibliography, named laws/tests, and a falsification-centered master synthesis. Part II cites CDFD Part I, DOI 10.5281/zenodo.20250821, for CDFL, the public flow-constraint-memory language, and aligns the manuscript archive with the public CDFD Runtime."
+abstract: "Public Part II origins-of-life archive for Constraint-Driven Flux Dynamics (release v1.1.0). Twelve-paper manuscript spine with supplementary scripts, multi-origin convergence diagnostics, interactive panels, bibliography, claim-status ledger, and falsification-centered master synthesis. Life Number and operating-ratio packaging are treated as notation/gauges—not ontology of life. Cites Part I (DOI 10.5281/zenodo.20250821) for CDFL. Open preprint; not peer reviewed; not historical validation of any origin pathway."
 keywords:
   - CDFD
   - CDFL

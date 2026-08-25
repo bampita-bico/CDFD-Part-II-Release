@@ -96,7 +96,7 @@ def write_outputs(
         writer = csv.DictWriter(handle, fieldnames=["step", "mean_flux", "peak_interface_flux", "mean_s", "mean_ms"])
         writer.writeheader()
         writer.writerows(rows)
-    fig, axes = plt.subplots(1, 3, figsize=(15, 4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(13.8, 6.4), constrained_layout=True)
     im = axes[0].imshow(final_phi, cmap="inferno", origin="lower")
     axes[0].contour(constraint, levels=[5.0], colors="cyan", linewidths=1.2)
     axes[0].set_title("Final redox flux field")

@@ -8,26 +8,28 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-1: The Thermodynamic Mandate and Dissipative Structuring:\\ A Constraint-Driven Flux Dynamics (CDFD) Perspective}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{The Thermodynamic Mandate and Dissipative Structuring:\\ A Constraint-Driven Flux Dynamics (CDFD) Perspective}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This opening manuscript frames abiogenesis as a nonequilibrium systems problem rather than a single lucky molecular accident. Constraint-Driven Flux Dynamics (CDFD) is used as a coarse-grained language for asking when environmental energy flux, geometric constraint, active surface formation, and memory-like persistence can reinforce one another. The central object is the adaptive ratio
-\[
-\Psi_s=\left(\frac{\Phi}{C}\right)S M_s,
-\]
-where $\Phi$ denotes available driving flux, $C$ denotes the effective resistance or constraint field, $S$ denotes responsive organization, and $M_s$ denotes retained structural memory. The paper does not prove that life is inevitable in every driven environment. It establishes the dependency structure that later papers test in geochemical, polymerization, compartment, replication, parasitic, photochemical, and synthesis settings.
+This manuscript frames abiogenesis as a nonequilibrium systems problem rather than a single lucky molecular accident. Constraint-Driven Flux Dynamics (CDFD) is used as a coarse-grained language for asking when environmental energy flux, geometric constraint, active surface formation, and memory-like persistence can reinforce one another. The central object is the adaptive operating ratio $\Psi_s=(\Phi/C)\cdot S\cdot M_s$, where $\Phi$ denotes available driving flux, $C$ denotes the effective resistance or constraint field, $S$ denotes responsive organization, and $M_s$ denotes retained structural memory. This is the first paper in a twelve-paper series; it does not prove that life is inevitable in every driven environment, but establishes the dependency structure that later papers test in geochemical, polymerization, compartment, replication, parasitic, photochemical, and synthesis settings.
 \end{abstract}
 
+\noindent\textbf{Keywords:} origins of life; nonequilibrium thermodynamics; dissipative structures; constraint-driven dynamics; computational modelling.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
+
 \section*{Symbol Conventions}
+
+\noindent This is the reference paper for the full CDFD origins-of-life symbol convention used throughout Part II. Every other paper in the series points back here rather than repeating the full tables.
 
 \noindent\textbf{CDFD origins-of-life symbol convention.}
 \begin{center}
@@ -41,7 +43,7 @@ $C$ & Effective constraint or resistance & Mineral geometry, pore confinement, d
 $S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
 $M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
 $\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
+$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance (defined in Paper~12) \\
 \bottomrule
 \end{tabular}
 }
@@ -66,47 +68,50 @@ $\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a
 }
 \end{center}
 
+\noindent\textbf{Working-convention status.}
+$\Psi_s=\Phi/C$ and the four-term product $\Psi_s=(\Phi/C)\cdot S\cdot M_s$ are adopted here as a \emph{working notational convention} for Part~II bookkeeping, not as a derived physical law from Part~I. The biology series remains evaluable on its own chemical and geological evidence regardless of how Part~I revises the status of that ratio.
+
+\noindent\textbf{Note on the $\Psi_s$ closure across this series.}
+Several papers in this sequence (Papers~2, 3, and~4) restrict discussion to the ratio $\Phi/C$ alone before $S$ and $M_s$ are formally developed in Papers~6--7. Where this occurs, it should be read as a deliberate structural restriction---$S$ and $M_s$ are held implicitly at their neutral values until the mechanisms that give them content are introduced---not as an inconsistency in the master equation. Papers~1, 5, 8, and~12 use the full four-term product.
 
 \section{Introduction}
 Living systems maintain local order by coupling themselves to external gradients. The origin-of-life problem is therefore not only the problem of making particular molecules; it is also the problem of sustaining useful work against dilution, hydrolysis, side reactions, and spatial loss. In CDFD language, a prebiotic system becomes interesting when a flux source and a constraint architecture create a persistent opportunity for organization.
 
-This manuscript supplies the series-level vocabulary. This vocabulary is CDFL, the CDFD flow-constraint-memory language used by the public runtime and by the manuscript series. It deliberately keeps the claim at the level of mechanism class: driven systems can favor structures that increase usable dissipation, but only if those structures also retain enough organization to persist.
+This manuscript supplies the series-level vocabulary --- CDFL, the CDFD flow-constraint-memory language used by the public runtime and by the manuscript series. It deliberately keeps the claim at the level of mechanism class: driven systems can favor structures that increase usable dissipation, but only if those structures also retain enough organization to persist.
+
+\textbf{Relation to prior dissipation-based accounts of abiogenesis.}
+This framing sits inside an existing thermodynamic-dissipation lineage in origins-of-life research and should be read as continuous with it, not as an independent discovery. Prigogine's dissipative-structures program established that systems maintained far from equilibrium can spontaneously organize to increase entropy production~\cite{PrigogineNicolis1977} --- the source of the phrase used in this paper's title. England's statistical-physics account of self-replication~\cite{England2013} makes a closely related claim in modern notation: driven, dissipative systems can be statistically favored to adopt structures that absorb and dissipate more of the available driving work, which is essentially the CDFD $\Psi_s$ claim restated with a different formalism. Michaelian's thermodynamic dissipation theory for the origin of life~\cite{Michaelian2011,Michaelian2017} argues for a directly competing account centered on UV-driven dissipation as the primary selective force at the origin of life. CDFD's contribution relative to these three is a shared bookkeeping notation across geochemical, polymerization, and protocellular stages, rather than a new physical mechanism --- the underlying thermodynamic intuition is not new, and later work in this series should be read as an application of that established framework rather than a departure from it.
+
+The same flux-constraint grammar is also applied elsewhere in the CDFD program (fundamental physics and, prospectively, medicine). Origins-of-life claims in Part~II are expected to be judged on their own chemical and geological evidence regardless of what happens to the formalism in those other domains.
 
 \section{Scientific Lineage and Complementarity}
-Part II stands on a long origin-of-life tradition rather than replacing it. Oparin's coacervate program, Wächtershäuser's surface-metabolism proposal, Russell and Martin's alkaline hydrothermal-vent work, Eigen and Orgel's error-threshold logic, Kauffman's autocatalytic-set theory, Szostak's protocell program, Lane's bioenergetic arguments, Powner's nucleotide chemistry, Patel's cyanosulfidic network chemistry, and Damer's cycling-environment hypothesis all identify real parts of the puzzle~\cite{Wachtershauser1988,Russell1994,Martin2007,Eigen1971,Orgel1963,Kauffman1986,Szostak2010,Lane2010,Powner2009,Patel2015,Damer2020}. CDFD's role is to provide a single dependency grammar across those traditions: what is the input, what constrains it, what routes it, what is retained, and what would falsify the claimed coupling?
+This paper stands on a long origin-of-life tradition rather than replacing it. Oparin's coacervate program, Wächtershäuser's surface-metabolism proposal, Russell and Martin's alkaline hydrothermal-vent work, Eigen and Orgel's error-threshold logic, Kauffman's autocatalytic-set theory, Szostak's protocell program, Lane's bioenergetic arguments, Powner's nucleotide chemistry, Patel's cyanosulfidic network chemistry, and Damer's cycling-environment hypothesis all identify real parts of the puzzle~\cite{Wachtershauser1988,Russell1994,Martin2007,Eigen1971,Orgel1963,Kauffman1986,Szostak2010,Lane2010,Powner2009,Patel2015,Damer2020}. CDFD's role is to provide a single dependency grammar across those traditions: what is the input, what constrains it, what routes it, what is retained, and what would falsify the claimed coupling? This framing is meant to complement those schools, not erase their disagreements.
 
-This framing is meant to complement those schools, not erase their disagreements. Vent models, hot-spring models, mineral-surface chemistry, RNA-world chemistry, metabolism-first chemistry, and protocell experiments can all be compared by asking whether they solve the same sequence of functional gates.
-
-\textbf{Status: Historical framing}
-
-\section{Relationship to Part I}
-Part I of this series introduced CDFL, the CDFD state grammar for flow, constraint, responsiveness, memory, and threshold crossing in fundamental-physics language~\cite{MujjabiPartI2026}. Part II does not require the reader to accept the stronger physical claims of Part I. It uses the shared notation as a disciplined bookkeeping layer: $\Phi$ names drive, $C$ names resistance or constraint, $S$ names responsive organization, and $M_s$ names retained structure. The biological question is whether those variables can be instantiated by geochemical, chemical, and protocellular mechanisms.
-
-\textbf{Status: Framing}
-
+\section{Notation independence}
+Shared CDFD/CDFL notation here is a disciplined bookkeeping layer only: $\Phi$ names drive, $C$ names resistance or constraint, $S$ names responsive organization, and $M_s$ names retained structure. As noted under Symbol Conventions, the $\Psi_s$ product is a working convention for this biology series rather than a load-bearing derivation from any other CDFD installment. Evaluation of Part~II stands on chemical and geological evidence alone.
 
 \section{Flux, Constraint, Surface, and Memory}
 The shared phenomenological balance used throughout this Part II sequence is
 \begin{equation}
-    \frac{\partial \Phi}{\partial t}
-    =
-    \nabla \cdot \left(\frac{1}{C}\nabla\Phi\right)+S-D,
-    \label{eq:flux-balance}
+ \frac{\partial \Phi}{\partial t}
+ =
+ \nabla \cdot \left(\frac{1}{C}\nabla\Phi\right)+S-D,
+ \label{eq:flux-balance}
 \end{equation}
 where $D$ collects loss, degradation, washout, and uncoupled dissipation. The terms are interpreted as follows:
 \begin{itemize}
-    \item \textbf{Flux ($\Phi$)}: chemical, redox, photochemical, thermal, or electrochemical drive available to the system.
-    \item \textbf{Constraint ($C$)}: transport resistance, activation barrier, geometric confinement, permeability, or maintenance burden.
-    \item \textbf{Responsiveness ($S$)}: the ability of local structure to route flux into productive pathways rather than noise.
-    \item \textbf{Systemic memory ($M_s$)}: persistence of structure, sequence, composition, topology, or boundary state across time.
+ \item \textbf{Flux ($\Phi$)}: chemical, redox, photochemical, thermal, or electrochemical drive available to the system.
+ \item \textbf{Constraint ($C$)}: transport resistance, activation barrier, geometric confinement, permeability, or maintenance burden.
+ \item \textbf{Responsiveness ($S$)}: the ability of local structure to route flux into productive pathways rather than noise.
+ \item \textbf{Systemic memory ($M_s$)}: persistence of structure, sequence, composition, topology, or boundary state across time.
 \end{itemize}
 
 All symbols are local phenomenological variables unless explicitly tied to a measurement. They should not be read as universal constants. Later papers redefine specialized symbols only after stating their physical meaning, because the same letter can otherwise mean different things in reaction kinetics, transport theory, and bioenergetics.
 
 The adaptive ratio
 \begin{equation}
-    \Psi_s=\left(\frac{\Phi}{C}\right)S M_s
-    \label{eq:psi}
+ \Psi_s=\left(\frac{\Phi}{C}\right)S M_s
+ \label{eq:psi}
 \end{equation}
 is not introduced as a universal constant. It is a bookkeeping device for tracking whether the components needed for persistence are co-present. A high flux without retention burns out. A strong constraint without flux freezes. A responsive surface without memory remains transient.
 
@@ -118,55 +123,56 @@ source. CDFD treats those ingredients as incomplete unless they satisfy a
 coupled gate.
 
 \begin{enumerate}
-    \item \textbf{Sustained disequilibrium.}  The environment must supply
-    repeatable drive, not a single pulse. Operationally, $\Phi$ must remain
-    positive over the relevant renewal interval.
-    \item \textbf{Finite constraint.}  The system must be neither freely mixed
-    nor sealed off. In symbols, $0<C<\infty$: too little constraint gives
-    washout, while too much constraint prevents exchange and renewal.
-    \item \textbf{Responsive routing.}  The local structure must alter product
-    distributions or retention. A surface, pore, droplet, or polymer has CDFD
-    significance only when it changes where flux goes, represented by $S>0$.
-    \item \textbf{Retained memory.}  Some product, pattern, boundary state, or
-    catalytic bias must survive later destructive phases. The working test is
-    $M_s(t+nT)>M_s(t)$ over at least one repeated environmental sequence.
+ \item \textbf{Sustained disequilibrium.} The environment must supply
+ repeatable drive, not a single pulse. Operationally, $\Phi$ must remain
+ positive over the relevant renewal interval.
+ \item \textbf{Finite constraint.} The system must be neither freely mixed
+ nor sealed off. In symbols, $0<C<\infty$: too little constraint gives
+ washout, while too much constraint prevents exchange and renewal.
+ \item \textbf{Responsive routing.} The local structure must alter product
+ distributions or retention. A surface, pore, droplet, or polymer has CDFD
+ significance only when it changes where flux goes, represented by $S>0$.
+ \item \textbf{Retained memory.} Some product, pattern, boundary state, or
+ catalytic bias must survive later destructive phases. The working test is
+ $M_s(t+nT)>M_s(t)$ over at least one repeated environmental sequence.
 \end{enumerate}
 
-\textbf{Status: Derived release guardrail}
-
-\section{Dependency-Gate Diagnostic}
-The final release adds a lightweight script for this opening paper,
-\texttt{supplementary\_ool\_01.py}. The script scans a two-dimensional grid of
+\section{Computational Results: Dependency-Gate Diagnostic}
+The companion script \texttt{supplementary\_ool\_01.py} scans a two-dimensional grid of
 drive $\Phi$ and constraint $C$, then computes Eq.~\eqref{eq:psi} using bounded
-phenomenological functions for $S$ and $M_s$. The result is not a simulation of
-life. It is a necessary-condition map showing where the opening notation is
-subcritical, near-critical, or overloaded.
+phenomenological functions for $S$ and $M_s$.
+\textbf{This is an illustrative diagnostic, not a validated Results section}:
+it is a necessary-condition map, not a simulation of life, and the specific
+numbers it reports depend on the toy script's chosen parameter ranges rather
+than any measured chemistry.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_01/dependency_gate_surface.png}
-\caption{Dependency-gate diagnostic for Paper 1. The near-critical band marks
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_01/dependency_gate_surface.png}
+\caption{Dependency-gate diagnostic. The near-critical band marks
 where drive, finite constraint, responsive routing, and retained memory are
 co-present in the toy surface. It is an interpretive map for the twelve-paper
 chain, not evidence that abiogenesis has occurred.}
 \end{figure}
 
 The scan reports 3,600 grid points, of which 425 fall in the near-critical
-window $0.85\leq\Psi_s\leq1.15$. That number has no universal meaning. Its
+window $0.85\leq\Psi_s\leq1.15$. That window's boundaries are chosen for
+illustration and have not been shown to be robust to alternative reasonable
+choices (e.g., $\pm10\%$ or $\pm20\%$ instead) --- a sensitivity sweep
+confirming the qualitative three-regime picture across several window widths
+is identified here as required future work, not yet performed. The diagnostic's
 purpose is to force the release to distinguish three regimes:
 \begin{itemize}
-    \item underdriven or overconstrained systems, where chemistry cannot build
-    persistent memory;
-    \item near-critical systems, where later mechanisms may matter;
-    \item overloaded systems, where excess drive outruns retention or control.
+ \item underdriven or overconstrained systems, where chemistry cannot build
+ persistent memory;
+ \item near-critical systems, where later mechanisms may matter;
+ \item overloaded systems, where excess drive outruns retention or control.
 \end{itemize}
-
-\textbf{Status: Derived diagnostic}
 
 \section{Dissipative Structuring}
 Driven systems can form structures that route energy more effectively than homogeneous diffusion. In prebiotic settings, the relevant question is whether such structures can become chemically consequential: mineral interfaces, pores, films, droplets, polymers, and reaction loops all change the effective relationship between $\Phi$ and $C$.
 
-For a bare chemical soup, one may have $S\approx 0$ and $M_s\to 0$, so transient fluctuations do not accumulate. A successful origin pathway must raise both quantities without disconnecting from the external drive. This is the handoff to Paper 2: the framework needs geological boundary conditions before it can become a concrete origin-of-life argument.
+For a bare chemical soup, one may have $S\approx 0$ and $M_s\to 0$, so transient fluctuations do not accumulate. A successful origin pathway must raise both quantities without disconnecting from the external drive. The next concrete step is geological boundary conditions: the framework needs a specific geochemical substrate before it becomes a concrete origin-of-life argument, developed in Paper~2.
 
 \section{Claim Boundary}
 The strongest defensible claim of this paper is conditional:
@@ -177,7 +183,7 @@ If a prebiotic environment supplies sustained disequilibrium, spatial constraint
 This is not a proof that a particular vent, pool, mineral, or molecule was historically necessary. The later papers narrow those possibilities by adding Fe--S redox chemistry, distributed mineral transport, proton/ion coupling, cycling polymerization, autocatalysis, chemical alphabets, compartments, replication thresholds, parasitic failure modes, and photochemical expansion.
 
 \section{Series-Level Falsification Logic}
-The opening paper can fail in several ways. If prebiotic experiments show that
+The present analysis can fail in several ways. If prebiotic experiments show that
 product persistence is independent of constraint architecture, then $C$ is a
 weak or decorative variable. If surfaces change flux but not endpoint chemistry,
 then $S$ is not a useful organizing parameter. If repeated cycles do not improve
@@ -187,16 +193,30 @@ paper in the series requires a different incompatible definition of
 $\Psi_s$, the CDFL grammar fails as a unifying language even if individual
 origin-of-life mechanisms remain interesting.
 
-\textbf{Status: Falsifiable framing}
-
 \section{Conclusion}
-The thermodynamic opening move is a dependency graph, not a victory lap. Life-like organization requires flux, constraint, responsive routing, and retained memory to reinforce one another. Paper 2 therefore begins the concrete chain with the most immediate physical substrate: iron--sulfur redox and mineral constraint scaffolds.
+The thermodynamic opening move is a dependency graph, not a victory lap. Life-like organization requires flux, constraint, responsive routing, and retained memory to reinforce one another. A natural continuation examines the most immediate physical substrate: iron--sulfur redox and mineral constraint scaffolds (Paper~2).
 
 \section{Reproducibility Note}
 The companion script \texttt{supplementary\_ool\_01.py} writes
 \path{dependency_gate_surface.png} under \path{outputs/paper_01/}, plus a grid
 CSV, a necessary-conditions CSV, and summary JSON. The output is a
 necessary-condition visualization, not validation of abiogenesis.
+
+\section*{Related literature}
+This manuscript defines the Part~II thermodynamic entry point on chemical and geological grounds. Shared CDFD/CDFL symbols are introduced locally as bookkeeping; Part~I vacuum-physics papers are not load-bearing here. Field anchors: Prigogine and Nicolis~\cite{PrigogineNicolis1977}; England~\cite{England2013}; Michaelian~\cite{Michaelian2011,Michaelian2017}.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

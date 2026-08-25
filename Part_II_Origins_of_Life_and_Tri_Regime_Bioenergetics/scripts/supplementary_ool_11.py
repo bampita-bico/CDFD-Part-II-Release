@@ -118,7 +118,7 @@ def write_outputs(
         )
         writer.writeheader()
         writer.writerows(overload_rows)
-    fig, axes = plt.subplots(1, 2, figsize=(12, 4.3), constrained_layout=True)
+    fig, axes = plt.subplots(1, 2, figsize=(11.0, 6.2), constrained_layout=True)
     capture_labels = [str(row["scenario"]).replace("_", "\n") for row in capture_rows]
     capture_values = [float(row["life_number"]) for row in capture_rows]
     colors = ["#7a9cc6" if value < 1.0 else "#4f8f5b" for value in capture_values]

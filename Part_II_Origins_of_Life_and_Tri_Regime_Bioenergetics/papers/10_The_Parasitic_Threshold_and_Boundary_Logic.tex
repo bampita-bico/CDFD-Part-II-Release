@@ -8,85 +8,53 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-10: The Parasitic Threshold and Boundary Logic:\\ Defense Pressure Before Modern Immunity}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{The Parasitic Threshold and Boundary Logic:\\ Defense Pressure Before Modern Immunity}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Parasitism becomes meaningful only after replication, retention, and container inheritance exist. This manuscript therefore moves the parasitic threshold after the protocell integration gate. In CDFD terms, a parasitic sequence or pathway is an internal flux drain that consumes activated resources while failing to maintain the host network or its boundary. The key claim is conditional and testable: once copying and compartment persistence are coupled, exploitative variants create selection pressure for specificity, exclusion, proofreading, degradation, and boundary control. The paper does not claim literal modern viruses, immune systems, or oncology at the dawn of life. It identifies the earliest functional problem that later defense systems solve.
+Parasitism becomes meaningful only after replication, retention, and container inheritance exist. This manuscript therefore moves the parasitic threshold after the protocell integration gate (Paper~9). In CDFD terms, a parasitic sequence or pathway is an internal flux drain that consumes activated resources while failing to maintain the host network or its boundary. The key claim is conditional and testable: once copying and compartment persistence are coupled, exploitative variants create selection pressure for specificity, exclusion, proofreading, degradation, and boundary control. The paper does not claim literal modern viruses, immune systems, or oncology at the dawn of life --- it identifies the earliest functional problem that later defense systems solve.
 \end{abstract}
+
+\noindent\textbf{Keywords:} parasitic threshold; boundary logic; prebiotic defense; replication; origins of life.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
 
 \section*{Symbol Conventions}
 
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+\noindent See Paper~1, \S Symbol Conventions, for the base CDFD and Greek-symbol tables. This paper introduces $\Phi_{\mathrm{host}}$, $\Phi_{\mathrm{loss}}$, and the host-survival inequality (\S4).
 
 \section{Introduction}
-Paper 9 established the minimum machinery required for protocellular evolution: information must copy with bounded error, and container success must covary with internal chemistry. Once that machinery exists, exploitation becomes unavoidable in principle. Any variant that uses the replication or catalytic apparatus without contributing to persistence can grow faster than cooperative chemistry over short horizons.
+Prior protocell-integration work established the minimum machinery required for protocellular evolution: information must copy with bounded error, and container success must covary with internal chemistry. Once that machinery exists, exploitation becomes unavoidable in principle. Any variant that uses the replication or catalytic apparatus without contributing to persistence can grow faster than cooperative chemistry over short horizons.
 
 This is the parasitic threshold. It is not a statement that modern viruses existed before cells. It is a statement about a failure mode of coupled autocatalytic and replicative systems, adjacent to classic error-threshold and major-transition logic~\cite{Eigen1971,MaynardSmith1997}.
 
 \section{Parasitic Flux Drain}
 Let the cooperative autocatalytic/replicative network have operational flux $\Phi_{\mathrm{host}}$. A parasitic component consumes resources at rate $\Phi_{\mathrm{loss}}$ while contributing little or nothing to retention, repair, catalytic closure, or boundary persistence. The effective host flux becomes
 \begin{equation}
-    \Phi_{\mathrm{eff}}=\Phi_{\mathrm{host}}-\Phi_{\mathrm{loss}}.
+ \Phi_{\mathrm{eff}}=\Phi_{\mathrm{host}}-\Phi_{\mathrm{loss}}.
 \end{equation}
 The adaptive ratio becomes
 \begin{equation}
-    \Psi_s=
-    \left(\frac{\Phi_{\mathrm{eff}}}{C_{\mathrm{mem}}}\right)S M_s.
+ \Psi_s=
+ \left(\frac{\Phi_{\mathrm{eff}}}{C_{\mathrm{mem}}}\right)S M_s.
 \end{equation}
 If $\Phi_{\mathrm{loss}}$ grows faster than host repair or exclusion, the system crosses from productive replication to starvation, washout, or loss of inherited organization.
 
 \section{Boundary Logic}
 The response cannot be only ``more flux.'' Extra substrate can amplify the parasite as easily as the host. A surviving protocell-like system needs constraint changes:
 \begin{itemize}
-    \item selective permeability at the boundary,
-    \item catalytic specificity inside the compartment,
-    \item degradation or sequestration of noncontributing templates,
-    \item copying rules that preserve useful heredity while limiting runaway freeloaders.
+ \item selective permeability at the boundary,
+ \item catalytic specificity inside the compartment,
+ \item degradation or sequestration of noncontributing templates,
+ \item copying rules that preserve useful heredity while limiting runaway freeloaders.
 \end{itemize}
 These are early functional analogues of defense logic. They are not yet modern immune systems.
 
@@ -108,9 +76,7 @@ The experimental target is a compartmental copying system in which host-like tem
 
 Useful observables include host-template fraction after serial transfer, compartment survival, product yield per compartment, leakage, and the covariance between internal chemistry and boundary growth or division. The CDFD expectation is a threshold response: increasing parasite access should sharply reduce host persistence unless selective permeability, degradation, sequestration, or copying specificity is present. Failure to see such a threshold under otherwise heritable conditions would weaken this paper's claim.
 
-\textbf{Status: Open experimental program}
-
-\section{Spatial Boundary Gate}
+\section{Computational Results: Spatial Boundary Gate}
 The final release expands the companion script beyond a well-mixed
 host--parasite ODE. A second diagnostic places host-like and parasite-like
 fields on a two-dimensional compartment grid. The boundary gate modifies
@@ -126,10 +92,8 @@ claim is too weak. Conversely, if gated compartments retain host-dominant
 interiors across parameter sweeps while open boundaries do not, the model earns
 a stronger experimental target.
 
-\textbf{Status: Derived diagnostic}
-
 \section{Conclusion}
-The parasitic threshold is the first crisis created by successful protocell integration. Once copying, retention, and compartment inheritance exist, exploitative variants force the system to evolve boundary logic. This paper therefore sits after replication/protocell integration and before photochemical expansion in Paper 11 in the revised Part II chain.
+The parasitic threshold is the first crisis created by successful protocell integration. Once copying, retention, and compartment inheritance exist, exploitative variants force the system to evolve boundary logic. Photochemical expansion is treated as a later energy-input channel (Paper~11) rather than a prerequisite for the parasitic-threshold argument.
 
 \section{Reproducibility Note}
 The companion script \texttt{supplementary\_ool\_10.py} tests a minimal
@@ -138,13 +102,27 @@ and a two-dimensional spatial boundary diagnostic. It writes
 \path{parasitic_threshold_boundary_logic.png} under \path{outputs/paper_10/},
 plus well-mixed and spatial CSV/JSON summaries. No notebook is required.
 
-
-
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_10/parasitic_threshold_boundary_logic.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_10/parasitic_threshold_boundary_logic.png}
 \caption{Parasitic-threshold diagnostic. The toy model compares host persistence with and without boundary specificity when a noncontributing replicator accesses the same resource stream, then shows a two-dimensional boundary-gate stress test. The figure is a mechanism diagnostic, not a claim about modern viruses.}
 \end{figure}
+
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors are cited in the body and bibliography.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

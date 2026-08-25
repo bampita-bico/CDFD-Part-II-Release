@@ -160,7 +160,7 @@ def write_outputs(
         )
         writer.writeheader()
         writer.writerows(cycle_rows)
-    fig, axes = plt.subplots(1, 3, figsize=(13, 4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(12.0, 5.8), constrained_layout=True)
     labels = [str(row["scenario"]).replace("_", "\n") for row in lambda_rows]
     values = [float(row["life_number"]) for row in lambda_rows]
     axes[0].bar(range(len(values)), values, color=["#b4553b", "#d6a04f", "#d6a04f", "#4f8f5b"])

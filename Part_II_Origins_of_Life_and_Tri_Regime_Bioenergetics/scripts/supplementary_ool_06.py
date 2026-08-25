@@ -63,7 +63,7 @@ def main() -> None:
     data.to_csv(out_dir / "closure_timeseries.csv", index=False)
     pd.DataFrame(rows).to_csv(out_dir / "closure_summary.csv", index=False)
     (out_dir / "summary.json").write_text(json.dumps({"paper": 6, "model": "autocatalytic closure scan", "gamma": str(gamma), "rows": rows}, indent=2) + "\n")
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4), constrained_layout=True)
+    fig, axes = plt.subplots(1, 2, figsize=(10.1, 5.8), constrained_layout=True)
     for label, frame in data.groupby(["initial_phi", "constraint"]):
         axes[0].plot(frame["time"], frame["phi"], lw=2, label=f"Phi0={label[0]}, C={label[1]}")
     labels = [f"{row['initial_phi']},{row['constraint']}" for row in rows]

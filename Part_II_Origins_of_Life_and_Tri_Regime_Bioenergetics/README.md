@@ -35,7 +35,10 @@ history.
 - `make_interactive_panels.py` - offline HTML viewer generator for the existing
   output folders.
 - `ool_references.bib` - shared bibliography, including the Part I DOI.
-- `MUJJABI_LIFE_LAWS_AND_TESTS.md` - named Part II laws, principles, and tests.
+- `CLAIM_STATUS.md` - binding claim boundary for this release.
+- `ARCHIVE_NOTICE_2026-08-24.md` - retained release scope and the separate
+  archive boundary for working material.
+- `methods/` - shared auditable toy-model declaration protocol.
 - `REPRODUCIBILITY.md` - commands used to regenerate scripts and PDFs.
 
 ## Relationship To Part I

@@ -9,80 +9,48 @@
 \usepackage{listings}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-9: Protocell Integration, Replication, and Error Thresholds:\\ The First Heritable Container Gate}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{Protocell Integration, Replication, and Error Thresholds:\\ The First Heritable Container Gate}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This paper is the integration gate. A protocell claim requires bounded copying error, retained internal chemistry, coupled energy throughput, and a boundary whose persistence covaries with its internal state. The paper combines Eigen--Orgel error-threshold logic with a conservative protocell diagnostic and explicitly reports numerical fragility where it appears. That restraint is intentional: Paper 9 defines what must be true before Paper 10 can introduce parasitic exploitation.
+This paper is the integration gate. A protocell claim requires bounded copying error, retained internal chemistry, coupled energy throughput, and a boundary whose persistence covaries with its internal state. The paper combines Eigen--Orgel error-threshold logic with a conservative protocell diagnostic and explicitly reports numerical fragility where it appears. That restraint is intentional: parasitic exploitation is treated only after bounded copying and container inheritance are defined (Paper~10).
 \end{abstract}
+
+\noindent\textbf{Keywords:} error threshold; protocell replication; quasispecies; information fidelity; origins of life.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
 
 \section*{Symbol Conventions}
 
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+\noindent See Paper~1, \S Symbol Conventions, for the base CDFD and Greek-symbol tables. This paper introduces the replication gain $\Gamma_{\mathrm{rep}}$, fidelity $Q$, and the composite bookkeeping score $\mathcal{H}_{\mathrm{copy}}$ (\S2--3).
 
 \section{Introduction}
 Papers 1--8 build the prerequisite ladder: thermodynamic framing, geochemical energy and transport, oscillating polymerization, autocatalytic closure, and adaptive boundaries. A protocell requires these pieces to become coupled. Replication without a boundary may preserve molecular information but does not necessarily create a lineage. A boundary without inherited internal chemistry can divide physically without biological heredity.
 
-Paper 9 therefore asks two linked questions:
+This paper asks two linked questions:
 \begin{enumerate}
-    \item When does copying preserve information rather than dissolve into error?
-    \item When does copying affect the persistence and division of the container that carries it?
+ \item When does copying preserve information rather than dissolve into error?
+ \item When does copying affect the persistence and division of the container that carries it?
 \end{enumerate}
 
 \section{Template Growth and Replication Gain}
 For a schematic template $T$ and monomer pool $M_i$,
 \begin{equation}
-    T+M_i\rightarrow TM_i,
-    \qquad
-    R_{\mathrm{rep}}=k_{\mathrm{rep}}c_Tc_M.
+ T+M_i\rightarrow TM_i,
+ \qquad
+ R_{\mathrm{rep}}=k_{\mathrm{rep}}c_Tc_M.
 \end{equation}
 Transport-limited monomer supply can be represented phenomenologically as
 \begin{equation}
-    \bm{J}_M=-\frac{1}{C}\nabla c_M.
+ \bm{J}_M=-\frac{1}{C}\nabla c_M.
 \end{equation}
 A well-mixed caricature gives
 \begin{equation}
@@ -94,19 +62,19 @@ c_T\left(k_{\mathrm{rep}}c_M-\frac{1}{CL^2}\right).
 \end{equation}
 Define the replication gain
 \begin{equation}
-    \Gamma_{\mathrm{rep}}=k_{\mathrm{rep}}c_MCL^2.
+ \Gamma_{\mathrm{rep}}=k_{\mathrm{rep}}c_MCL^2.
 \end{equation}
 The condition $\Gamma_{\mathrm{rep}}>1$ is only a linearized growth condition. It is not sufficient for life.
 
 \section{Error Threshold}
 If per-step fidelity is $q$ across $n$ additions, the simplest master-sequence survival approximation is
 \begin{equation}
-    Q=q^n,\qquad \epsilon=1-Q.
+ Q=q^n,\qquad \epsilon=1-Q.
 \end{equation}
 Information persists only if replication gain outruns error catastrophe. A schematic compatibility condition is
 \begin{equation}
-    \Gamma_{\mathrm{rep}}Q>1,
-    \label{eq:error-threshold}
+ \Gamma_{\mathrm{rep}}Q>1,
+ \label{eq:error-threshold}
 \end{equation}
 with the usual warning that real prebiotic copying is not a clean independent-site process~\cite{Orgel1963,Eigen1971}.
 
@@ -164,16 +132,16 @@ R_i=f_i(c)\,g(|\bm{J}_e\cdot\bm{J}_H|),
 \end{equation}
 for nonnegative $g$.
 
-\section{Numerical Audit}
+\section{Computational Results: Numerical Audit}
 The diagnostic for this paper combines a reduced error-threshold sweep with a
 bounded two-dimensional protocell update. It should be read as a numerical
 stress test, not as validation. The reduced diagnostic reported:
 \begin{itemize}
-    \item $\Phi=0.2$: final master-sequence fitness $0.367$,
-    \item $\Phi=0.5$: final master-sequence fitness $0.083$,
-    \item $\Phi=1.0$: final master-sequence fitness $0.014$,
-    \item $\Phi=5.0$: final master-sequence fitness $1.000$,
-    \item $\Phi=10.0$: final master-sequence fitness $1.000$.
+ \item $\Phi=0.2$: final master-sequence fitness $0.367$,
+ \item $\Phi=0.5$: final master-sequence fitness $0.083$,
+ \item $\Phi=1.0$: final master-sequence fitness $0.014$,
+ \item $\Phi=5.0$: final master-sequence fitness $1.000$,
+ \item $\Phi=10.0$: final master-sequence fitness $1.000$.
 \end{itemize}
 The non-monotonic low-to-intermediate response rules out a single universal critical flux in this reduced diagnostic. The correct claim is windowed: copying benefits from energy throughput only when activation, retention, and damage remain bounded.
 
@@ -185,9 +153,9 @@ boundary protects a low internal $\Psi_s$ region while the exterior experiences
 large drive, which is a stress-test picture of compartmental buffering rather
 than a demonstration of real protocell reproduction.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_09/error_threshold_and_protocell.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_09/error_threshold_and_protocell.png}
 \caption{Merged error-threshold/protocell diagnostic. The left panel tests flux-dependent master-sequence persistence. The right panel shows a bounded two-dimensional protocell stress test with finite internal and external adaptive-ratio traces. The figure is a mechanism diagnostic, not a successful protocell simulation.}
 \end{figure}
 
@@ -217,18 +185,34 @@ R_{\mathrm{division}},
 not by replication alone.
 
 \section{Conclusion}
-Paper 9 is the integration gate. It establishes that bounded copying, retained
+This paper is the integration gate. It establishes that bounded copying, retained
 internal chemistry, coupled energy flow, and heritable containers must be tested
 together. The current numerical status is deliberately conservative: the
 reduced copying toy is informative, while the two-dimensional protocell
 implementation is a bounded stress test that still needs refinement before it
-can be treated as a prediction. Paper 10 can only discuss parasitic exploitation
-after this replication/container machinery exists.
+can be treated as a prediction. Parasitic exploitation is discussed only
+after this replication/container machinery exists (Paper~10).
 
 \section{Reproducibility Note}
 The companion script \texttt{supplementary\_ool\_09.py} writes the figure
 \path{outputs/paper_09/error_threshold_and_protocell.png} plus CSV/JSON
 summaries. No notebook is required.
+
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors are cited in the body and bibliography.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

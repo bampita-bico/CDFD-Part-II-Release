@@ -1,6 +1,6 @@
 # Reproducibility
 
-Last local verification: 2026-05-30.
+Last local verification: 2026-08-18.
 
 ## Environment Used
 
@@ -67,8 +67,10 @@ origin-of-life hypotheses.
 
 ## Current Verification Result
 
-The active script outputs, interactive panels, and twelve-paper PDF set were
-regenerated locally on 2026-05-30 after the Paper 7 source-mix and Paper 11
-eumelanin endpoint updates. The final LaTeX log scan found no undefined
+The active script outputs and interactive panels were regenerated locally on
+2026-08-18 after the series-wide claim corrections. All twelve numbered
+supplementary scripts and the panel generator completed, and their one-to-one
+`paper_01` through `paper_12` mapping remains unchanged. The previous final
+LaTeX log scan found no undefined
 citations, unresolved references, rerun requests, or LaTeX/BibTeX errors in the
 active PDF build logs.

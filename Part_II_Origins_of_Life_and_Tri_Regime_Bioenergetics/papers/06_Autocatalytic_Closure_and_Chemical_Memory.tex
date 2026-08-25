@@ -8,67 +8,33 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-6: Autocatalytic Closure and Chemical Memory:\\ When Reaction Networks Begin to Remember}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{Autocatalytic Closure and Chemical Memory:\\ When Reaction Networks Begin to Remember}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This paper isolates autocatalytic closure from later claims about alphabets, homochirality, or protocells. A reaction network begins to remember only when its products help regenerate the conditions that make them. In CDFD terms, this is the first serious biological use of $M_s$: retained organization through feedback. The companion script performs a conservative closure scan and reports sub-ignition persistence enhancement rather than completed metabolic ignition.
+This paper isolates autocatalytic closure from later claims about alphabets, homochirality, or protocells. A reaction network begins to remember only when its products help regenerate the conditions that make them. In CDFD terms, this is the first serious biological use of retained structural memory $M_s$: retained organization through feedback. The companion script performs a conservative closure scan and reports sub-ignition persistence enhancement rather than completed metabolic ignition. The qualitative closure criterion developed here (\S2.4) is a mean-field caricature of a more rigorous existing formalism --- reflexively autocatalytic, food-generated (RAF) set theory (Hordijk and Steel, 2004) --- which future revisions of this paper should engage directly rather than reinvent independently.
 \end{abstract}
+
+\noindent\textbf{Keywords:} autocatalysis; chemical memory; reaction networks; origins of life; computational modelling.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
 
 \section*{Symbol Conventions}
 
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+\noindent See Paper~1, \S Symbol Conventions, for the base CDFD and Greek-symbol tables. This paper introduces species-specific transport resistance $C_i$ (not to be confused with product concentration symbols in legacy drafts) and the ignition parameter $\Gamma$ (\S2.3).
 
 \section{Introduction}
 Papers 1--5 supplied energy, transport, compartments, and selective interfaces. None of these alone guarantees \emph{self-reinforcing} chemistry. Autocatalysis and cross-catalysis supply positive feedback: products accelerate their own formation~\cite{Eigen1971,Kauffman1986}. In open systems, however, diffusion and dilution supply negative feedback. Closure is the balance point.
 
-Gap from Paper 5: catalytic selection must escalate into network persistence.
-
-\textbf{Status: Inferred}
+A remaining question is how catalytic selection escalates into network persistence.
 
 \paragraph{Capstone channel mapping.}
 Metabolic closure is not single-channel: losing input $\Phi$, electron throughput $\sigma_e$, proton coupling $\sigma_p$, or stabilization capacity against $S$ collapses the bundled $J$ in the weakest-link sense even when $\Gamma$ inequalities locally favor amplification.
@@ -84,8 +50,6 @@ For species $X_i$ with concentrations $c_i$,
 \end{equation}
 with sources $S_i$. Here $C_i$ is a \emph{transport resistance} for species $i$ (not to be confused with product concentration symbols in legacy drafts).
 
-\textbf{Status: Derived}
-
 \subsection{Minimal autocatalytic core}
 \begin{equation}
 X + A \rightarrow 2X,\qquad R = k c_X c_A.
@@ -97,8 +61,6 @@ Well-mixed loss to a compartment of scale $L$ scales as $D_{\mathrm{eff}}c_X/L^2
 = c_X\left(k c_A - \frac{1}{C L^2}\right).
 \end{equation}
 
-\textbf{Status: Derived}
-
 \subsection{Ignition parameter}
 Define
 \begin{equation}
@@ -106,29 +68,21 @@ Define
 \end{equation}
 If $\Gamma>1$, exponential growth of $c_X$ results in this linearized well-mixed limit; if $\Gamma<1$, trajectories decay toward zero without other sources. The boundary $\Gamma=1$ is a mean-field caricature; spatial patterning and nonlinear saturation modify bifurcations.
 
-\textbf{Status: Derived}
-
 \subsection{Vector closure}
 A network is \emph{closed} if every required intermediate is produced internally faster than it leaks, $\forall i,\; \sum_j k_{ij}c_j > (C_i L_i^2)^{-1}$ in the same schematic sense.
 
-\textbf{Status: Hypothesis}
+This criterion is a linearized mean-field approximation of the network-closure question, and the more rigorous existing formalism for this exact problem is RAF (reflexively autocatalytic, food-generated) set theory~\cite{HordijkSteel2004}, which formalizes closure via a directed hypergraph over catalyzed reactions and a food set, without requiring the linearization used here. Future work on this paper should test whether the $\Gamma$ threshold criterion and RAF-set membership agree on the same toy networks, since the two currently make the same qualitative claim through different mathematical machinery without having been reconciled.
 
 \subsection{Energy coupling}
 Rates may scale with coupled fluxes $R_i\propto |\bm{J}_e\cdot\bm{J}_p|$ when redox drive gates chemistry~\cite{Lane2010}. We do not specify constants.
 
-\textbf{Status: Hypothesis}
-
 \subsection{Linear stability (Jacobian)}
 Let $\mathsf{J}_{\mathrm{jac}}$ be the Jacobian of the reaction vector field. Local stability of a steady state requires $\mathrm{Re}\,\lambda<0$ for all eigenvalues $\lambda$ of $\mathsf{J}_{\mathrm{jac}}$. Autocatalysis can instead produce unstable modes, limit cycles, or blow-up depending on constraints and saturation.
-
-\textbf{Status: Derived}
 
 \section{Main Results}
 
 \subsection{Conceptual}
 Metabolic organization begins when positive feedback loops beat transport losses~\cite{MaynardSmith1997}. Compartments increase $C$ (resistance to escape), improving $\Gamma$ for fixed $k,c_A,L$.
-
-\textbf{Status: Inferred}
 
 \section{Numerical Verification}
 \texttt{supplementary\_ool\_06.py} integrates a reduced two-parameter caricature. Reported final $\Phi$ values:
@@ -140,42 +94,48 @@ Metabolic organization begins when positive feedback loops beat transport losses
 \end{itemize}
 Higher constraint $C$ raises the final state relative to comparable baselines, but \textbf{no run exhibits runaway ignition} in the companion script. Narratives about ``critical metabolism'' must therefore remain Hypothesis/Open until bifurcation scans identify supercritical parameters.
 
-\textbf{Status: Derived}
-
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_06/autocatalytic_closure_scan.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_06/autocatalytic_closure_scan.png}
 \caption{Autocatalytic-closure diagnostic. The trajectories show persistence enhancement under stronger constraint but do not prove completed metabolic ignition. The figure is a disciplined threshold check, not a claim of living metabolism.}
 \end{figure}
 
-\section{Interpretation}
+\section{Interpretation and Limitations}
 The mathematics clarifies what must be proven: closure is a competition between amplification and loss. The numerics currently demonstrate \emph{sub-ignition} persistence enhancement, not autonomous self-acceleration to a living steady state.
 
-\textbf{Status: Inferred}
-
-\section{Limitations and Open Problems}
 \begin{itemize}
 \item Mismatch between rhetorical ``ignition'' and outputs is explicitly documented.
 \item Need bifurcation analysis in $(k,c_A,C,L)$ space with spatial resolution.
 \item Saturation chemistry and side reactions omitted.
+\item The RAF-set reconciliation flagged in \S2.4 has not been performed.
 \end{itemize}
 
-\textbf{Status: Open}
+\section{Modern Network Boundary}
+Autocatalysis is not enough by itself. A closure claim must distinguish three layers: self-amplification of a species, mutual regeneration of a reaction set, and persistence of an organized network through environmental cycling. The strict reading is that closure becomes biological only when it couples to chemical memory, boundary retention, and later copying. Homochirality and genetic inheritance are treated separately (Papers~7 and~9).
 
 \section{Conclusion}
-This paper states the closure criterion clearly and shows that the companion script does not yet realize full ignition. Paper 7 moves to aromatic carriers where pattern persistence becomes an information-relevant quantity.
-
-\textbf{Status: Inferred}
+This paper states the closure criterion clearly and shows that the companion script does not yet realize full ignition. Aromatic carriers, where pattern persistence becomes information-relevant, are treated in Paper~7;
 
 \section{Reproducibility Note}
 \begin{verbatim}
 python supplementary_ool_06.py
 \end{verbatim}
 
-\section{Modern Network Boundary}
-Autocatalysis is not enough by itself. A closure claim must distinguish three layers: self-amplification of a species, mutual regeneration of a reaction set, and persistence of an organized network through environmental cycling. The modern CDFD reading is therefore strict: closure becomes biological only when it couples to chemical memory, boundary retention, and later copying. This is why Paper 6 ends before homochirality or genetic inheritance are claimed.
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors are cited in the body and bibliography.
 
-\textbf{Status: Derived guardrail}
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\section*{Funding}
+This research received no external funding.
+
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
+
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
+
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

@@ -8,13 +8,12 @@
 \usepackage{booktabs}
 \onehalfspacing
 
-\title{\textbf{Paper OOL-8: Boundaries, Mineral-Organic Interfaces, and Coacervate Phase Separation:\\ From Geological Pores to Adaptive Compartments}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
+\title{Boundaries, Mineral-Organic Interfaces, and Coacervate Phase Separation:\\ From Geological Pores to Adaptive Compartments}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
+\date{August 2026}
 
 \begin{document}
 \maketitle
@@ -23,45 +22,14 @@
 This paper turns localization into boundary logic. Mineral pores, mineral-organic films, coacervates, gels, phase-separated droplets, and vesicle-like compartments are treated as variations on one functional problem: retain useful chemistry without sealing off the external flux. The claim is not that any one compartment type is the first cell. The claim is that life requires a transition from passive geological confinement to adaptive chemical boundaries whose state covaries with internal chemistry.
 \end{abstract}
 
+\noindent\textbf{Keywords:} protocell compartments; coacervates; phase separation; mineral-organic interfaces; origins of life.
+
+\section*{Preprint note}
+This is a computational research article. The companion script produces numerical diagnostics reported in the Computational Results section. It is not a narrative review and does not claim historical proof of a unique abiogenesis pathway.
+
 \section*{Symbol Conventions}
 
-\noindent\textbf{CDFD origins-of-life symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Meaning in Part II & Origins-of-life reading \\
-\midrule
-$\Phi$ & Available driving flux & Redox, thermal, photochemical, proton/ion, or chemical potential drive supplied by the environment \\
-$C$ & Effective constraint or resistance & Mineral geometry, pore confinement, diffusion barrier, permeability, activation barrier, or maintenance burden \\
-$S$ & Responsive organization & Surface, boundary, catalytic network, coacervate, or protocellular structure that routes flux into retained function \\
-$M_s$ & Retained structural memory & Composition, sequence, topology, compartment state, mineral imprint, or boundary history that persists across renewal cycles \\
-$\Psi_s$ & Local adaptive ratio $(\Phi/C)\cdot S\cdot M_s$ & Bookkeeping gauge for whether drive, constraint, responsiveness, and retention are co-present; not a universal constant \\
-$\Lambda_{\mathrm{life}}$ & Integrated Life Number where used & Capstone surplus ratio for decay, near-critical proto-biology, and sustained self-maintenance \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\toprule
-Symbol & Local role & Interpretation rule \\
-\midrule
-$\alpha$ & Accumulation or reinforcement coefficient & Defines how fast a constraint, pathway, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, or washout coefficient & Defines recovery, loss, clearance, hydrolysis, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, or redistribution coefficient & Defines spread across pores, surfaces, compartments, networks, or chemical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, or small offset scales & Used only as local thresholds, numerical guards, or experimental tolerances \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, or frequency terms & Meaning is set by the equation and subscript where they occur \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, conductance/noise, time-scale, or phase/field terms & Never universal constants unless a paper explicitly defines them that way \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where used & $\Omega$ names a modeled state space; $\Lambda$ is reserved for life-number notation only where defined \\
-\bottomrule
-\end{tabular}
-}
-\end{center}
-
+\noindent See Paper~1, \S Symbol Conventions, for the base CDFD and Greek-symbol tables. This paper introduces the localization ratio $\Xi_{\mathrm{loc}}=R/(D_{\mathrm{eff}}/L^2)$, distinct from $\Psi_{s,\mathrm{CDFD}}=\Phi/C$, to avoid symbol collision (\S4.1).
 
 \section{Introduction}
 Early prebiotic chemistry requires a crucible. Molecules dissolved in the vast, turbulent ocean are too dilute to undergo meaningful autocatalysis. Hydrothermal vent pores provide excellent concentration mechanisms, acting as rigid rock matrices. However, an organism locked inside a rock cannot migrate, divide, or hunt for resources.
@@ -73,15 +41,15 @@ In CDFD, this phase separation represents a profound evolutionary leap: the tran
 \section{The Coacervate Adaptive Surface}
 We apply the local CDFD adaptive ratio to a membraneless droplet:
 \begin{equation}
-    \Psi_s = \left( \frac{\Phi}{C} \right) \cdot S \cdot M_s
+ \Psi_s = \left( \frac{\Phi}{C} \right) \cdot S \cdot M_s
 \end{equation}
 
 For a liquid-liquid phase separated droplet:
 \begin{itemize}
-    \item \textbf{Flux ($\Phi$)}: The diffusion of monomeric building blocks (amino acids, nucleotides) and energy gradients into the droplet.
-    \item \textbf{Constraint ($C$)}: The surface tension and phase boundary of the droplet. Unlike a rock wall, this constraint is permeable and elastic.
-    \item \textbf{Responsiveness ($S$)}: The internal microenvironment of the coacervate, which creates a highly concentrated, lower-dielectric matrix ideal for catalytic reactions.
-    \item \textbf{Memory ($M_s$)}: The specific polypeptide or nucleotide composition that dictates the droplet's stability. If the droplet composition crystallizes or precipitates out of solution, the memory locks entirely, resulting in topological death.
+ \item \textbf{Flux ($\Phi$)}: The diffusion of monomeric building blocks (amino acids, nucleotides) and energy gradients into the droplet.
+ \item \textbf{Constraint ($C$)}: The surface tension and phase boundary of the droplet. Unlike a rock wall, this constraint is permeable and elastic.
+ \item \textbf{Responsiveness ($S$)}: The internal microenvironment of the coacervate, which creates a highly concentrated, lower-dielectric matrix ideal for catalytic reactions.
+ \item \textbf{Memory ($M_s$)}: The specific polypeptide or nucleotide composition that dictates the droplet's stability. If the droplet composition crystallizes or precipitates out of solution, the memory locks entirely, resulting in topological death.
 \end{itemize}
 
 \subsection{Elastic Constraint and Proto-Division}
@@ -91,13 +59,10 @@ A coacervate, however, possesses topological elasticity. As $\Phi$ increases (th
 
 However, as the volume increases, the surface-area-to-volume ratio drops, causing a localized $\Psi_s$ instability. The internal core of the droplet can starve of flux because the surface constraint cannot process enough material to sustain the volume. In some parameter regimes, fluid and interfacial mechanics may favor breakup or division-like resetting. This is not genetic replication; it is a physical precursor to heritable cellular division only if later papers add retained internal chemistry and bounded copying.
 
-
 \section{Mineral Compartments, Tortuosity, and Localization Thresholds}
 Papers 1--4 established energy injection and coupled transport channels. The next bottleneck is \textbf{spatial localization}: without confinement, synthetic steps cannot chain. Vent chimneys and precipitated Fe--S masses provide pores, dead ends, and adsorptive walls~\cite{Russell1994,Hazen2008}.
 
-Gap from Paper 4: even efficient proton coupling fails if products wash out; compartments address retention.
-
-\textbf{Status: Inferred}
+Even efficient proton coupling fails if products wash out; compartments address retention.
 
 \paragraph{Capstone channel mapping.}
 Porous minerals keep electron-carrying surfaces and proton-transporting pore fluids \emph{co-localized}, which is geometrically necessary if the bundled scalar $J=I_E\sigma_e\sigma_p/B_{\mathrm{stab}}$ is to exceed washout losses. $\Xi_{\mathrm{loc}}$ remains the paper's retention diagnostic; Paper 12 supplies the multi-channel throughput vocabulary.
@@ -111,16 +76,12 @@ The CDFD adaptive ratio uses $\Psi_{s,\mathrm{CDFD}}=\Phi/C$ for intensity over 
 \end{equation}
 for characteristic reaction rate $R$, effective diffusivity $D_{\mathrm{eff}}$, and length $L$. This prevents symbol collision with $\Psi_{s,\mathrm{CDFD}}$.
 
-\textbf{Status: Derived}
-
 \subsection{Fickian baseline}
 In bulk fluid,
 \begin{equation}
 \frac{\partial \rho}{\partial t} = D\nabla^2\rho,
 \end{equation}
 with mixing time $t_D\sim L^2/D$. Small molecules in warm water homogenize quickly over millimeter scales.
-
-\textbf{Status: Derived}
 
 \subsection{Constrained porous media}
 Introduce resistance field $C(\bm{x})$ such that
@@ -130,8 +91,6 @@ Introduce resistance field $C(\bm{x})$ such that
 \end{equation}
 Effective diffusivity scales as $D_{\mathrm{eff}}\sim D/\tau$ with tortuosity $\tau>1$. In the resistance picture, large $C$ corresponds to tight pores or dead-end topology.
 
-\textbf{Status: Inferred}
-
 \subsection{Persistence inequality}
 For bimolecular $A+B\rightarrow C$ with rate law $R=k[A][B]$, dominance of reaction over diffusive loss requires schematically
 \begin{equation}
@@ -139,14 +98,10 @@ k[A][B] \gg \frac{D_{\mathrm{eff}}}{L^2}\rho,
 \end{equation}
 equivalently $\Xi_{\mathrm{loc}}\gg 1$ after nondimensionalization. Increasing $C$ (slower transport) can raise residence time and help satisfy the inequality---the geological content of ``compartments buy time.''
 
-\textbf{Status: Derived}
-
 \section{Main Results}
 
 \subsection{Geochemical interpretation}
 Porous Fe--S and silica--iron precipitates can host long-lived gradients when externally fed by vent fluids~\cite{Martin2007}. Mineral compartments are not selective membranes like lipid bilayers, but they alter transport statistics enough to change chemical fate.
-
-\textbf{Status: Inferred}
 
 \section{Numerical Verification}
 \texttt{supplementary\_ool\_08.py} collapses the compartment dynamics to a scalar ``concentration-like'' state with synthesis, loss $\Phi/C$, and $\Psi_{s,\mathrm{script}} = J_{\mathrm{syn}}/\text{loss}$ (the script's own ratio---see code). We report its outputs verbatim:
@@ -158,12 +113,8 @@ Porous Fe--S and silica--iron precipitates can host long-lived gradients when ex
 \end{itemize}
 The open-ocean case sits at threshold in this discretization, so definitive washout claims require extended sweeps.
 
-\textbf{Status: Derived}
-
 \section{Interpretation}
-Stronger modeled resistance improves retention monotonically here, matching intuition that tortuous pores increase local abundance. Mapping $\Psi_{s,\mathrm{script}}$ to measurable field variables (porosity, permeability, reactive surface area) remains open.
-
-\textbf{Status: Inferred}
+Stronger modeled resistance improves retention monotonically here, matching intuition that tortuous pores increase local abundance. Mapping $\Psi_{s,\mathrm{script}}$ to measurable field variables (porosity, permeability, reactive surface area) remains open. Paper~8 formalizes why compartments matter: they reshape transport resistance and shift localization balances; the sections below add organic films and adaptive interfacial regulation atop mineral walls.
 
 \section{Limitations and Open Problems}
 \begin{itemize}
@@ -172,29 +123,10 @@ Stronger modeled resistance improves retention monotonically here, matching intu
 \item Heterogeneous pore-size distributions and reactive walls await integration.
 \end{itemize}
 
-\textbf{Status: Open}
-
-\section{Interim Synthesis: Mineral Compartments}
-Paper 8 formalizes why compartments matter: they reshape transport resistance and shift localization balances. This paper adds organic films and adaptive interfacial regulation atop mineral walls.
-
-\textbf{Status: Inferred}
-
-\section{Compartment Diagnostic Note}
-\begin{verbatim}
-python supplementary_ool_08.py
-\end{verbatim}
-
-
-
-
-
-
 \section{Mineral--Organic Interfaces as Catalytic Constraint Fields}
 Bulk prebiotic soup scenarios struggle with reversibility and product escape. Surfaces solve part of this by stabilizing transition states and increasing effective concentrations~\cite{Wachtershauser1988}. When simple organic films or adsorbed layers accumulate, the interface becomes a \textbf{hybrid} boundary: still mineral-anchored, but with softer, reorganizing dynamics reminiscent of later regulatory lipids (without yet claiming protocells)~\cite{Szostak2010}.
 
 Gap from mineral compartments: compartments localize volume; interfaces \emph{select} pathways.
-
-\textbf{Status: Inferred}
 
 \paragraph{Capstone channel mapping.}
 Hybrid mineral--organic films couple redox currents to soft matter that can transiently absorb, delay, or redirect local flux. This is an early stabilization function, not a claim about literal melanin. This paper stays at the interface-kinetics tier; Papers 7 and 11 develop the broader overload-buffering vocabulary.
@@ -208,22 +140,14 @@ A_{(\mathrm{aq})} \leftrightarrow A_{(\mathrm{ads})},\qquad
 \end{equation}
 with coverage $\theta$, pressure or concentration proxy $P$, and equilibrium constant $K$. Adsorption reduces entropy but raises local reactivity.
 
-\textbf{Status: Derived}
-
 \subsection{Activation barrier reduction}
 Arrhenius rates gain effective barrier $E_a^{\mathrm{surf}} = E_a - \Delta E_{\mathrm{ads}}$ when transition states are surface-stabilized, yielding $k_{\mathrm{surf}}\gg k_{\mathrm{bulk}}$ in favorable regimes.
-
-\textbf{Status: Inferred}
 
 \subsection{Langmuir--Hinshelwood and Eley--Rideal pathways}
 Both mechanisms increase encounter rates: either two adsorbed species react, or one adsorbed species attacks a gas/solution partner. Mineral terminations steer which pathway dominates.
 
-\textbf{Status: Inferred}
-
 \subsection{PCET coupling}
 Many redox steps transfer electrons and protons together. Flux-product couplings such as $R\propto |\bm{J}_e\cdot\bm{J}_p|$ express the idea that both channels must be co-available at the interface~\cite{Lane2010}.
-
-\textbf{Status: Hypothesis}
 
 \subsection{Hybrid adaptive interface (script)}
 \texttt{supplementary\_ool\_08.py} also evolves $C_{\mathrm{organic}}$ with
@@ -233,14 +157,10 @@ Many redox steps transfer electrons and protons together. Flux-product couplings
 \end{equation}
 adding to static $C_{\mathrm{mineral}}$. This mimics thickening or reorganizing organic layers under fluctuating drive.
 
-\textbf{Status: Hypothesis}
-
 \section{Main Results}
 
 \subsection{Conceptual}
 Surfaces structure chemical space: they determine which reactions encounter lowered barriers and which remain starved of flux. Hybrid layers add transient buffering.
-
-\textbf{Status: Inferred}
 
 \section{Numerical Verification}
 Companion script: \texttt{supplementary\_ool\_08.py}.
@@ -251,18 +171,14 @@ Companion script: \texttt{supplementary\_ool\_08.py}.
 \end{itemize}
 Hybrid interfaces attenuate surge peaks and return closer to baseline in this parameterization.
 
-\textbf{Status: Derived}
-
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{outputs/paper_08/compartments_and_interfaces.png}
+\includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{outputs/paper_08/compartments_and_interfaces.png}
 \caption{Merged compartment/interface diagnostic. The left panel shows the localization threshold across open and confined settings. The right panel shows how a hybrid mineral--organic interface attenuates a forcing surge relative to a fixed mineral-only surface.}
 \end{figure}
 
 \section{Interpretation}
 The model supports a pathway from rigid geochemistry toward adaptive boundaries without invoking full membrane biophysics~\cite{Hanczyc2003}. Specific molecular identities (fatty acids, PAHs) are left to experiment.
-
-\textbf{Status: Inferred}
 
 \section{Mineral-to-Lipid Transition}
 The series-level synthesis includes a step that must remain explicit: mineral compartments are not the final boundary architecture. They are a plausible retention scaffold that can hand off to softer amphiphile and lipid-like compartments. The transition can be written schematically as
@@ -275,8 +191,6 @@ The series-level synthesis includes a step that must remain explicit: mineral co
 \end{equation}
 This does not mean vesicles must replace minerals immediately. Hybrid stages are likely: fatty acids or other amphiphiles can coat surfaces, partition into pores, trap products, and later bud or detach. In CDFD language, the boundary evolves from a fixed geological constraint to a partially adaptive chemical constraint.
 
-\textbf{Status: Inferred}
-
 \section{Chemical Selection, Not Just Concentration}
 Compartmentalization is usually described as a concentration solution, but the deeper claim is pathway selection. Interfaces can favor some adsorbed intermediates, exclude others, and make sequential reactions more likely by holding products near the next catalytic site. The active paper should therefore be read as two coupled claims:
 \begin{equation}
@@ -284,8 +198,6 @@ Compartmentalization is usually described as a concentration solution, but the d
 \text{interface chemistry changes pathway probability}.
 \end{equation}
 The first claim can be tested by dilution and residence-time measurements. The second requires product-distribution assays on realistic mineral surfaces under fed, cycling conditions.
-
-\textbf{Status: Derived}
 
 \section{Mineral Polymerization and Template Surfaces}
 Mineral surfaces can do more than retain molecules. Montmorillonite and other clays have been used experimentally to promote oligomerization and template-influenced RNA chemistry~\cite{Ferris1996,Ertem1996}. These experiments do not show that clay was the only prebiotic surface, but they establish a key principle: surface chemistry can alter polymer length, sequence statistics, and product distribution.
@@ -297,8 +209,6 @@ P(\mathrm{product}\mid \mathrm{surface})
 P(\mathrm{product}\mid \mathrm{bulk}).
 \end{equation}
 That inequality is the operational meaning of chemical selection.
-
-\textbf{Status: Inferred}
 
 \section{From Encapsulation to Growth and Division}
 The mineral-to-lipid transition is not speculative decoration; it connects directly to model protocell experiments. Fatty-acid vesicles can encapsulate contents, grow, divide, and support nonenzymatic genetic-polymer chemistry under some conditions~\cite{Hanczyc2003,Mansy2008,Adamala2013}. This gives the active paper a deeper target: not merely forming a boundary, but forming a boundary that can change while preserving internal chemistry. Newly reported cysteine/thioester protocell-like vesicles sharpen that target by showing how short-chain precursors, silica, and water-compatible reactions can generate membrane-like compartments compatible with ribozyme function~\cite{Cho2025}.
@@ -313,8 +223,6 @@ f(J_{\mathrm{internal}},J_{\mathrm{external}}).
 \end{equation}
 A dead container is not enough. A protocell boundary must retain, exchange, and adapt.
 
-\textbf{Status: Inferred}
-
 \section{Limitations and Open Problems}
 \begin{itemize}
 \item No explicit self-assembly kinetics for amphiphiles.
@@ -322,12 +230,8 @@ A dead container is not enough. A protocell boundary must retain, exchange, and 
 \item Surface heterogeneity (step edges, vacancies) is coarse-grained into scalars.
 \end{itemize}
 
-\textbf{Status: Open}
-
 \section{Conclusion}
-This interface layer positions mineral--organic boundaries as the locus where catalysis, selection, and flux regulation coincide. Paper 9 asks whether retained boundary systems can copy with bounded error and become selectable protocellular lineages.
-
-\textbf{Status: Inferred}
+Boundaries are the transition from geochemical localization to protocellular individuality. Mineral pores, mineral-organic films, coacervates, gels, and lipid-like compartments all solve versions of the same CDFD problem: retain useful chemistry without fully blocking exchange. Whether such retained systems copy with bounded error and become selectable lineages is examined in Paper~9.
 
 \section{Reproducibility Note}
 \begin{verbatim}
@@ -335,13 +239,21 @@ python supplementary_ool_08.py
 \end{verbatim}
 The merged script writes compact reproducibility outputs under \texttt{outputs/paper\_08/}.
 
+\section*{Related literature}
+This manuscript is self-contained within the Part~II origins-of-life sequence. Shared CDFD/CDFL symbols ($\Phi$, $C$, $S$, $M_s$, $\Psi_s$) are used as bookkeeping only; they do not require Part~I physics results. Field anchors are cited in the body and bibliography.
 
+\section*{Competing Interests}
+The author declares no competing interests.
 
+\section*{Funding}
+This research received no external funding.
 
+\section*{Data and Code Availability}
+Companion scripts, generated figures, and numerical outputs for this manuscript are included in the public CDFD Part II release archive (\url{https://github.com/bampita-bico/CDFD-Part-II-Release}; Zenodo DOI \texttt{10.5281/zenodo.20264779}). See the Reproducibility Note above for the paper-local script path.
 
+\section*{Author Contributions}
+Conceptualization, formal analysis, computational diagnostics, and manuscript preparation: Steve Bico Mujjabi
 
-\section{Conclusion}
-Boundaries are the transition from geochemical localization to protocellular individuality. Mineral pores, mineral-organic films, coacervates, gels, and lipid-like compartments all solve versions of the same CDFD problem: retain useful chemistry without fully blocking exchange. Paper 9 can now ask whether such retained systems copy with bounded error and become selectable lineages.
 \bibliographystyle{plain}
 \bibliography{ool_references}
 \end{document}

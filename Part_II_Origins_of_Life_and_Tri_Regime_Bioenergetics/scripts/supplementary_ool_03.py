@@ -95,7 +95,7 @@ def write_outputs(
         writer = csv.DictWriter(handle, fieldnames=["step", "network_efficiency", "mean_s", "mean_ms"])
         writer.writeheader()
         writer.writerows(rows)
-    fig, axes = plt.subplots(1, 4, figsize=(16, 3.8), constrained_layout=True)
+    fig, axes = plt.subplots(1, 4, figsize=(14.7, 6.8), constrained_layout=True)
 
     im0 = axes[0].imshow(final_phi, cmap="magma", origin="lower")
     axes[0].set_title("Electron flux proxy")
