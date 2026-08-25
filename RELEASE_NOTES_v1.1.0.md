@@ -3,7 +3,8 @@
 **Release date:** 25 August 2026  
 **Tag:** `v1.1.0`  
 **License:** CC BY 4.0  
-**Concept DOI:** [10.5281/zenodo.20264779](https://doi.org/10.5281/zenodo.20264779)
+**Concept DOI:** [10.5281/zenodo.20264779](https://doi.org/10.5281/zenodo.20264779)  
+**This version DOI:** [10.5281/zenodo.22090528](https://doi.org/10.5281/zenodo.22090528)
 
 ## Summary
 
@@ -15,10 +16,10 @@ Part II remains an **open preprint archive**. Supplementary scripts are toy diag
 
 - **12-paper** manuscript spine under `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/`
 - Claim ledger: `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/CLAIM_STATUS.md`
-- Multi-origin convergence note + simulation: `MULTI_ORIGIN_CONVERGENCE.md`, `scripts/multi_origin_convergence_sim.py`
+- Multi-origin convergence note + simulation: `MULTI_ORIGIN_CONVERGENCE.md`, `Part_II_Origins_of_Life_and_Tri_Regime_Bioenergetics/scripts/multi_origin_convergence_sim.py`
 - Shared methods protocol: `methods/`
 - PDFs, interactive outputs, bibliography, reproducibility instructions
-- Explicit citation to Part I for CDFL: DOI `10.5281/zenodo.20250821`
+- Explicit citation to Part I for CDFL (Part I concept DOI `10.5281/zenodo.20250820`)
 
 ## What changed from v1.0.2
 
@@ -53,4 +54,5 @@ Cites Part I for the public flow–constraint–memory grammar (CDFL). Companion
 
 ## DOI note
 
-Concept DOI `10.5281/zenodo.20264779` remains. Mint a **new versioned Zenodo deposit** for tag `v1.1.0` before citing this exact snapshot by DOI.
+- **Cite this snapshot:** [10.5281/zenodo.22090528](https://doi.org/10.5281/zenodo.22090528) (v1.1.0)
+- **All-versions / concept:** [10.5281/zenodo.20264779](https://doi.org/10.5281/zenodo.20264779)
